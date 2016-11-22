@@ -154,7 +154,7 @@ class ParsedMessage(object):
     def __get_decoded_addresses(self, address, charset):
         result = []
         for name, email in getaddresses([address]):
-            decoded_email = self.__decode(email, charset)
+            decoded_email = self.__decode(email, charset).replace('"', '')
 
             # If name is none, we just choose the first part of the email as name
             if not name or name is None:
