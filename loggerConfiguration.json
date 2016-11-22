@@ -53,7 +53,12 @@
             "handlers": ["debug_file_handler", "info_file_handler", "error_file_handler"],
             "propagate": "no"
         },
-        "session": {
+        "backend": {
+            "level": "DEBUG",
+            "handlers": ["debug_file_handler", "info_file_handler", "error_file_handler"],
+            "propagate": "no"
+        },
+        "analyzer": {
             "level": "DEBUG",
             "handlers": ["debug_file_handler", "info_file_handler", "error_file_handler"],
             "propagate": "no"

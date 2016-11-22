@@ -1,5 +1,5 @@
 {
-    "name": "issueSHARK",
+    "name": "mailingSHARK",
     "author": "Fabian Trautsch",
     "version": "0.10",
     "plugin_type": "other",
@@ -30,14 +30,14 @@
         },
         {
             "name": "db_user",
-            "required": true,
+            "required": false,
             "position": 2,
             "type": "execute",
             "description": "database user for the mongodb"
         },
         {
             "name": "db_password",
-            "required": true,
+            "required": false,
             "position": 3,
             "type": "execute",
             "description": "password for the user of the mongodb"
@@ -65,7 +65,7 @@
         },
         {
             "name": "db_authentication",
-            "required": true,
+            "required": false,
             "position": 7,
             "type": "execute",
             "description": "databse against which users are authenticated"
@@ -78,7 +78,7 @@
             "description": "url of the project, to which the issue tracking system belongs"
         },
         {
-            "name": "issueurl",
+            "name": "mailingurl",
             "required": true,
             "position": 9,
             "type": "execute",
@@ -92,39 +92,46 @@
             "description": "backend to choose for the plugin execution"
         },
         {
-            "name": "token",
-            "required": false,
-            "position": 11,
-            "type": "execute",
-            "description": "token to use for api requests"
-        },
-        {
             "name": "proxy_host",
             "required": false,
-            "position": 12,
+            "position": 11,
             "type": "execute",
             "description": "host to the proxy, if used"
         },
         {
             "name": "proxy_port",
             "required": false,
-            "position": 13,
+            "position": 12,
             "type": "execute",
             "description": "port of the proxy"
         },
         {
             "name": "proxy_user",
             "required": false,
-            "position": 14,
+            "position": 13,
             "type": "execute",
             "description": "user of the proxy"
         },
         {
             "name": "proxy_password",
             "required": false,
+            "position": 14,
+            "type": "execute",
+            "description": "password of the proxy"
+        },
+        {
+            "name": "output",
+            "required": true,
             "position": 15,
             "type": "execute",
             "description": "password of the proxy"
+        },
+        {
+            "name": "debug",
+            "required": false,
+            "position": 16,
+            "type": "execute",
+            "description": "debug level, default is debug"
         }
     ]
 }

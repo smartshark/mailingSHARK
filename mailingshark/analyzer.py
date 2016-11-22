@@ -27,7 +27,7 @@ def to_unicode(text, charset):
         for encoding in [charset, 'ascii', 'utf-8', 'iso-8859-15']:
             try:
                 return text.decode(encoding)
-            except UnicodeDecodeError:
+            except (UnicodeDecodeError, LookupError):
                 continue
         else:
             # All conversions failed, get unicode with unknown characters
@@ -66,13 +66,10 @@ class ParsedMessage(object):
 
         # set references
         if raw_message.get('references') is not None:
-            self.references = raw_message.get('references').split('\n\t')
-            self.references = [reference.strip() for reference in self.references]
+            found_references = re.findall(r'(\<.*?\>)', raw_message.get('references'), re.MULTILINE)
+            self.references = list(set(found_references))
         else:
             self.references = []
-
-
-        print(self)
 
     def __str__(self):
         return "message_id: %s, body: %s, patches: %s, subject: %s, msgdate: %s, from: %s, to: %s, cc: %s, date: %s, " \
@@ -101,7 +98,7 @@ class ParsedMessage(object):
                 setattr(self, header, None)
                 continue
 
-            address = self.__check_spam_obscuring(raw_message.get(header))
+            address = self.__check_spam_obscuring(self.__decode(raw_message.get(header), charset))
             addresses = self.__get_decoded_addresses(address, charset)
             setattr(self, header, addresses or None)
 
@@ -113,7 +110,7 @@ class ParsedMessage(object):
             parsed_date = parsedate_tz(date_to_parse)
             return datetime.datetime(*parsed_date)[:6]
         except AttributeError:
-           return None
+            return None
 
     def __create_message_id(self, raw_message):
         if raw_message.get('message-id') is not None:
@@ -125,7 +122,7 @@ class ParsedMessage(object):
         except Exception:
             domain = 'mailingshark.localdomain'
 
-        m = hashlib.md5(self.body).hexdigest()
+        m = hashlib.md5(self.body.encode('utf-8')).hexdigest()
         return '<%s.mailingshark@%s>' % (m, domain)
 
     @staticmethod
@@ -197,7 +194,7 @@ class ParsedMessage(object):
             elif part_subtype in ('x-patch', 'x-diff'):
                 patches.append(to_unicode(part_body, part_charset))
 
-        return '\n'.join(body), '\n'.join(patches)
+        return '\n'.join(body), patches
 
     @staticmethod
     def __decode(s, charset='latin-1', sep=u' '):
@@ -210,7 +207,7 @@ class ParsedMessage(object):
         try:
             decoded_s = decode_header(s)
             r = sep.join([to_unicode(text, text_charset or charset) for text, text_charset in decoded_s])
-        except:
+        except Exception:
             logger.warning('WARNING: charset: %s' % charset)
             logger.warning('%s' % s)
             r = s

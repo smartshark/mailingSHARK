@@ -17,8 +17,6 @@ class Config(object):
         self.password = args.db_password
         self.database = args.db_database
         self.authentication_db = args.db_authentication
-        self.mailing_user = args.mailing_user
-        self.mailing_password = args.mailing_password
         self.debug = args.debug
         self.output_dir = args.output.rstrip('/')
 
@@ -33,7 +31,7 @@ class Config(object):
 
         self.temporary_dir = os.path.join(self.output_dir, 'ready')
 
-        self._validate_config()
+        #self._validate_config()
 
     def get_mailing_url_identifier(self):
         parsed_url = urlparse(self.mailing_url)
@@ -45,10 +43,6 @@ class Config(object):
         else:
             shutil.rmtree(self.temporary_dir)
             os.makedirs(self.temporary_dir)
-
-        if (self.mailing_user is not None and self.mailing_password is None) or \
-                (self.mailing_password is not None and self.mailing_user is None):
-            raise ConfigValidationException('Issue user and password must be set if either of them are not None.')
 
         if (self.proxy_username is not None and self.proxy_password is None) or \
                 (self.proxy_password is not None and self.proxy_username is None):
@@ -89,13 +83,11 @@ class Config(object):
         return True
 
     def __str__(self):
-        return "Config: identifier: %s, token: %s, mailing_url: %s, project_url: %s, host: %s, port: %s, user: %s, " \
+        return "Config: mailing_url: %s, project_url: %s, host: %s, port: %s, user: %s, " \
                "password: %s, database: %s, authentication_db: %s, proxy_host: %s, proxy_port: %s, proxy_username: %s" \
-               "proxy_password: %s, mailing_user: %s, mailing_password: %s" % \
+               "proxy_password: %s" % \
                (
-                   self.identifier,
-                   self.token,
-                   self.tracking_url,
+                   self.mailing_url,
                    self.project_url,
                    self.host,
                    self.port,
@@ -106,9 +98,7 @@ class Config(object):
                    self.proxy_host,
                    self.proxy_port,
                    self.proxy_username,
-                   self.proxy_password,
-                   self.mailing_user,
-                   self.mailing_password
+                   self.proxy_password
                )
 
 

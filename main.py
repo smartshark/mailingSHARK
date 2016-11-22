@@ -65,7 +65,7 @@ def start():
     parser.add_argument('-o', '--output', help='Directory, which can be used as output.',
                         required=True, type=writable_dir)
     parser.add_argument('-p', '--db-port', help='Port, where the database server is listening', default=27017, type=int)
-    parser.add_argument('-a', '--db-authentication', help='Name of the authentication database')
+    parser.add_argument('-a', '--db-authentication', help='Name of the authentication database', default=None)
     parser.add_argument('-u', '--url', help='URL of the VCS of the project.', required=True)
     parser.add_argument('-m', '--mailingurl', help='URL to the bugtracking system.', required=True)
     parser.add_argument('-b', '--backend', help='Backend to use for the mailing parsing', choices=backend_choices)
@@ -73,11 +73,8 @@ def start():
     parser.add_argument('-PP', '--proxy-port', help='Port of the proxy to use.', default=None)
     parser.add_argument('-Pp', '--proxy-password', help='Password to use the proxy (HTTP Basic Auth)', default=None)
     parser.add_argument('-PU', '--proxy-user', help='Username to use the proxy (HTTP Basic Auth)', default=None)
-    parser.add_argument('-mU', '--mailing-user', help='Username to use the mailing system', default=None)
-    parser.add_argument('-mP', '--mailing-password', help='Password to use the mailing system', default=None)
     parser.add_argument('--debug', help='Sets the debug level.', default='DEBUG',
                         choices=['DEBUG', 'INFO', 'WARNING', 'ERROR', 'CRITICAL'])
-    parser.add_argument('-t', '--token', help='Token for accessing.', default=None)
 
     try:
         args = parser.parse_args()

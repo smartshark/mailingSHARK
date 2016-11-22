@@ -7,21 +7,24 @@ import tarfile
 
 import sys
 
+import datetime
 from mongoengine import connect, DoesNotExist
 
 from mailingshark.datacollection.basedatacollector import BaseDataCollector
-from mailingshark.storage.models import Project
 from mailingshark.analyzer import ParsedMessage
 from email.parser import Parser
 import codecs
 import mailbox
+
+from mailingshark.helpers.mongomodels import MailingList, Project, Message, People
 
 logger = logging.getLogger("main")
 
 
 class MailingSHARK(object):
     def __init__(self):
-        pass
+        self.people = {}
+        self.messages = {}
 
     def start(self, cfg):
         logger.setLevel(cfg.get_debug_level())
@@ -31,11 +34,19 @@ class MailingSHARK(object):
         connect(cfg.database, username=cfg.user, password=cfg.password, host=cfg.host,
                 port=cfg.port, authentication_source=cfg.authentication_db)
 
+        # Try to create the mailing_list in database
+        try:
+            mailing_list = MailingList.objects(name=cfg.mailing_url).get()
+        except DoesNotExist:
+            mailing_list = MailingList(name=cfg.mailing_url)
+        mailing_list.last_updated = datetime.datetime.now()
+        mailing_list_id = mailing_list.save().id
+
         # Get the project for which issue data is collected
         try:
             project = Project.objects(url=cfg.project_url).get()
-            if cfg.mailing_url not in project.mailing_urls:
-                project.mailing_urls.append(cfg.mailing_url)
+            if mailing_list_id not in project.mailing_list_ids:
+                project.mailing_list_ids.append(mailing_list_id)
                 project_id = project.save().id
             else:
                 project_id = project.id
@@ -55,30 +66,92 @@ class MailingSHARK(object):
         boxes_to_analyze = self._unpack_files(found_files, cfg.temporary_dir)
         logger.info("Analyzing the following files: %s" % boxes_to_analyze)
 
+        stored_messages, non_parsed = (0, 0)
         for path_to_box in boxes_to_analyze:
             box = mailbox.mbox(path_to_box, create=False)
-            i = 0
-            logger.debug("Analyzing: %s" % path_to_box)
+            logger.info("Analyzing: %s" % path_to_box)
             for msg in box:
                 parsed_message = ParsedMessage(cfg, msg)
+                logger.debug('Got the following message: %s' % parsed_message)
 
-                '''
-                print(msg.keys())
-                print(msg.get('Message-ID'))
-                if msg.get('References'):
-                    print(msg.get('References').split("\n\t"))
-                '''
-                i += 1
-            print(i)
+                self.__store_message(parsed_message, mailing_list_id)
+                stored_messages += 1
 
-        total_messages, stored_messages, non_parsed = (0, 0, 0)
-        logger.info("%d messages analyzed" % total_messages)
+
         logger.info("%d messages stored in database %s" % (stored_messages, cfg.database))
         logger.info("%d messages ignored by the parser" % non_parsed)
 
-
         elapsed = timeit.default_timer() - start_time
         logger.info("Execution time: %0.5f s" % elapsed)
+
+    def __store_message(self, parsed_message, list_id):
+        try:
+            mongo_message = Message.objects(message_id=parsed_message.message_id, mailing_list_id=list_id).get()
+        except DoesNotExist:
+            mongo_message = Message(message_id=parsed_message.message_id, mailing_list_id=list_id)
+
+        mongo_message.subject = parsed_message.subject
+        mongo_message.body = parsed_message.body
+        mongo_message.patches = parsed_message.patches
+        mongo_message.date = parsed_message.date
+
+        if parsed_message.in_reply_to and parsed_message.in_reply_to is not None:
+            mongo_message.in_reply_to_id = self._get_message(parsed_message.in_reply_to, list_id)
+
+        if parsed_message.references:
+            reference_ids = []
+            for reference in parsed_message.references:
+                reference_ids.append(self._get_message(reference, list_id))
+            mongo_message.reference_ids = reference_ids
+
+        if getattr(parsed_message, 'from'):
+            mongo_message.from_id = self._get_people(getattr(parsed_message, 'from')[0])
+
+        if parsed_message.to:
+            to_ids = []
+            for user_to in parsed_message.to:
+                to_ids.append(self._get_people(user_to))
+            mongo_message.to_ids = to_ids
+
+        if parsed_message.cc:
+            cc_ids = []
+            for user_cc in parsed_message.cc:
+                cc_ids.append(self._get_people(user_cc))
+            mongo_message.cc_ids = cc_ids
+
+        # Save this call in a dictionary to save network traffic
+        mongo_id = mongo_message.save().id
+        self.messages[parsed_message.message_id] = mongo_id
+
+    def _get_message(self, message_id, list_id):
+        if message_id in self.messages:
+            return self.messages[message_id]
+
+        try:
+            mongo_id = Message.objects(message_id=message_id, mailing_list_id=list_id).get().id
+        except DoesNotExist:
+            mongo_id = Message(message_id=message_id, mailing_list_id=list_id).save().id
+
+        self.messages[message_id] = mongo_id
+        return mongo_id
+    def _get_people(self, user):
+
+        # Username is the first part of the email address
+        username = user[1].split('@')[0]
+        email = user[1]
+        name = user[0]
+
+        # Check if user was accessed before. This reduces the amount of API requests
+        if email in self.people:
+            return self.people[email]
+
+        # Replace the email address "anonymization"
+        people_id = People.objects(name=name, email=email).upsert_one(name=name, email=email, username=username).id
+        self.people[username] = people_id
+        return people_id
+
+
+
 
     def _unpack_files(self, file_paths, output_dir):
         for file_path in file_paths:
@@ -97,8 +170,8 @@ class MailingSHARK(object):
                 with open(path_to_store, 'wb') as f:
                     f.write(s)
 
-            if file_path.endswith('.mbox'):
-                shutil.move(file_path, os.path.join(output_dir, os.path.basename(file_path)))
+            #if file_path.endswith('.mbox'):
+            #    shutil.move(file_path, os.path.join(output_dir, os.path.basename(file_path)))
 
         # Find all extracted files, which end with .txt or .mbox
         new_paths = []

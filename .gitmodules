@@ -1,0 +1,3 @@
+[submodule "mailingshark/helpers"]
+	path = mailingshark/helpers
+	url = git@github.com:smartshark/helpers.git

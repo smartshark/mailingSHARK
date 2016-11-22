@@ -3,186 +3,34 @@
       {
          "fields":[
             {
-               "sub_type": "StringType",
+               "sub_type": "ObjectIdType",
                "type":"ArrayType",
-               "logical_type":"Url",
-               "field_name":"issue_urls"
+               "logical_type":"RID",
+               "reference_to": "mailing_list",
+               "field_name":"mailing_list_ids"
             }
          ],
          "collection_name":"project"
       },
       {  
-         "fields":[  
-            {  
+         "fields":[
+            {
                "type":"ObjectIdType",
                "logical_type":"OID",
                "field_name":"_id"
             },
-            {  
-               "type":"ObjectIdType",
-               "logical_type":"RID",
-               "reference_to": "project",
-               "field_name":"project_id"
-            },
-            {  
-               "type":"StringType",
-               "logical_type":"ID",
-               "field_name":"system_id"
-            },
-            {  
+            {
                "type":"StringType",
                "logical_type":"Name",
-               "field_name":"title"
+               "field_name":"name"
             },
-            {  
-               "type":"StringType",
-               "logical_type":"Name",
-               "field_name":"desc"
-            },
-            {  
+            {
                "type":"DateType",
                "logical_type":"Date",
-               "field_name":"created_at"
-            },
-            {  
-               "type":"DateType",
-               "logical_type":"Date",
-               "field_name":"updated_at"
-            },
-            {
-               "type":"ObjectIdType",
-               "logical_type":"RID",
-               "reference_to": "people",
-               "field_name":"creator_id"
-            },
-            {
-               "type":"ObjectIdType",
-               "logical_type":"RID",
-               "reference_to": "people",
-               "field_name":"reporter_id"
-            },
-            {
-               "type":"StringType",
-               "logical_type":"Name",
-               "field_name":"issue_type"
-            },
-            {
-               "type":"StringType",
-               "logical_type":"Name",
-               "field_name":"priority"
-            },
-            {
-               "type":"StringType",
-               "logical_type":"Name",
-               "field_name":"status"
-            },
-            {
-               "sub_type": "StringType",
-               "type":"ArrayType",
-               "logical_type":"Name",
-               "field_name":"affects_versions"
-            },
-            {
-               "sub_type": "StringType",
-               "type":"ArrayType",
-               "logical_type":"Name",
-               "field_name":"components"
-            },
-            {
-               "sub_type": "StringType",
-               "type":"ArrayType",
-               "logical_type":"Name",
-               "field_name":"labels"
-            },
-            {
-               "type":"StringType",
-               "logical_type":"Name",
-               "field_name":"resolution"
-            },
-            {
-               "sub_type": "StringType",
-               "type":"ArrayType",
-               "logical_type":"Name",
-               "field_name":"fix_versions"
-            },
-            {
-               "type":"ObjectIdType",
-               "logical_type":"RID",
-               "reference_to": "people",
-               "field_name":"assignee"
-            },
-            {
-               "type":"IntegerType",
-               "logical_type":"Name",
-               "field_name":"original_time_estimate"
-            },
-            {
-               "type":"StructType",
-               "logical_type":"Name",
-               "field_name":"issue_links",
-                "fields": [
-                  {
-                     "type":"ObjectIdType",
-                     "logical_type":"RID",
-                     "reference_to": "issue",
-                     "field_name":"issue_id"
-                  },
-                  {
-                     "type":"StringType",
-                     "logical_type":"Name",
-                     "field_name":"type"
-                  },
-                  {
-                     "type":"StringType",
-                     "logical_type":"Name",
-                     "field_name":"effect"
-                  }
-                ]
-            },
-            {
-               "type":"StringType",
-               "logical_type":"Name",
-               "field_name":"environment"
+               "field_name":"last_updated"
             }
          ],
-         "collection_name":"issue"
-      },
-      {  
-         "fields":[  
-            {  
-               "type":"ObjectIdType",
-               "logical_type":"OID",
-               "field_name":"_id"
-            },
-            {  
-               "type":"IntegerType",
-               "logical_type":"ID",
-               "field_name":"system_id"
-            },
-            {  
-               "type":"ObjectIdType",
-               "logical_type":"RID",
-               "reference_to": "issue",
-               "field_name":"issue_id"
-            },
-            {  
-               "type":"ObjectIdType",
-               "logical_type":"RID",
-               "reference_to": "people",
-               "field_name":"author_id"
-            },
-            {  
-               "type":"StringType",
-               "logical_type":"Name",
-               "field_name":"comment"
-            },
-            {  
-               "type":"DateType",
-               "logical_type":"Date",
-               "field_name":"created_at"
-            }
-         ],
-         "collection_name":"issue_comment"
+         "collection_name":"mailing_list"
       },
       {  
          "fields":[  
@@ -194,42 +42,70 @@
             {  
                "type":"StringType",
                "logical_type":"ID",
-               "field_name":"system_id"
+               "field_name":"message_id"
             },
             {  
                "type":"ObjectIdType",
                "logical_type":"RID",
-               "reference_to": "issue",
-               "field_name":"issue_id"
+               "reference_to": "mailing_list",
+               "field_name":"mailing_list_id"
+            },
+            {  
+               "sub_type": "ObjectIdType",
+               "type":"ArrayType",
+               "logical_type":"RID",
+               "reference_to": "message",
+               "field_name":"reference_ids"
+            },
+            {  
+               "type":"ObjectIdType",
+               "logical_type":"RID",
+               "reference_to": "message",
+               "field_name":"in_reply_to"
+            },
+            {
+               "type":"ObjectIdType",
+               "logical_type":"RID",
+               "reference_to": "people",
+               "field_name":"from_id"
+            },
+            {
+               "sub_type": "ObjectIdType",
+               "type":"ArrayType",
+               "logical_type":"RID",
+               "reference_to": "people",
+               "field_name":"to_ids"
+            },
+            {
+               "sub_type": "ObjectIdType",
+               "type":"ArrayType",
+               "logical_type":"RID",
+               "reference_to": "people",
+               "field_name":"cc_ids"
+            },
+            {
+               "type":"StringType",
+               "logical_type":"Text",
+               "field_name":"subject"
+            },
+            {
+               "type":"StringType",
+               "logical_type":"Text",
+               "field_name":"body"
             },
             {  
                "type":"DateType",
                "logical_type":"Date",
-               "field_name":"created_at"
+               "field_name":"date"
             },
-            {  
-               "type":"StringType",
-               "logical_type":"Name",
-               "field_name":"status"
-            },
-            {  
-               "type":"ObjectIdType",
-               "logical_type":"RID",
-               "reference_to": "people",
-               "field_name":"author_id"
-            },
-            {  
-               "type":"StringType",
-               "logical_type":"Name",
-               "field_name":"old_value"
-            },
-            {  
-               "type":"StringType",
-               "logical_type":"Name",
-               "field_name":"new_value"
+            {
+               "sub_type": "StringType",
+               "type":"ArrayType",
+               "logical_type":"Text",
+               "field_name":"patches"
             }
          ],
-         "collection_name":"event"
+         "collection_name":"message"
       }
    ]
 }

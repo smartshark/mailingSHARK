@@ -27,7 +27,6 @@ class PipermailBackend(BaseDataCollector):
 
         logger.setLevel(self.debug_level)
 
-
     def download_mail_boxes(self):
         base_path = os.path.join(self.config.output_dir, self.config.get_mailing_url_identifier())
         if not os.path.exists(base_path):
@@ -44,7 +43,6 @@ class PipermailBackend(BaseDataCollector):
             else:
                 logger.info('Already got %s...' % link)
             paths.append(path)
-            break
 
         return paths
 
