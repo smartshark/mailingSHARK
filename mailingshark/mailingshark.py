@@ -12,11 +12,9 @@ from mongoengine import connect, DoesNotExist
 
 from mailingshark.datacollection.basedatacollector import BaseDataCollector
 from mailingshark.analyzer import ParsedMessage
-from email.parser import Parser
-import codecs
 import mailbox
 
-from mailingshark.helpers.mongomodels import MailingList, Project, Message, People
+from mailingshark.mongomodels import MailingList, Project, Message, People
 
 logger = logging.getLogger("main")
 
@@ -34,25 +32,20 @@ class MailingSHARK(object):
         connect(cfg.database, username=cfg.user, password=cfg.password, host=cfg.host,
                 port=cfg.port, authentication_source=cfg.authentication_db)
 
-        # Try to create the mailing_list in database
-        try:
-            mailing_list = MailingList.objects(name=cfg.mailing_url).get()
-        except DoesNotExist:
-            mailing_list = MailingList(name=cfg.mailing_url)
-        mailing_list.last_updated = datetime.datetime.now()
-        mailing_list_id = mailing_list.save().id
-
         # Get the project for which issue data is collected
         try:
-            project = Project.objects(url=cfg.project_url).get()
-            if mailing_list_id not in project.mailing_list_ids:
-                project.mailing_list_ids.append(mailing_list_id)
-                project_id = project.save().id
-            else:
-                project_id = project.id
+            project_id = Project.objects(name=cfg.project_name).get().id
         except DoesNotExist:
             logger.error('Project not found. Use vcsSHARK beforehand!')
             sys.exit(1)
+
+        # Try to create the mailing_list in database
+        try:
+            mailing_list = MailingList.objects(project_id=project_id, name=cfg.mailing_url).get()
+        except DoesNotExist:
+            mailing_list = MailingList(project_id=project_id, name=cfg.mailing_url)
+        mailing_list.last_updated = datetime.datetime.now()
+        mailing_list_id = mailing_list.save().id
 
         # Find correct backend
         backend = BaseDataCollector.find_fitting_backend(cfg, project_id)
@@ -76,7 +69,6 @@ class MailingSHARK(object):
 
                 self.__store_message(parsed_message, mailing_list_id)
                 stored_messages += 1
-
 
         logger.info("%d messages stored in database %s" % (stored_messages, cfg.database))
         logger.info("%d messages ignored by the parser" % non_parsed)
@@ -134,6 +126,7 @@ class MailingSHARK(object):
 
         self.messages[message_id] = mongo_id
         return mongo_id
+
     def _get_people(self, user):
 
         # Username is the first part of the email address
@@ -149,9 +142,6 @@ class MailingSHARK(object):
         people_id = People.objects(name=name, email=email).upsert_one(name=name, email=email, username=username).id
         self.people[username] = people_id
         return people_id
-
-
-
 
     def _unpack_files(self, file_paths, output_dir):
         for file_path in file_paths:

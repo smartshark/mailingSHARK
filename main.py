@@ -66,7 +66,7 @@ def start():
                         required=True, type=writable_dir)
     parser.add_argument('-p', '--db-port', help='Port, where the database server is listening', default=27017, type=int)
     parser.add_argument('-a', '--db-authentication', help='Name of the authentication database', default=None)
-    parser.add_argument('-u', '--url', help='URL of the VCS of the project.', required=True)
+    parser.add_argument('-n', '--project-name', help='Name of the project.', required=True)
     parser.add_argument('-m', '--mailingurl', help='URL to the bugtracking system.', required=True)
     parser.add_argument('-b', '--backend', help='Backend to use for the mailing parsing', choices=backend_choices)
     parser.add_argument('-PH', '--proxy-host', help='Proxy hostname or IP address.', default=None)

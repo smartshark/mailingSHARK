@@ -10,7 +10,7 @@ class Config(object):
     def __init__(self, args):
         self.mailing_url = args.mailingurl.rstrip('/')
         self.backend = args.backend
-        self.project_url = args.url.rstrip('/')
+        self.project_name = args.project_name
         self.host = args.db_hostname
         self.port = args.db_port
         self.user = args.db_user
@@ -20,7 +20,7 @@ class Config(object):
         self.debug = args.debug
         self.output_dir = args.output.rstrip('/')
 
-        if args.proxy_host.startswith('http://'):
+        if args.proxy_host is not None and args.proxy_host.startswith('http://'):
             self.proxy_host = args.proxy_host[7:]
         else:
             self.proxy_host = args.proxy_host
