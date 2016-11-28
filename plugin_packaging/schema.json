@@ -1,23 +1,17 @@
 {
 "collections":[
-      {
-         "fields":[
-            {
-               "sub_type": "ObjectIdType",
-               "type":"ArrayType",
-               "logical_type":"RID",
-               "reference_to": "mailing_list",
-               "field_name":"mailing_list_ids"
-            }
-         ],
-         "collection_name":"project"
-      },
       {  
          "fields":[
             {
                "type":"ObjectIdType",
                "logical_type":"OID",
                "field_name":"_id"
+            },
+            {
+               "type":"ObjectIdType",
+               "logical_type":"RID",
+               "reference_to": "project",
+               "field_name":"project_id"
             },
             {
                "type":"StringType",

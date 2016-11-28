@@ -6,20 +6,14 @@
     "linux_libraries": [
     ],
     "description": "Plugin to collect data from issue tracking systems.",
-    "requires": [
-        {
-            "name": "vcsSHARK",
-            "operator": ">=",
-            "version": "0.10"
-        }
-    ],
+    "requires": [],
     "arguments": [
         {
             "name": "plugin_path",
             "required": true,
             "position": 1,
             "type": "install",
-            "description": ""
+            "description": "path to root folder of plugin"
         },
         {
             "name": "plugin_path",
@@ -71,11 +65,11 @@
             "description": "databse against which users are authenticated"
         },
         {
-            "name": "url",
+            "name": "project_name",
             "required": true,
             "position": 8,
             "type": "execute",
-            "description": "url of the project, to which the issue tracking system belongs"
+            "description": "name of the project to which the mailing list belongs"
         },
         {
             "name": "mailingurl",
@@ -124,7 +118,7 @@
             "required": true,
             "position": 15,
             "type": "execute",
-            "description": "password of the proxy"
+            "description": "temporary directory that can be used for the output"
         },
         {
             "name": "debug",
