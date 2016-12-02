@@ -7,6 +7,22 @@
     ],
     "description": "Plugin to collect data from issue tracking systems.",
     "requires": [],
+    "created_collections": [
+		{
+			"name": "mailing_list",
+			"shard_key": {"name": "hashed"}
+		},
+        {
+			"name": "message",
+			"shard_key": {"message_id": 1, "mailing_list_id": 1},
+			"unique": true
+		},
+        {
+			"name": "people",
+			"shard_key": {"email": 1, "name": 1},
+			"unique": true
+		}
+	],
     "arguments": [
         {
             "name": "plugin_path",
