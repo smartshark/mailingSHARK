@@ -5,126 +5,149 @@
             {
                "type":"ObjectIdType",
                "logical_type":"OID",
-               "field_name":"_id"
+               "field_name":"_id",
+               "desc": "Identifier of the document"
             },
             {
                "type":"ObjectIdType",
                "logical_type":"RID",
                "reference_to": "project",
-               "field_name":"project_id"
+               "field_name":"project_id",
+               "desc": "ObjectID that links to the project, to which this mailing list belongs"
             },
             {
                "type":"StringType",
                "logical_type":"Name",
-               "field_name":"name"
+               "field_name":"name",
+               "desc": "Name of the mailing list"
             },
             {
                "type":"DateType",
                "logical_type":"Date",
-               "field_name":"last_updated"
+               "field_name":"last_updated",
+               "desc": "Date, which was the last time data was collected from this list"
             }
          ],
-         "collection_name":"mailing_list"
+         "collection_name":"mailing_list",
+         "desc": "Contains all mailing list from which data was collected"
       },
       {
          "fields":[
             {
                "type":"ObjectIdType",
                "logical_type":"OID",
-               "field_name":"_id"
+               "field_name":"_id",
+               "desc": "Identifier of the document"
             },
             {
                "type":"StringType",
                "logical_type":"Other",
-               "field_name":"email"
+               "field_name":"email",
+               "desc": "Email address of the person"
             },
             {
                "type":"StringType",
                "logical_type":"Name",
-               "field_name":"name"
+               "field_name":"name",
+               "desc": "Name of the person"
             },
             {
                "type":"StringType",
                "logical_type":"Name",
-               "field_name":"username"
+               "field_name":"username",
+               "desc": "Username of the person"
             }
          ],
-         "collection_name":"people"
+         "collection_name":"people",
+         "desc": "This collection contains all persons that worked within the project (e.g., contributing a commit)"
       },
       {  
          "fields":[  
             {  
                "type":"ObjectIdType",
                "logical_type":"OID",
-               "field_name":"_id"
+               "field_name":"_id",
+               "desc": "Identifier of the document"
             },
             {  
                "type":"StringType",
                "logical_type":"ID",
-               "field_name":"message_id"
+               "field_name":"message_id",
+               "desc": "Identifier of the email message (see: https://cr.yp.to/immhf/thread.html)"
             },
             {  
                "type":"ObjectIdType",
                "logical_type":"RID",
                "reference_to": "mailing_list",
-               "field_name":"mailing_list_id"
+               "field_name":"mailing_list_id",
+               "desc": "ObjectID that links to the mailing list to which this message belongs"
             },
             {  
                "sub_type": "ObjectIdType",
                "type":"ArrayType",
                "logical_type":"RID",
                "reference_to": "message",
-               "field_name":"reference_ids"
+               "field_name":"reference_ids",
+               "desc": "List of ObjectIDs of messages that are mentioned in the reference header of the email (see: https://cr.yp.to/immhf/thread.html)"
             },
             {  
                "type":"ObjectIdType",
                "logical_type":"RID",
                "reference_to": "message",
-               "field_name":"in_reply_to"
+               "field_name":"in_reply_to",
+               "desc": "List of ObjectIDs of messages that are mentioned in the in-reply-to header of the email (see: https://cr.yp.to/immhf/thread.html)"
             },
             {
                "type":"ObjectIdType",
                "logical_type":"RID",
                "reference_to": "people",
-               "field_name":"from_id"
+               "field_name":"from_id",
+               "desc": "ObjectID of one person that is mentioned in the from header of the email (see: https://cr.yp.to/immhf/thread.html)"
             },
             {
                "sub_type": "ObjectIdType",
                "type":"ArrayType",
                "logical_type":"RID",
                "reference_to": "people",
-               "field_name":"to_ids"
+               "field_name":"to_ids",
+               "desc": "List of ObjectIDs of people that are mentioned in the to header of the email"
             },
             {
                "sub_type": "ObjectIdType",
                "type":"ArrayType",
                "logical_type":"RID",
                "reference_to": "people",
-               "field_name":"cc_ids"
+               "field_name":"cc_ids",
+               "desc": "List of ObjectIDs of people that are mentioned in the cc header of the email"
             },
             {
                "type":"StringType",
                "logical_type":"Text",
-               "field_name":"subject"
+               "field_name":"subject",
+               "desc": "Subject of the email"
             },
             {
                "type":"StringType",
                "logical_type":"Text",
-               "field_name":"body"
+               "field_name":"body",
+               "desc": "Actual body of the email"
             },
             {  
                "type":"DateType",
                "logical_type":"Date",
-               "field_name":"date"
+               "field_name":"date",
+               "desc": "Date on which the email was sent"
             },
             {
                "sub_type": "StringType",
                "type":"ArrayType",
                "logical_type":"Text",
-               "field_name":"patches"
+               "field_name":"patches",
+               "desc": "Patches of the email"
             }
          ],
-         "collection_name":"message"
+         "collection_name":"message",
+         "desc": "Collection that contain the actual messages that were sent on the mailing list(s)"
       }
    ]
 }
