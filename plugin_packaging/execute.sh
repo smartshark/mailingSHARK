@@ -1,5 +1,8 @@
 #!/bin/sh
-COMMAND="python3.5 ${1}/main.py --db-database ${4} --db-hostname ${5} --db-port ${6} --project-name ${8} --mailingurl ${9} --backend ${10} --output ${15}"
+NEW_UUID=$(cat /dev/urandom | tr -dc 'a-zA-Z0-9' | fold -w 32 | head -n 1)
+mkdir "/dev/shm/$NEW_UUID"
+
+COMMAND="python3.5 ${1}/main.py --db-database ${4} --db-hostname ${5} --db-port ${6} --project-name ${8} --mailingurl ${9} --backend ${10} --output /dev/shm/$NEW_UUID"
 
 if [ ! -z ${2+x} ] && [ ${2} != "None" ]; then
 COMMAND="$COMMAND --db-user ${2}"
@@ -34,3 +37,5 @@ COMMAND="$COMMAND --debug ${16}"
 fi
 
 $COMMAND
+
+rm -rf "/dev/shm/$NEW_UUID"
