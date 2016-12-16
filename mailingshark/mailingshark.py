@@ -58,7 +58,7 @@ class MailingSHARK(object):
         boxes_to_analyze = self._unpack_files(found_files, cfg.temporary_dir)
         logger.info("Analyzing the following files: %s" % boxes_to_analyze)
 
-        stored_messages, non_parsed = (0, 0)
+        stored_messages, non_stored = (0, 0)
         for path_to_box in boxes_to_analyze:
             box = mailbox.mbox(path_to_box, create=False)
             logger.info("Analyzing: %s" % path_to_box)
@@ -66,15 +66,19 @@ class MailingSHARK(object):
                 parsed_message = ParsedMessage(cfg, msg)
                 logger.debug('Got the following message: %s' % parsed_message)
 
-                self.__store_message(parsed_message, mailing_list_id)
-                stored_messages += 1
+                try:
+                    self.__store_message(parsed_message, mailing_list_id)
+                    stored_messages += 1
+                except Exception:
+                    non_stored += 1
+
 
         # Update mailing list
         mailing_list.last_updated = datetime.datetime.now()
         mailing_list.save()
 
         logger.info("%d messages stored in database %s" % (stored_messages, cfg.database))
-        logger.info("%d messages ignored by the parser" % non_parsed)
+        logger.info("%d messages ignored by the parser" % non_stored)
 
         elapsed = timeit.default_timer() - start_time
         logger.info("Execution time: %0.5f s" % elapsed)
