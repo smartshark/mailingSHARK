@@ -30,12 +30,11 @@ class Config(object):
         self.proxy_password = args.proxy_password
 
         self.temporary_dir = os.path.join(self.output_dir, 'ready')
-
-        #self._validate_config()
+        self._validate_config()
 
     def get_mailing_url_identifier(self):
         parsed_url = urlparse(self.mailing_url)
-        return parsed_url.netloc+'/'+parsed_url.path
+        return parsed_url.netloc+parsed_url.path
 
     def _validate_config(self):
         if not os.path.exists(self.temporary_dir):

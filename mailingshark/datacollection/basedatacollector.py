@@ -19,7 +19,7 @@ class BaseDataCollector(metaclass=abc.ABCMeta):
             self.debug_level = self.config.get_debug_level()
 
     @abc.abstractmethod
-    def download_mail_boxes(self):
+    def download_mail_boxes(self, mailing_list):
         pass
 
     @staticmethod

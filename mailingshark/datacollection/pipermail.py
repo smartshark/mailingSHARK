@@ -7,6 +7,7 @@ import sys
 import os
 from bs4 import BeautifulSoup
 
+from mailingshark.datacollection.common import find_month_were_mailing_list_was_last_parsed
 from mailingshark.datacollection.basedatacollector import BaseDataCollector
 
 
@@ -16,6 +17,7 @@ COMPRESSED_TYPES = ['.gz', '.bz2', '.zip', '.tar',
                     '.tar.gz', '.tar.bz2', '.tgz', '.tbz']
 ACCEPTED_TYPES = ['.mbox', '.txt']
 MOD_MBOX_THREAD_STR = "/thread"
+
 
 class PipermailBackend(BaseDataCollector):
     @property
@@ -27,22 +29,29 @@ class PipermailBackend(BaseDataCollector):
 
         logger.setLevel(self.debug_level)
 
-    def download_mail_boxes(self):
+    def download_mail_boxes(self, mailing_list):
         base_path = os.path.join(self.config.output_dir, self.config.get_mailing_url_identifier())
         if not os.path.exists(base_path):
             os.makedirs(base_path)
 
         links = self._get_links()
         paths = []
-
+        already_parsed = True
         for link in links:
             path = os.path.join(base_path, link.split('/')[-1])
-            if not os.path.isfile(path):
-                logger.info('Downloading %s...' % link)
-                urllib.request.urlretrieve(link, path)
-            else:
-                logger.info('Already got %s...' % link)
-            paths.append(path)
+            month = find_month_were_mailing_list_was_last_parsed(link, mailing_list.last_updated)
+            if month is not None:
+                already_parsed = False
+
+            if not already_parsed:
+                paths.append(path)
+                if not os.path.isfile(path):
+                    logger.info('Downloading %s...' % link)
+                    response = requests.get(link, proxies=self.config.get_proxy_dictionary())
+                    with open(path, 'wb') as target_file:
+                        target_file.write(response.content)
+                else:
+                    logger.info('Already got %s...' % link)
 
         return paths
 

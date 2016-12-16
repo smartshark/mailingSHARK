@@ -44,7 +44,6 @@ class MailingSHARK(object):
             mailing_list = MailingList.objects(project_id=project_id, name=cfg.mailing_url).get()
         except DoesNotExist:
             mailing_list = MailingList(project_id=project_id, name=cfg.mailing_url)
-        mailing_list.last_updated = datetime.datetime.now()
         mailing_list_id = mailing_list.save().id
 
         # Find correct backend
@@ -52,7 +51,7 @@ class MailingSHARK(object):
         logger.debug("Using backend: %s" % backend.identifier)
 
         # Get a list of all file paths to boxes
-        found_files = backend.download_mail_boxes()
+        found_files = backend.download_mail_boxes(mailing_list)
         logger.debug("Got the following files: %s" % found_files)
 
         # Unpack boxes (if necessary)
@@ -69,6 +68,10 @@ class MailingSHARK(object):
 
                 self.__store_message(parsed_message, mailing_list_id)
                 stored_messages += 1
+
+        # Update mailing list
+        mailing_list.last_updated = datetime.datetime.now()
+        mailing_list.save()
 
         logger.info("%d messages stored in database %s" % (stored_messages, cfg.database))
         logger.info("%d messages ignored by the parser" % non_parsed)
@@ -160,8 +163,9 @@ class MailingSHARK(object):
                 with open(path_to_store, 'wb') as f:
                     f.write(s)
 
-            #if file_path.endswith('.mbox'):
-            #    shutil.move(file_path, os.path.join(output_dir, os.path.basename(file_path)))
+            if file_path.endswith('.mbox'):
+                print(file_path)
+                shutil.move(file_path, os.path.join(output_dir, os.path.basename(file_path)))
 
         # Find all extracted files, which end with .txt or .mbox
         new_paths = []
