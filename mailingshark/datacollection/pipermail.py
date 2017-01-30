@@ -1,9 +1,6 @@
-from html.parser import HTMLParser
 import logging
 
 import requests
-import urllib.request
-import sys
 import os
 from bs4 import BeautifulSoup
 

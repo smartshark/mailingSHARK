@@ -1,18 +1,23 @@
-import os
 import sys
 
 from setuptools import setup, find_packages
 
+if not sys.version_info[0] == 3:
+    print('only python3 supported!')
+    sys.exit(1)
+
 setup(
     name='mailingSHARK',
-    version='0.1',
-    description='Collect data from mailing lists',
-    install_requires=['mongoengine', 'pymongo', 'requests'],
+    version='1.0.0',
     author='Fabian Trautsch',
-    author_email='ftrautsch@googlemail.com',
+    author_email='trautsch@cs.uni-goettingen.de',
+    description='Collect data from issue mailing lists',
+    install_requires=['mongoengine', 'pymongo', 'requests', 'pycoshark>=1.0.0'],
+    dependency_links=['git+https://github.com/smartshark/pycoSHARK.git@1.0.0#egg=pycoshark-1.0.0'],
     url='https://github.com/smartshark/mailingSHARK',
-    test_suite='tests',
+    download_url='https://github.com/smartshark/mailingSHARK/zipball/master',
     packages=find_packages(),
+    test_suite ='tests',
     zip_safe=False,
     include_package_data=True,
     classifiers=[
@@ -25,4 +30,5 @@ setup(
         "Topic :: Software Development :: Libraries :: Python Modules",
     ],
 )
+
 

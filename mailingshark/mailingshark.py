@@ -14,7 +14,7 @@ from mailingshark.datacollection.basedatacollector import BaseDataCollector
 from mailingshark.analyzer import ParsedMessage
 import mailbox
 
-from mailingshark.mongomodels import MailingList, Project, Message, People
+from pycoshark.mongomodels import MailingList, Project, Message, People
 
 logger = logging.getLogger("main")
 
