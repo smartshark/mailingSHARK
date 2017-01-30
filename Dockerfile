@@ -2,6 +2,7 @@ FROM ubuntu:16.04
 
 
 # Install dependencies
+RUN apt-get update
 RUN apt-get install -y build-essential wget git
 RUN apt-get install -y python3-pip python3-cffi
 
