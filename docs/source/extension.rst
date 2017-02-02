@@ -12,7 +12,7 @@ and implement the methods defined there.
 The process of chosing the backend is the following:
 
 *	Every backend gets instantiated
-
+make
 *	If the by the user choosen backend identifier matches the :func:`~mailingshark.datacollection.basedatacollector.BaseDataCollector.identifier` it is chosen
 
 There are several important things to note:
