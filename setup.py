@@ -12,7 +12,7 @@ setup(
     author='Fabian Trautsch',
     author_email='trautsch@cs.uni-goettingen.de',
     description='Collect data from issue mailing lists',
-    install_requires=['mongoengine', 'pymongo', 'requests', 'pycoshark>=1.0.0'],
+    install_requires=['mongoengine', 'pymongo', 'requests', 'bs4', 'pycoshark>=1.0.0'],
     dependency_links=['git+https://github.com/smartshark/pycoSHARK.git@1.0.0#egg=pycoshark-1.0.0'],
     url='https://github.com/smartshark/mailingSHARK',
     download_url='https://github.com/smartshark/mailingSHARK/zipball/master',

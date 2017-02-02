@@ -1,4 +1,5 @@
 mongoengine
 pymongo
 requests
+bs4
 git+https://github.com/smartshark/pycoSHARK.git@1.0.0#egg=pycoshark-1.0.0
