@@ -1,0 +1,4466 @@
+From pier@betaversion.org  Thu Dec 14 10:37:31 2000
+Return-Path: <pier@betaversion.org>
+Mailing-List: contact log4j-user-help@jakarta.apache.org; run by ezmlm
+Delivered-To: mailing list log4j-user@jakarta.apache.org
+Received: (qmail 29761 invoked from network); 14 Dec 2000 10:37:31 -0000
+Received: from dnai-216-15-97-206.cust.dnai.com (HELO kali.betaversion.org) (216.15.97.206)
+  by locus.apache.org with SMTP; 14 Dec 2000 10:37:31 -0000
+Received: from [192.168.1.102] ([192.168.1.102])
+	by kali.betaversion.org (8.9.3+Sun/8.9.3) with ESMTP id CAA22206;
+	Thu, 14 Dec 2000 02:37:46 -0800 (PST)
+User-Agent: Microsoft-Entourage/9.0.2509
+Date: Thu, 14 Dec 2000 02:37:30 -0800
+Subject: Triple LOG4J test with Reply-To header set...
+From: "Pier P. Fumagalli" <pier@betaversion.org>
+To: <log4j-cvs@jakarta.apache.org>, <log4j-dev@jakarta.apache.org>,
+        <log4j-user@jakarta.apache.org>
+Message-ID: <B65DE2EA.67B4%pier@betaversion.org>
+Mime-version: 1.0
+Organization: Apache Software Foundation
+Content-type: text/plain; charset="US-ASCII"
+Content-transfer-encoding: 7bit
+X-Spam-Rating: locus.apache.org 1.6.2 0/1000/N
+
+Triple LOG4J test with Reply-To header set...
+
+    Pier
+
+-- 
+Pier Fumagalli  <http://www.betaversion.org/>  <mailto:pier@betaversion.org>
+----------------------------------------------------------------------------
+
+
+
+From pier@betaversion.org  Thu Dec 14 10:41:31 2000
+Return-Path: <pier@betaversion.org>
+Mailing-List: contact log4j-user-help@jakarta.apache.org; run by ezmlm
+Delivered-To: mailing list log4j-user@jakarta.apache.org
+Received: (qmail 33527 invoked from network); 14 Dec 2000 10:41:31 -0000
+Received: from dnai-216-15-97-206.cust.dnai.com (HELO kali.betaversion.org) (216.15.97.206)
+  by locus.apache.org with SMTP; 14 Dec 2000 10:41:31 -0000
+Received: from [192.168.1.102] ([192.168.1.102])
+	by kali.betaversion.org (8.9.3+Sun/8.9.3) with ESMTP id CAA22252;
+	Thu, 14 Dec 2000 02:41:46 -0800 (PST)
+User-Agent: Microsoft-Entourage/9.0.2509
+Date: Thu, 14 Dec 2000 02:41:31 -0800
+Subject: The previous test didn't work correctly...
+From: "Pier P. Fumagalli" <pier@betaversion.org>
+To: <log4j-cvs@jakarta.apache.org>, <log4j-dev@jakarta.apache.org>,
+        <log4j-user@jakarta.apache.org>
+Message-ID: <B65DE3DB.67BF%pier@betaversion.org>
+Mime-version: 1.0
+Organization: Apache Software Foundation
+Content-type: text/plain; charset="US-ASCII"
+Content-transfer-encoding: 7bit
+X-Spam-Rating: locus.apache.org 1.6.2 0/1000/N
+
+Let's try it again with the reply-to set (hopefully) correctly...
+
+    Pier
+
+-- 
+Pier Fumagalli  <http://www.betaversion.org/>  <mailto:pier@betaversion.org>
+----------------------------------------------------------------------------
+
+
+
+From pier@betaversion.org  Thu Dec 14 10:44:08 2000
+Return-Path: <pier@betaversion.org>
+Mailing-List: contact log4j-user-help@jakarta.apache.org; run by ezmlm
+Delivered-To: mailing list log4j-user@jakarta.apache.org
+Received: (qmail 34667 invoked from network); 14 Dec 2000 10:44:08 -0000
+Received: from dnai-216-15-97-206.cust.dnai.com (HELO kali.betaversion.org) (216.15.97.206)
+  by locus.apache.org with SMTP; 14 Dec 2000 10:44:08 -0000
+Received: from [192.168.1.102] ([192.168.1.102])
+	by kali.betaversion.org (8.9.3+Sun/8.9.3) with ESMTP id CAA22287;
+	Thu, 14 Dec 2000 02:44:24 -0800 (PST)
+User-Agent: Microsoft-Entourage/9.0.2509
+Date: Thu, 14 Dec 2000 02:44:08 -0800
+Subject: Hopefully this should be right...
+From: "Pier P. Fumagalli" <pier@betaversion.org>
+To: <log4j-cvs@jakarta.apache.org>, <log4j-dev@jakarta.apache.org>,
+        <log4j-user@jakarta.apache.org>
+Message-ID: <B65DE478.67C3%pier@betaversion.org>
+Mime-version: 1.0
+Organization: Apache Software Foundation
+Content-type: text/plain; charset="US-ASCII"
+Content-transfer-encoding: 7bit
+X-Spam-Rating: locus.apache.org 1.6.2 0/1000/N
+
+(I hate EZMLM!) :)
+
+    Pier
+
+-- 
+Pier Fumagalli  <http://www.betaversion.org/>  <mailto:pier@betaversion.org>
+----------------------------------------------------------------------------
+
+
+
+From cgu@urbanet.ch  Thu Dec 14 14:38:25 2000
+Return-Path: <cgu@urbanet.ch>
+Mailing-List: contact log4j-user-help@jakarta.apache.org; run by ezmlm
+Delivered-To: mailing list log4j-user@jakarta.apache.org
+Received: (qmail 48059 invoked from network); 14 Dec 2000 14:38:25 -0000
+Received: from monterosa.urbanet.ch (qmailr@195.202.193.104)
+  by locus.apache.org with SMTP; 14 Dec 2000 14:38:25 -0000
+Received: (qmail 3241 invoked from network); 14 Dec 2000 14:38:23 -0000
+Received: from unknown (HELO gil.urbanet.ch) (195.202.202.140)
+  by monterosa.urbanet.ch with SMTP; 14 Dec 2000 14:38:23 -0000
+Message-Id: <5.0.0.25.0.20001214150902.00aefaa0@mail.urbanet.ch>
+X-Sender: urba19978@mail.urbanet.ch
+X-Mailer: QUALCOMM Windows Eudora Version 5.0
+Date: Thu, 14 Dec 2000 15:38:59 +0100
+To: "Guy Nirpaz" <guyn@tantian.com>
+From: Ceki Gulcu <cgu@urbanet.ch>
+Subject: Re: Is Log4j getting into Jakarta?
+Cc: <log4j-dev@jakarta.apache.org>,<log4j-user@jakarta.apache.org>
+In-Reply-To: <006e01c065d2$e316e580$0100000a@tantian.local>
+Mime-Version: 1.0
+Content-Type: multipart/alternative;
+	boundary="=====================_195335938==_.ALT"
+X-Spam-Rating: locus.apache.org 1.6.2 0/1000/N
+
+--=====================_195335938==_.ALT
+Content-Type: text/plain; charset="us-ascii"; format=flowed
+
+
+Hi Guy,
+
+It's not public yet but since you have asked: yes, log4j should become a 
+jakarta project in the next few days.
+
+There are now two new mailing lists: log4j-dev@jakarta.apache.org and 
+log4j-user@jakarta.apache.org which replace the old log4j-dev@log4j.org and 
+log4j-public@log4j.org mailing lists. The members of the old lists have 
+been automatically subscribed to the corresponding list on 
+jakarta.apache.org. The CVS repository has also moved to Apache.
+
+There is a strong push to rename the package to "org.apache.log4j". I have 
+already committed to do this for the next major log4j release scheduled for 
+1Q 2001. If you have a good reason to oppose a name change, then let us 
+know so that we can raise the issue with the apache group.  This is your 
+chance to speak up.
+
+Some Apache members have suggested abandoning the name "log4j" altogether. 
+I personally don't have a problem with that since I don't really like the 
+name log4j. I have proposed the name "cat" (for cat-egory) or equivalently 
+jakarta-cat. The package hierarchy would start at "org.apache.cat." Other 
+names/proposals are most welcome. Ceki
+
+
+
+At 15:36 14.12.2000 +0200, Guy Nirpaz wrote:
+>Hi,
+>
+>I was wondering, is Log4j going into Jakarta? If so, when?
+>
+>Thanks,
+>
+>Guy Nirpaz
+>Java Architect
+>
+>Tantian Corp.
+>guyn@tantian.com
+>
+>_______________________________________________
+>log4j-dev mailing list
+>log4j-dev@log4j.org
+>http://lists.sourceforge.net/mailman/listinfo/log4j-dev
+
+--=====================_195335938==_.ALT
+Content-Type: text/html; charset="us-ascii"
+
+<html>
+<br>
+Hi Guy,<br>
+<br>
+It's not public yet but since you have asked: yes, log4j should become a
+jakarta project in the next few days. <br>
+<br>
+There are now two new mailing lists: log4j-dev@jakarta.apache.org and
+log4j-user@jakarta.apache.org which replace the old log4j-dev@log4j.org
+and log4j-public@log4j.org mailing lists. The members of the old lists
+have been automatically subscribed to the corresponding list on
+jakarta.apache.org. The CVS repository has also moved to Apache.<br>
+<br>
+There is a strong push to rename the package to
+&quot;org.apache.log4j&quot;. I have already committed to do this for the
+next major log4j release scheduled for 1Q 2001. If you have a good reason
+to oppose a name change, then let us know so that we can raise the issue
+with the apache group.&nbsp; This is your chance to speak up.<br>
+<br>
+Some Apache members have suggested abandoning the name &quot;log4j&quot;
+altogether. I personally don't have a problem with that since I don't
+really like the name <i>log4j</i>. I have proposed the name
+&quot;cat&quot; (for cat-egory) or equivalently jakarta-cat. The package
+hierarchy would start at &quot;org.apache.cat.&quot; Other
+names/proposals are most welcome. Ceki <br>
+<br>
+<br>
+<br>
+At 15:36 14.12.2000 +0200, Guy Nirpaz wrote:<br>
+<blockquote type=cite class=cite cite>Hi,<br>
+<br>
+I was wondering, is Log4j going into Jakarta? If so, when?<br>
+<br>
+Thanks,<br>
+<br>
+Guy Nirpaz<br>
+Java Architect<br>
+<br>
+Tantian Corp.<br>
+guyn@tantian.com<br>
+<br>
+_______________________________________________<br>
+log4j-dev mailing list<br>
+log4j-dev@log4j.org<br>
+<a href="http://lists.sourceforge.net/mailman/listinfo/log4j-dev" eudora="autourl">http://lists.sourceforge.net/mailman/listinfo/log4j-dev</a></blockquote></html>
+
+--=====================_195335938==_.ALT--
+
+
+From keithb@fgm.com  Thu Dec 14 14:43:39 2000
+Return-Path: <keithb@fgm.com>
+Mailing-List: contact log4j-user-help@jakarta.apache.org; run by ezmlm
+Delivered-To: mailing list log4j-user@jakarta.apache.org
+Received: (qmail 50857 invoked from network); 14 Dec 2000 14:43:39 -0000
+Received: from ns.fgm.com (216.1.16.66)
+  by locus.apache.org with SMTP; 14 Dec 2000 14:43:39 -0000
+Received: from minime (port1.fgm.com [216.2.55.241])
+	by ns.fgm.com (8.9.3/8.9.3) with SMTP id JAA28080;
+	Thu, 14 Dec 2000 09:43:36 -0500
+From: "Keith R. Bennett" <keithb@fgm.com>
+To: "LOG4J Users Mailing List" <log4j-user@jakarta.apache.org>
+Cc: "Keith Bennett" <keithb@fgm.com>
+Subject: RE: Is Log4j getting into Jakarta?
+Date: Thu, 14 Dec 2000 09:44:11 -0500
+Message-ID: <NDBBJDFBHKOONKOPMDMLOEMCCAAA.keithb@fgm.com>
+MIME-Version: 1.0
+Content-Type: multipart/alternative;
+	boundary="----=_NextPart_000_000B_01C065B2.698F0AA0"
+X-Priority: 3 (Normal)
+X-MSMail-Priority: Normal
+X-Mailer: Microsoft Outlook IMO, Build 9.0.2416 (9.0.2910.0)
+Importance: Normal
+X-MimeOLE: Produced By Microsoft MimeOLE V4.72.3612.1700
+In-Reply-To: <5.0.0.25.0.20001214150902.00aefaa0@mail.urbanet.ch>
+X-Spam-Rating: locus.apache.org 1.6.2 0/1000/N
+
+------=_NextPart_000_000B_01C065B2.698F0AA0
+Content-Type: text/plain;
+	charset="iso-8859-1"
+Content-Transfer-Encoding: 7bit
+
+My vote for a new name would be something indicating that the package does
+logging.  Maybe something with "log" included in it.  IMHO, the problem with
+"cat" is that it is sufficiently general to include all manner of things in
+addition to logging.
+
+- Keith
+  -----Original Message-----
+  From: Ceki Gulcu [mailto:cgu@urbanet.ch]
+
+
+   Some Apache members have suggested abandoning the name "log4j"
+altogether. I personally don't have a problem with that since I don't really
+like the name log4j. I have proposed the name "cat" (for cat-egory) or
+equivalently jakarta-cat. The package hierarchy would start at
+"org.apache.cat." Other names/proposals are most welcome. Ceki
+
+
+------=_NextPart_000_000B_01C065B2.698F0AA0
+Content-Type: text/html;
+	charset="iso-8859-1"
+Content-Transfer-Encoding: quoted-printable
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML><HEAD>
+<META http-equiv=3DContent-Type content=3D"text/html; =
+charset=3Dwindows-1252">
+<META content=3D"MSHTML 5.50.4134.600" name=3DGENERATOR></HEAD>
+<BODY>
+<DIV><FONT face=3DArial color=3D#0000ff size=3D2><SPAN =
+class=3D979164214-14122000>My=20
+vote for a new name would be something indicating that the package does=20
+logging.&nbsp; Maybe something with "log" included in it.&nbsp; IMHO, =
+the=20
+problem with "cat" is that it is sufficiently general to include all =
+manner of=20
+things in addition to logging.</SPAN></FONT></DIV>
+<DIV><FONT face=3DArial color=3D#0000ff size=3D2><SPAN=20
+class=3D979164214-14122000></SPAN></FONT>&nbsp;</DIV>
+<DIV><FONT face=3DArial color=3D#0000ff size=3D2><SPAN =
+class=3D979164214-14122000>-=20
+Keith</SPAN></FONT></DIV>
+<BLOCKQUOTE dir=3Dltr=20
+style=3D"PADDING-LEFT: 5px; MARGIN-LEFT: 5px; BORDER-LEFT: #0000ff 2px =
+solid; MARGIN-RIGHT: 0px">
+  <DIV class=3DOutlookMessageHeader dir=3Dltr align=3Dleft><FONT =
+face=3DTahoma=20
+  size=3D2>-----Original Message-----<BR><B>From:</B> Ceki Gulcu=20
+  [mailto:cgu@urbanet.ch]<BR></FONT></DIV>
+  <DIV><SPAN class=3D979164214-14122000><FONT face=3DArial =
+color=3D#0000ff=20
+  size=3D2>&nbsp;</FONT></SPAN></DIV>
+  <DIV><SPAN class=3D979164214-14122000>&nbsp;</SPAN>Some Apache members =
+have=20
+  suggested abandoning the name "log4j" altogether. I personally don't =
+have a=20
+  problem with that since I don't really like the name <I>log4j</I>. I =
+have=20
+  proposed the name "cat" (for cat-egory) or equivalently jakarta-cat. =
+The=20
+  package hierarchy would start at "org.apache.cat." Other =
+names/proposals are=20
+  most welcome. Ceki <BR><FONT face=3DArial color=3D#0000ff=20
+size=3D2></FONT></DIV></BLOCKQUOTE></BODY></HTML>
+
+------=_NextPart_000_000B_01C065B2.698F0AA0--
+
+
+From cgu@urbanet.ch  Thu Dec 14 15:36:44 2000
+Return-Path: <cgu@urbanet.ch>
+Mailing-List: contact log4j-user-help@jakarta.apache.org; run by ezmlm
+Delivered-To: mailing list log4j-user@jakarta.apache.org
+Received: (qmail 89911 invoked from network); 14 Dec 2000 15:36:44 -0000
+Received: from monterosa.urbanet.ch (qmailr@195.202.193.104)
+  by locus.apache.org with SMTP; 14 Dec 2000 15:36:44 -0000
+Received: (qmail 20686 invoked from network); 14 Dec 2000 15:36:38 -0000
+Received: from unknown (HELO gil.urbanet.ch) (195.202.202.140)
+  by monterosa.urbanet.ch with SMTP; 14 Dec 2000 15:36:38 -0000
+Message-Id: <5.0.0.25.0.20001214163549.00aa65f8@mail.urbanet.ch>
+X-Sender: urba19978@mail.urbanet.ch
+X-Mailer: QUALCOMM Windows Eudora Version 5.0
+Date: Thu, 14 Dec 2000 16:37:14 +0100
+To: "LOG4J Users Mailing List" <log4j-user@jakarta.apache.org>
+From: Ceki Gulcu <cgu@urbanet.ch>
+Subject: RE: Is Log4j getting into Jakarta?
+Cc: "LOG4J Users Mailing List" <log4j-user@jakarta.apache.org>,
+ "Keith Bennett" <keithb@fgm.com>
+In-Reply-To: <NDBBJDFBHKOONKOPMDMLOEMCCAAA.keithb@fgm.com>
+References: <5.0.0.25.0.20001214150902.00aefaa0@mail.urbanet.ch>
+Mime-Version: 1.0
+Content-Type: multipart/alternative;
+	boundary="=====================_198831604==_.ALT"
+X-Spam-Rating: locus.apache.org 1.6.2 0/1000/N
+
+--=====================_198831604==_.ALT
+Content-Type: text/plain; charset="us-ascii"; format=flowed
+
+
+Keith,
+
+How about "catlog"? Sounds much like catalog but I can't tell if that's 
+good or bad. Cheers, Ceki
+
+At 09:44 14.12.2000 -0500, Keith R. Bennett wrote:
+>My vote for a new name would be something indicating that the package does 
+>logging.  Maybe something with "log" included in it.  IMHO, the problem 
+>with "cat" is that it is sufficiently general to include all manner of 
+>things in addition to logging.
+>
+>- Keith
+>-----Original Message-----
+>From: Ceki Gulcu [mailto:cgu@urbanet.ch]
+>
+>  Some Apache members have suggested abandoning the name "log4j" 
+> altogether. I personally don't have a problem with that since I don't 
+> really like the name log4j. I have proposed the name "cat" (for 
+> cat-egory) or equivalently jakarta-cat. The package hierarchy would start 
+> at "org.apache.cat." Other names/proposals are most welcome. Ceki
+
+--=====================_198831604==_.ALT
+Content-Type: text/html; charset="us-ascii"
+
+<html>
+<br>
+Keith,<br>
+<br>
+How about &quot;catlog&quot;? Sounds much like catalog but I can't tell
+if that's good or bad. Cheers, Ceki<br>
+<br>
+At 09:44 14.12.2000 -0500, Keith R. Bennett wrote:<br>
+<blockquote type=cite class=cite cite><font face="arial" size=2 color="#0000FF">My
+vote for a new name would be something indicating that the package does
+logging.&nbsp; Maybe something with &quot;log&quot; included in it.&nbsp;
+IMHO, the problem with &quot;cat&quot; is that it is sufficiently general
+to include all manner of things in addition to logging.</font><br>
+&nbsp;<br>
+<font face="arial" size=2 color="#0000FF">- Keith</font>
+<dl><font face="tahoma" size=2>
+<dd>-----Original Message-----
+<dd>From:</b> Ceki Gulcu
+[<a href="mailto:cgu@urbanet.ch" eudora="autourl">mailto:cgu@urbanet.ch</a>]</font><font face="arial" size=2 color="#0000FF">
+<dd>&nbsp;</font>
+<dd>&nbsp;Some Apache members have suggested abandoning the name
+&quot;log4j&quot; altogether. I personally don't have a problem with that
+since I don't really like the name log4j</i>. I have proposed the name
+&quot;cat&quot; (for cat-egory) or equivalently jakarta-cat. The package
+hierarchy would start at &quot;org.apache.cat.&quot; Other
+names/proposals are most welcome. Ceki 
+</dl></blockquote></html>
+
+--=====================_198831604==_.ALT--
+
+
+From cgu@urbanet.ch  Thu Dec 14 15:36:44 2000
+Return-Path: <cgu@urbanet.ch>
+Mailing-List: contact log4j-user-help@jakarta.apache.org; run by ezmlm
+Delivered-To: mailing list log4j-user@jakarta.apache.org
+Received: (qmail 89917 invoked from network); 14 Dec 2000 15:36:44 -0000
+Received: from monterosa.urbanet.ch (qmailr@195.202.193.104)
+  by locus.apache.org with SMTP; 14 Dec 2000 15:36:44 -0000
+Received: (qmail 20686 invoked from network); 14 Dec 2000 15:36:38 -0000
+Received: from unknown (HELO gil.urbanet.ch) (195.202.202.140)
+  by monterosa.urbanet.ch with SMTP; 14 Dec 2000 15:36:38 -0000
+Message-Id: <5.0.0.25.0.20001214163549.00aa65f8@mail.urbanet.ch>
+X-Sender: urba19978@mail.urbanet.ch
+X-Mailer: QUALCOMM Windows Eudora Version 5.0
+Date: Thu, 14 Dec 2000 16:37:14 +0100
+To: "LOG4J Users Mailing List" <log4j-user@jakarta.apache.org>
+From: Ceki Gulcu <cgu@urbanet.ch>
+Subject: RE: Is Log4j getting into Jakarta?
+Cc: "LOG4J Users Mailing List" <log4j-user@jakarta.apache.org>,
+ "Keith Bennett" <keithb@fgm.com>
+In-Reply-To: <NDBBJDFBHKOONKOPMDMLOEMCCAAA.keithb@fgm.com>
+References: <5.0.0.25.0.20001214150902.00aefaa0@mail.urbanet.ch>
+Mime-Version: 1.0
+Content-Type: multipart/alternative;
+	boundary="=====================_198831604==_.ALT"
+X-Spam-Rating: locus.apache.org 1.6.2 0/1000/N
+
+--=====================_198831604==_.ALT
+Content-Type: text/plain; charset="us-ascii"; format=flowed
+
+
+Keith,
+
+How about "catlog"? Sounds much like catalog but I can't tell if that's 
+good or bad. Cheers, Ceki
+
+At 09:44 14.12.2000 -0500, Keith R. Bennett wrote:
+>My vote for a new name would be something indicating that the package does 
+>logging.  Maybe something with "log" included in it.  IMHO, the problem 
+>with "cat" is that it is sufficiently general to include all manner of 
+>things in addition to logging.
+>
+>- Keith
+>-----Original Message-----
+>From: Ceki Gulcu [mailto:cgu@urbanet.ch]
+>
+>  Some Apache members have suggested abandoning the name "log4j" 
+> altogether. I personally don't have a problem with that since I don't 
+> really like the name log4j. I have proposed the name "cat" (for 
+> cat-egory) or equivalently jakarta-cat. The package hierarchy would start 
+> at "org.apache.cat." Other names/proposals are most welcome. Ceki
+
+--=====================_198831604==_.ALT
+Content-Type: text/html; charset="us-ascii"
+
+<html>
+<br>
+Keith,<br>
+<br>
+How about &quot;catlog&quot;? Sounds much like catalog but I can't tell
+if that's good or bad. Cheers, Ceki<br>
+<br>
+At 09:44 14.12.2000 -0500, Keith R. Bennett wrote:<br>
+<blockquote type=cite class=cite cite><font face="arial" size=2 color="#0000FF">My
+vote for a new name would be something indicating that the package does
+logging.&nbsp; Maybe something with &quot;log&quot; included in it.&nbsp;
+IMHO, the problem with &quot;cat&quot; is that it is sufficiently general
+to include all manner of things in addition to logging.</font><br>
+&nbsp;<br>
+<font face="arial" size=2 color="#0000FF">- Keith</font>
+<dl><font face="tahoma" size=2>
+<dd>-----Original Message-----
+<dd>From:</b> Ceki Gulcu
+[<a href="mailto:cgu@urbanet.ch" eudora="autourl">mailto:cgu@urbanet.ch</a>]</font><font face="arial" size=2 color="#0000FF">
+<dd>&nbsp;</font>
+<dd>&nbsp;Some Apache members have suggested abandoning the name
+&quot;log4j&quot; altogether. I personally don't have a problem with that
+since I don't really like the name log4j</i>. I have proposed the name
+&quot;cat&quot; (for cat-egory) or equivalently jakarta-cat. The package
+hierarchy would start at &quot;org.apache.cat.&quot; Other
+names/proposals are most welcome. Ceki 
+</dl></blockquote></html>
+
+--=====================_198831604==_.ALT--
+
+
+From dkarr@tcsi.com  Thu Dec 14 16:16:30 2000
+Return-Path: <dkarr@tcsi.com>
+Mailing-List: contact log4j-user-help@jakarta.apache.org; run by ezmlm
+Delivered-To: mailing list log4j-user@jakarta.apache.org
+Received: (qmail 32524 invoked from network); 14 Dec 2000 16:16:30 -0000
+Received: from tcsi.com (HELO gateway.tcsi.com) (137.134.47.2)
+  by locus.apache.org with SMTP; 14 Dec 2000 16:16:30 -0000
+Received: from wa-ms.tcsi.com ([137.134.52.20])
+	by gateway.tcsi.com (8.9.1b+Sun/8.9.1) with ESMTP id IAA24225
+	for <log4j-user@jakarta.apache.org>; Thu, 14 Dec 2000 08:16:28 -0800 (PST)
+Received: from cheetos.tcsi.com (cheetos [137.134.52.110]) by wa-ms.tcsi.com (8.8.5/8.8.3) with SMTP id IAA18503 for <log4j-user@jakarta.apache.org>; Thu, 14 Dec 2000 08:18:07 -0800 (PST)
+To: "LOG4J Users Mailing List" <log4j-user@jakarta.apache.org>
+Subject: Re: Is Log4j getting into Jakarta?
+References: <5.0.0.25.0.20001214150902.00aefaa0@mail.urbanet.ch>
+	<5.0.0.25.0.20001214163549.00aa65f8@mail.urbanet.ch>
+From: dkarr@tcsi.com (David M. Karr)
+Date: 14 Dec 2000 08:14:41 -0800
+In-Reply-To: Ceki Gulcu's message of "Thu, 14 Dec 2000 16:37:14 +0100"
+Message-ID: <uybsuf2d5a.fsf@tcsi.com>
+Lines: 18
+User-Agent: Gnus/5.0807 (Gnus v5.8.7) Emacs/20.6
+MIME-Version: 1.0
+Content-Type: text/plain; charset=us-ascii
+X-Spam-Rating: locus.apache.org 1.6.2 0/1000/N
+
+>>>>> "Ceki" == Ceki Gulcu <cgu@urbanet.ch> writes:
+
+  >> -----Original Message-----
+  >> From: Ceki Gulcu [mailto:cgu@urbanet.ch]
+  >> 
+  >> Some Apache members have suggested abandoning the name "log4j"
+  >> altogether. I personally don't have a problem with that since I
+  >> don't really like the name log4j. I have proposed the name "cat"
+  >> (for cat-egory) or equivalently jakarta-cat. The package hierarchy
+  >> would start at "org.apache.cat." Other names/proposals are most
+
+Frankly, I think "log4j" is perfectly fine.  You've developed name
+recognition for it.  Changing the name has very little value.
+
+-- 
+===============================================================================
+David M. Karr     ; dkarr@tcsi.com  ; w:(425)487-8312 ; TCSI & Best Consulting
+Software Engineer ; Unix/Java/C++/X ; BrainBench CJ12P (#12004)
+
+
+From cstaylor@pacbell.net  Thu Dec 14 17:02:27 2000
+Return-Path: <cstaylor@pacbell.net>
+Mailing-List: contact log4j-user-help@jakarta.apache.org; run by ezmlm
+Delivered-To: mailing list log4j-user@jakarta.apache.org
+Received: (qmail 80516 invoked from network); 14 Dec 2000 17:02:27 -0000
+Received: from unknown (HELO hermes.previewsystems.com) (208.50.148.79)
+  by locus.apache.org with SMTP; 14 Dec 2000 17:02:27 -0000
+Received: from [192.168.30.123] ([192.168.30.123]) by
+          hermes.previewsystems.com (Netscape Messaging Server 4.15) with
+          ESMTP id G5KHZD00.EGE for <log4j-user@jakarta.apache.org>; Thu,
+          14 Dec 2000 09:02:01 -0800 
+User-Agent: Microsoft-Entourage/9.0.2509
+Date: Thu, 14 Dec 2000 09:02:01 -0800
+Subject: Re: Is Log4j getting into Jakarta?
+From: Christopher Taylor <cstaylor@pacbell.net>
+To: LOG4J Users Mailing List <log4j-user@jakarta.apache.org>
+Message-ID: <B65E3D09.16D%cstaylor@pacbell.net>
+In-Reply-To: <uybsuf2d5a.fsf@tcsi.com>
+Mime-version: 1.0
+Content-type: text/plain; charset="US-ASCII"
+Content-transfer-encoding: 7bit
+X-Spam-Rating: locus.apache.org 1.6.2 0/1000/N
+
+On 12/14/00 8:14 AM, "David M. Karr" <dkarr@tcsi.com> wrote:
+
+>>>>>> "Ceki" == Ceki Gulcu <cgu@urbanet.ch> writes:
+> 
+>>> -----Original Message-----
+>>> From: Ceki Gulcu [mailto:cgu@urbanet.ch]
+>>> 
+>>> Some Apache members have suggested abandoning the name "log4j"
+>>> altogether. I personally don't have a problem with that since I
+>>> don't really like the name log4j. I have proposed the name "cat"
+>>> (for cat-egory) or equivalently jakarta-cat. The package hierarchy
+>>> would start at "org.apache.cat." Other names/proposals are most
+> 
+> Frankly, I think "log4j" is perfectly fine.  You've developed name
+> recognition for it.  Changing the name has very little value.
+
+Yeah, I think the name should stay Log4J too.
+
+-Chris
+
+
+From gdoshi@softhome.net  Thu Dec 14 17:18:05 2000
+Return-Path: <gdoshi@softhome.net>
+Mailing-List: contact log4j-user-help@jakarta.apache.org; run by ezmlm
+Delivered-To: mailing list log4j-user@jakarta.apache.org
+Received: (qmail 98560 invoked from network); 14 Dec 2000 17:18:05 -0000
+Received: from tango.softhome.net (204.144.231.49)
+  by locus.apache.org with SMTP; 14 Dec 2000 17:18:05 -0000
+Received: (qmail 18731 invoked by uid 417); 14 Dec 2000 17:21:15 -0000
+Received: from unknown (HELO gdoshi) (206.138.153.250)
+  by smtpb.softhome.net with SMTP; 14 Dec 2000 17:21:15 -0000
+Message-ID: <001501c065f2$1a29ec60$4d05a8c0@noblestar.com>
+From: "Gunjan Doshi" <gdoshi@softhome.net>
+To: "LOG4J Users Mailing List" <log4j-user@jakarta.apache.org>
+References: <5.0.0.25.0.20001214150902.00aefaa0@mail.urbanet.ch><5.0.0.25.0.20001214163549.00aa65f8@mail.urbanet.ch> <uybsuf2d5a.fsf@tcsi.com>
+Subject: Re: Is Log4j getting into Jakarta?
+Date: Thu, 14 Dec 2000 12:20:03 -0500
+MIME-Version: 1.0
+Content-Type: text/plain;
+	charset="iso-8859-1"
+Content-Transfer-Encoding: 7bit
+X-Priority: 3
+X-MSMail-Priority: Normal
+X-Mailer: Microsoft Outlook Express 5.50.4133.2400
+X-MimeOLE: Produced By Microsoft MimeOLE V5.50.4133.2400
+X-Spam-Rating: locus.apache.org 1.6.2 0/1000/N
+
+I agree to this too. Log4j is fine, it conveys the message.
+----- Original Message -----
+From: "David M. Karr" <dkarr@tcsi.com>
+To: "LOG4J Users Mailing List" <log4j-user@jakarta.apache.org>
+Sent: Thursday, December 14, 2000 11:14 AM
+Subject: Re: Is Log4j getting into Jakarta?
+
+
+> >>>>> "Ceki" == Ceki Gulcu <cgu@urbanet.ch> writes:
+>
+>   >> -----Original Message-----
+>   >> From: Ceki Gulcu [mailto:cgu@urbanet.ch]
+>   >>
+>   >> Some Apache members have suggested abandoning the name "log4j"
+>   >> altogether. I personally don't have a problem with that since I
+>   >> don't really like the name log4j. I have proposed the name "cat"
+>   >> (for cat-egory) or equivalently jakarta-cat. The package hierarchy
+>   >> would start at "org.apache.cat." Other names/proposals are most
+>
+> Frankly, I think "log4j" is perfectly fine.  You've developed name
+> recognition for it.  Changing the name has very little value.
+>
+> --
+>
+============================================================================
+===
+> David M. Karr     ; dkarr@tcsi.com  ; w:(425)487-8312 ; TCSI & Best
+Consulting
+> Software Engineer ; Unix/Java/C++/X ; BrainBench CJ12P (#12004)
+>
+>
+> ---------------------------------------------------------------------
+> To unsubscribe, e-mail: log4j-user-unsubscribe@jakarta.apache.org
+> For additional commands, e-mail: log4j-user-help@jakarta.apache.org
+>
+>
+
+
+From roberto.leong@sibs.mailcom.pt  Thu Dec 14 17:18:39 2000
+Return-Path: <roberto.leong@sibs.mailcom.pt>
+Mailing-List: contact log4j-user-help@jakarta.apache.org; run by ezmlm
+Delivered-To: mailing list log4j-user@jakarta.apache.org
+Received: (qmail 99081 invoked from network); 14 Dec 2000 17:18:39 -0000
+Received: from mail0.sibs.pt (195.138.0.101)
+  by locus.apache.org with SMTP; 14 Dec 2000 17:18:39 -0000
+Received: (qmail 25061 invoked from network); 14 Dec 2000 17:03:48 -0000
+Received: from unknown (HELO mail.sibs.pt) (172.17.0.2)
+  by 172.16.0.3 with SMTP; 14 Dec 2000 17:03:48 -0000
+Received: from edi.van ([194.117.48.12]) by mail.sibs.pt
+          (Netscape Mail Server v2.02) with ESMTP id AAA21537
+          for <log4j-user@jakarta.apache.org>;
+          Thu, 14 Dec 2000 17:17:37 +0000
+Received: from SIBSEX.sibs ([192.168.250.26]) by edi.van (8.8.2/8.8.2) with ESMTP id RAA18762 for <log4j-user@jakarta.apache.org>; Thu, 14 Dec 2000 17:15:48 GMT
+Received: by sibsex.sibs with Internet Mail Service (5.5.2650.21)
+	id <XC7FTWLN>; Thu, 14 Dec 2000 17:30:56 -0000
+Message-ID: <63DA964A0E78D211B53E0008C7A4F56D0111552E@sibsex.sibs>
+From: Roberto Leong <roberto.leong@sibs.mailcom.pt>
+To: "'LOG4J Users Mailing List'" <log4j-user@jakarta.apache.org>
+Subject: RE: Is Log4j getting into Jakarta?
+Date: Thu, 14 Dec 2000 17:30:50 -0000
+MIME-Version: 1.0
+X-Mailer: Internet Mail Service (5.5.2650.21)
+Content-Type: text/plain;
+	charset="iso-8859-1"
+Content-Transfer-Encoding: quoted-printable
+X-Spam-Rating: locus.apache.org 1.6.2 0/1000/N
+
+i kind of like log4j. changing it=B4s name will only create confusion =
+among
+who used it and i don=B4t understand why you want to give up of name =
+thas has
+so much recognition and reputation behind it
+
+regards
+Roberto
+
+ps:
+have you taken a look at my DailyFileAppender? :)
+
+From jpljpl@gmx.de  Thu Dec 14 19:17:17 2000
+Return-Path: <jpljpl@gmx.de>
+Mailing-List: contact log4j-user-help@jakarta.apache.org; run by ezmlm
+Delivered-To: mailing list log4j-user@jakarta.apache.org
+Received: (qmail 21413 invoked from network); 14 Dec 2000 19:17:17 -0000
+Received: from pop.gmx.net (HELO mail.gmx.net) (194.221.183.20)
+  by locus.apache.org with SMTP; 14 Dec 2000 19:17:17 -0000
+Received: (qmail 26359 invoked by uid 0); 14 Dec 2000 19:16:50 -0000
+Received: from unknown (HELO localhost) (212.255.17.103)
+  by mail.gmx.net (mail01) with SMTP; 14 Dec 2000 19:16:49 -0000
+Message-ID: <5394746.976821407415.JavaMail.jpl@localhost>
+Date: Thu, 14 Dec 2000 20:16:47 +0100 (GMT+01:00)
+From: Jan Ploski <jpljpl@gmx.de>
+To: log4j-user@jakarta.apache.org
+Subject: RE: Is Log4j getting into Jakarta?
+Mime-Version: 1.0
+Content-Type: multipart/mixed; boundary=5984111.976821407179.JavaMail.jpl.localhost
+X-Mailer: JPL batch mailer 1.0b
+Organization: JPL Remote Java Dev
+X-Spam-Rating: locus.apache.org 1.6.2 0/1000/N
+
+--5984111.976821407179.JavaMail.jpl.localhost
+Content-Type: text/plain; charset="iso-8859-1"
+Content-Transfer-Encoding: 7bit
+
+> i kind of like log4j. changing it´s name will only create confusion among
+> who used it and i don´t understand why you want to give up of name thas has
+> so much recognition and reputation behind it
+
+Exactly. Add my vote for log4j please.
+
+-JPL
+
+--5984111.976821407179.JavaMail.jpl.localhost--
+
+
+From tak@wigwamlab.com  Thu Dec 14 19:43:15 2000
+Return-Path: <tak@wigwamlab.com>
+Mailing-List: contact log4j-user-help@jakarta.apache.org; run by ezmlm
+Delivered-To: mailing list log4j-user@jakarta.apache.org
+Received: (qmail 60638 invoked from network); 14 Dec 2000 19:43:15 -0000
+Received: from unknown (HELO mail.wigwamlab.com) (206.107.164.120)
+  by locus.apache.org with SMTP; 14 Dec 2000 19:43:15 -0000
+Received: from wigwamlab.com (fembot.wigwamlab.com [192.168.66.254])
+	by mail.wigwamlab.com (8.10.1/8.8.7) with ESMTP id eBEJfRO11079;
+	Thu, 14 Dec 2000 11:41:27 -0800
+Sender: tak@wigwamlab.com
+Message-ID: <3A3922B8.4753FD2@wigwamlab.com>
+Date: Thu, 14 Dec 2000 11:42:48 -0800
+From: Mark Takacs <tak@wigwamlab.com>
+X-Mailer: Mozilla 4.75 [en] (X11; U; Linux 2.2.16-9mdk i686)
+X-Accept-Language: en
+MIME-Version: 1.0
+To: LOG4J Developers Mailing List <log4j-dev@jakarta.apache.org>
+CC: log4j-user@jakarta.apache.org
+Subject: Re: Is Log4j getting into Jakarta?
+References: <5.0.0.25.0.20001214150902.00aefaa0@mail.urbanet.ch> <020c01c065fe$def9df30$0100000a@tantian.local>
+Content-Type: multipart/alternative;
+ boundary="------------BF1E591599B528A0DB95B9B4"
+X-Spam-Rating: locus.apache.org 1.6.2 0/1000/N
+
+--------------BF1E591599B528A0DB95B9B4
+Content-Type: text/plain; charset=us-ascii
+Content-Transfer-Encoding: 7bit
+
+
+--------------BF1E591599B528A0DB95B9B4
+Content-Type: text/html; charset=us-ascii
+Content-Transfer-Encoding: 7bit
+
+<!doctype html public "-//w3c//dtd html 4.0 transitional//en">
+<html>
+Guy Nirpaz wrote:
+<blockquote TYPE=CITE>
+<blockquote 
+style="BORDER-LEFT: #000000 2px solid; MARGIN-LEFT: 5px; MARGIN-RIGHT: 0px; PADDING-LEFT: 5px; PADDING-RIGHT: 0px">&nbsp;
+<br>Some Apache members have suggested abandoning the name "log4j" altogether.
+I personally don't have a problem with that since I don't really like the
+name <i>log4j</i>. I have proposed the name "cat" (for cat-egory) or equivalently
+jakarta-cat. The package hierarchy would start at "org.apache.cat." Other
+names/proposals are most welcome. Ceki</blockquote>
+</blockquote>
+
+<p><br>Well, sun's JSR is supposedly gonna be called "java.util.logging".&nbsp;
+Jakarta could mirror that with org.apache.logging
+<p>-tak
+<br>&nbsp;</html>
+
+--------------BF1E591599B528A0DB95B9B4--
+
+
+From floyd@middleware-company.com  Thu Dec 14 20:31:59 2000
+Return-Path: <floyd@middleware-company.com>
+Mailing-List: contact log4j-user-help@jakarta.apache.org; run by ezmlm
+Delivered-To: mailing list log4j-user@jakarta.apache.org
+Received: (qmail 28311 invoked from network); 14 Dec 2000 20:31:59 -0000
+Received: from theserverside.com (HELO server1.TheServerSide.com) (216.110.36.84)
+  by locus.apache.org with SMTP; 14 Dec 2000 20:31:59 -0000
+Received: from ANANDAPRIME (cr791680-a.ktchnr1.on.wave.home.com [24.114.174.36])
+	(authenticated (0 bits))
+	by server1.TheServerSide.com (8.11.0.Beta1/8.11.0.Beta1) with ESMTP id eBEKXUA14175
+	for <log4j-user@jakarta.apache.org>; Thu, 14 Dec 2000 14:33:30 -0600
+From: "Floyd Marinescu" <floyd@middleware-company.com>
+To: "LOG4J Users Mailing List" <log4j-user@jakarta.apache.org>
+Subject: RE: Is Log4j getting into Jakarta?
+Date: Thu, 14 Dec 2000 15:31:23 -0800
+Message-ID: <JGECLPBKJLBALJNKJNFJCEGACPAA.floyd@middleware-company.com>
+MIME-Version: 1.0
+Content-Type: text/plain;
+	charset="us-ascii"
+Content-Transfer-Encoding: 7bit
+X-Priority: 3 (Normal)
+X-MSMail-Priority: Normal
+X-Mailer: Microsoft Outlook IMO, Build 9.0.2416 (9.0.2910.0)
+Importance: Normal
+X-MimeOLE: Produced By Microsoft MimeOLE V5.00.2919.6700
+In-Reply-To: <B65E3D09.16D%cstaylor@pacbell.net>
+X-Spam-Rating: locus.apache.org 1.6.2 0/1000/N
+
+I vote to stay with Log4j. It is a familiar name to the industry, it has
+appeared in Java World and talked about in many newsgroups. To change it
+would mean a lot of confusion.
+
+	How about sending me an email when it gets added to Apache.org, so I can
+announce it on TheServerSide.com.
+
+Floyd Marinescu
+webmaster@theserverside.com
+
+
+From cakalijp@Maritz.com  Thu Dec 14 16:28:14 2000
+Return-Path: <cakalijp@Maritz.com>
+Mailing-List: contact log4j-user-help@jakarta.apache.org; run by ezmlm
+Delivered-To: mailing list log4j-user@jakarta.apache.org
+Delivered-To: moderator for log4j-user@jakarta.apache.org
+Received: (qmail 46010 invoked from network); 14 Dec 2000 16:28:14 -0000
+Received: from maritzmail01.maritz.com (HELO mifenmta01.maritz.com) (207.239.112.21)
+  by locus.apache.org with SMTP; 14 Dec 2000 16:28:14 -0000
+Received: by mifenmta01.maritz.com with Internet Mail Service (5.5.2653.19)
+	id <YY771QYX>; Thu, 14 Dec 2000 11:27:11 -0500
+Message-ID: <57FF6ABCB13CD411AE1400508B0EB51E029E3D65@mifenexch02.maritz.com>
+From: "Cakalic, James P." <cakalijp@Maritz.com>
+To: 'LOG4J Users Mailing List' <log4j-user@jakarta.apache.org>
+Subject: RE: Is Log4j getting into Jakarta?
+Date: Thu, 14 Dec 2000 11:27:09 -0500
+MIME-Version: 1.0
+X-Mailer: Internet Mail Service (5.5.2653.19)
+Content-Type: multipart/alternative;
+	boundary="----_=_NextPart_001_01C065EA.B4909220"
+X-Spam-Rating: locus.apache.org 1.6.2 0/1000/N
+
+------_=_NextPart_001_01C065EA.B4909220
+Content-Type: text/plain;
+	charset="iso-8859-1"
+
+I guess we could be clever and, in keeping with the name Jakarta, try to
+find an Indonesian word as the package name -- something either
+conceptually-related or a language pun.
+ 
+The JSR-0047 group wasn't particularly imaginative, but we might choose to
+follow their lead. The package name that they currently propose is
+java.util.logging. Our equivalent would be org.apache.logging.
+ 
+Naming could be a concern given that log4j has just recently gotten some
+good publicity with the publication of a 3rd party article in the Java
+Developer's Journal and your article, Ceki, on JavaWorld. This move to
+apache might be a good thing but I think we want to be sure to maintain some
+trail of crumbs that leads anyone looking for log4j to the new package.
+ 
+I'll have to give it more thought. 
+Jim
+
+-----Original Message-----
+From: Ceki Gulcu [mailto:cgu@urbanet.ch]
+Sent: Thursday, December 14, 2000 9:37 AM
+To: LOG4J Users Mailing List
+Cc: LOG4J Users Mailing List; Keith Bennett
+Subject: RE: Is Log4j getting into Jakarta?
+
+
+
+Keith,
+
+How about "catlog"? Sounds much like catalog but I can't tell if that's good
+or bad. Cheers, Ceki
+
+At 09:44 14.12.2000 -0500, Keith R. Bennett wrote:
+
+
+My vote for a new name would be something indicating that the package does
+logging.  Maybe something with "log" included in it.  IMHO, the problem with
+"cat" is that it is sufficiently general to include all manner of things in
+addition to logging.
+ 
+- Keith 
+
+
+-----Original Message----- 
+
+From: Ceki Gulcu [ mailto:cgu@urbanet.ch <mailto:cgu@urbanet.ch> ] 
+
+  
+
+ Some Apache members have suggested abandoning the name "log4j" altogether.
+I personally don't have a problem with that since I don't really like the
+name log4j. I have proposed the name "cat" (for cat-egory) or equivalently
+jakarta-cat. The package hierarchy would start at "org.apache.cat." Other
+names/proposals are most welcome. Ceki 
+
+
+------_=_NextPart_001_01C065EA.B4909220
+Content-Type: text/html;
+	charset="iso-8859-1"
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML><HEAD>
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+
+
+<META content="MSHTML 5.00.3105.105" name=GENERATOR></HEAD>
+<BODY>
+<DIV><FONT color=#0000ff face=Arial size=2><SPAN class=083021216-14122000>I 
+guess we could be clever and, in keeping with the name Jakarta, try to find an 
+Indonesian word as the package name -- something either conceptually-related or 
+a language pun.</SPAN></FONT></DIV>
+<DIV><FONT color=#0000ff face=Arial size=2><SPAN 
+class=083021216-14122000></SPAN></FONT>&nbsp;</DIV>
+<DIV><FONT color=#0000ff face=Arial size=2><SPAN class=083021216-14122000>The 
+JSR-0047 group wasn't particularly imaginative, but we might&nbsp;choose to 
+follow their lead. The package name that they currently propose is 
+java.util.logging. Our equivalent would be 
+org.apache.logging.</SPAN></FONT></DIV>
+<DIV><FONT color=#0000ff face=Arial size=2><SPAN 
+class=083021216-14122000></SPAN></FONT>&nbsp;</DIV>
+<DIV><FONT color=#0000ff face=Arial size=2><SPAN class=083021216-14122000>
+<DIV><FONT color=#0000ff face=Arial size=2><SPAN class=083021216-14122000>Naming 
+could be a concern given&nbsp;that log4j has just recently gotten some good 
+publicity with the publication of a 3rd party article in the Java Developer's 
+Journal and your article, Ceki, on JavaWorld. This move to apache might be a 
+good thing but I think we want to be sure to maintain some trail of crumbs that 
+leads anyone looking for log4j to the new package.</SPAN></FONT></DIV>
+<DIV><FONT color=#0000ff face=Arial size=2><SPAN 
+class=083021216-14122000></SPAN></FONT>&nbsp;</DIV></SPAN></FONT></DIV>
+<DIV><FONT color=#0000ff face=Arial size=2><SPAN class=083021216-14122000>I'll 
+have to give it more thought. </SPAN></FONT></DIV>
+<DIV><FONT color=#0000ff face=Arial size=2><SPAN 
+class=083021216-14122000>Jim</SPAN></FONT></DIV>
+<BLOCKQUOTE 
+style="BORDER-LEFT: #0000ff 2px solid; MARGIN-LEFT: 5px; MARGIN-RIGHT: 0px; PADDING-LEFT: 5px">
+  <DIV align=left class=OutlookMessageHeader dir=ltr><FONT face=Tahoma 
+  size=2>-----Original Message-----<BR><B>From:</B> Ceki Gulcu 
+  [mailto:cgu@urbanet.ch]<BR><B>Sent:</B> Thursday, December 14, 2000 9:37 
+  AM<BR><B>To:</B> LOG4J Users Mailing List<BR><B>Cc:</B> LOG4J Users Mailing 
+  List; Keith Bennett<BR><B>Subject:</B> RE: Is Log4j getting into 
+  Jakarta?<BR><BR></DIV></FONT><BR>Keith,<BR><BR>How about "catlog"? Sounds much 
+  like catalog but I can't tell if that's good or bad. Cheers, Ceki<BR><BR>At 
+  09:44 14.12.2000 -0500, Keith R. Bennett wrote:<BR>
+  <BLOCKQUOTE class=cite cite type="cite"><FONT color=#0000ff face=arial 
+    size=2>My vote for a new name would be something indicating that the package 
+    does logging.&nbsp; Maybe something with "log" included in it.&nbsp; IMHO, 
+    the problem with "cat" is that it is sufficiently general to include all 
+    manner of things in addition to logging.</FONT><BR>&nbsp;<BR><FONT 
+    color=#0000ff face=arial size=2>- Keith</FONT> 
+    <DL><FONT face=tahoma size=2>
+      <DD>-----Original Message----- 
+      <DD>From:</B> Ceki Gulcu [<A href="mailto:cgu@urbanet.ch" 
+      eudora="autourl">mailto:cgu@urbanet.ch</A>]</FONT><FONT color=#0000ff 
+      face=arial size=2> 
+      <DD>&nbsp;</FONT> 
+      <DD>&nbsp;Some Apache members have suggested abandoning the name "log4j" 
+      altogether. I personally don't have a problem with that since I don't 
+      really like the name log4j</I>. I have proposed the name "cat" (for 
+      cat-egory) or equivalently jakarta-cat. The package hierarchy would start 
+      at "org.apache.cat." Other names/proposals are most welcome. Ceki 
+  </DD></DL></BLOCKQUOTE></BLOCKQUOTE></BODY></HTML>
+
+------_=_NextPart_001_01C065EA.B4909220--
+
+From ito@integrationtech.com.br  Thu Dec 14 16:54:30 2000
+Return-Path: <ito@integrationtech.com.br>
+Mailing-List: contact log4j-user-help@jakarta.apache.org; run by ezmlm
+Delivered-To: mailing list log4j-user@jakarta.apache.org
+Delivered-To: moderator for log4j-user@jakarta.apache.org
+Received: (qmail 72214 invoked from network); 14 Dec 2000 16:54:30 -0000
+Received: from unknown (HELO server.eurosoft.com.br) (@200.182.9.30)
+  by locus.apache.org with SMTP; 14 Dec 2000 16:54:30 -0000
+Received: from www.integrationtech.com.br by server.eurosoft.com.br
+          via smtpd (for locus.apache.org [63.211.145.10]) with SMTP; 14 Dec 2000 17:57:27 UT
+Received: from integrationtech.com.br (IDENT:ito@[172.17.17.67])
+	by www.integrationtech.com.br (8.10.0.Beta12/8.8.7) with ESMTP id eBEGsMW10077
+	for <log4j-user@jakarta.apache.org>; Thu, 14 Dec 2000 14:54:22 -0200
+Message-ID: <3A38FBB5.60305@integrationtech.com.br>
+Date: Thu, 14 Dec 2000 14:56:21 -0200
+From: Eduardo Issao Ito <ito@integrationtech.com.br>
+User-Agent: Mozilla/5.0 (X11; U; Linux 2.2.16-22 i686; en-US; m18) Gecko/20001107 Netscape6/6.0
+X-Accept-Language: en
+MIME-Version: 1.0
+To: LOG4J Users Mailing List <log4j-user@jakarta.apache.org>
+Subject: Re: Is Log4j getting into Jakarta?
+References: <5.0.0.25.0.20001214150902.00aefaa0@mail.urbanet.ch>
+		<5.0.0.25.0.20001214163549.00aa65f8@mail.urbanet.ch> <uybsuf2d5a.fsf@tcsi.com>
+Content-Type: text/plain; charset=us-ascii; format=flowed
+Content-Transfer-Encoding: 7bit
+X-Spam-Rating: locus.apache.org 1.6.2 0/1000/N
+
+I agree!
+
+David M. Karr wrote:
+
+>>>>>> "Ceki" == Ceki Gulcu <cgu@urbanet.ch> writes:
+>>>>> 
+> 
+>   >> -----Original Message-----
+>   >> From: Ceki Gulcu [mailto:cgu@urbanet.ch]
+>   >> 
+>   >> Some Apache members have suggested abandoning the name "log4j"
+>   >> altogether. I personally don't have a problem with that since I
+>   >> don't really like the name log4j. I have proposed the name "cat"
+>   >> (for cat-egory) or equivalently jakarta-cat. The package hierarchy
+>   >> would start at "org.apache.cat." Other names/proposals are most
+> 
+> Frankly, I think "log4j" is perfectly fine.  You've developed name
+> recognition for it.  Changing the name has very little value.
+
+
+-- 
+--
+Eduardo Issao Ito <ito@integrationtech.com.br>
+Integration Technologies Ltda. <http://www.integrationtech.com.br>
+Rua Marina Saddi Haidar, 176
+04650-050 / Sao Paulo / SP / Brasil
+Phone: +55 11 5522-4848 x311
+Fax:   +55 11 5524-1125
+
+
+From cakalijp@Maritz.com  Thu Dec 14 18:24:31 2000
+Return-Path: <cakalijp@Maritz.com>
+Mailing-List: contact log4j-user-help@jakarta.apache.org; run by ezmlm
+Delivered-To: mailing list log4j-user@jakarta.apache.org
+Delivered-To: moderator for log4j-user@jakarta.apache.org
+Received: (qmail 48047 invoked from network); 14 Dec 2000 18:24:31 -0000
+Received: from maritzmail02.maritz.com (HELO mifenmta02.maritz.com) (207.239.112.22)
+  by locus.apache.org with SMTP; 14 Dec 2000 18:24:31 -0000
+Received: by mifenmta02.maritz.com with Internet Mail Service (5.5.2653.19)
+	id <W4QGFM99>; Thu, 14 Dec 2000 13:03:51 -0500
+Message-ID: <57FF6ABCB13CD411AE1400508B0EB51E029E3D69@mifenexch02.maritz.com>
+From: "Cakalic, James P." <cakalijp@Maritz.com>
+To: "'log4j-user@jakarta.apache.org'" <log4j-user@jakarta.apache.org>
+Subject: RE: Is Log4j getting into Jakarta?
+Date: Thu, 14 Dec 2000 13:03:39 -0500
+MIME-Version: 1.0
+X-Mailer: Internet Mail Service (5.5.2653.19)
+Content-Type: multipart/alternative;
+	boundary="----_=_NextPart_001_01C065F8.2FB13010"
+X-Spam-Rating: locus.apache.org 1.6.2 0/1000/N
+
+------_=_NextPart_001_01C065F8.2FB13010
+Content-Type: text/plain;
+	charset="iso-8859-1"
+
+I guess we could be clever and, in keeping with the name Jakarta, try to
+find an Indonesian word as the package name -- something either
+conceptually-related or a language pun.
+ 
+The JSR-0047 group wasn't particularly imaginative, but we might choose to
+follow their lead. The package name that they currently propose is
+java.util.logging. Our equivalent would be org.apache.logging.
+ 
+Naming could be a concern given that log4j has just recently gotten some
+good publicity with the publication of a 3rd party article in the Java
+Developer's Journal and your article, Ceki, on JavaWorld. This move to
+apache might be a good thing but I think we want to be sure to maintain some
+trail of crumbs that leads anyone looking for log4j to the new package.
+ 
+I'll have to give it more thought. 
+Jim
+
+-----Original Message-----
+From: Ceki Gulcu [mailto:cgu@urbanet.ch]
+Sent: Thursday, December 14, 2000 9:37 AM
+To: LOG4J Users Mailing List
+Cc: LOG4J Users Mailing List; Keith Bennett
+Subject: RE: Is Log4j getting into Jakarta?
+
+
+
+Keith,
+
+How about "catlog"? Sounds much like catalog but I can't tell if that's good
+or bad. Cheers, Ceki
+
+At 09:44 14.12.2000 -0500, Keith R. Bennett wrote:
+
+
+My vote for a new name would be something indicating that the package does
+logging.  Maybe something with "log" included in it.  IMHO, the problem with
+"cat" is that it is sufficiently general to include all manner of things in
+addition to logging.
+ 
+- Keith 
+
+
+-----Original Message----- 
+
+From: Ceki Gulcu [ mailto:cgu@urbanet.ch <mailto:cgu@urbanet.ch> ] 
+
+  
+
+ Some Apache members have suggested abandoning the name "log4j" altogether.
+I personally don't have a problem with that since I don't really like the
+name log4j. I have proposed the name "cat" (for cat-egory) or equivalently
+jakarta-cat. The package hierarchy would start at "org.apache.cat." Other
+names/proposals are most welcome. Ceki 
+
+
+------_=_NextPart_001_01C065F8.2FB13010
+Content-Type: text/html;
+	charset="iso-8859-1"
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML><HEAD>
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+
+
+<META content="MSHTML 5.00.3105.105" name=GENERATOR></HEAD>
+<BODY>
+<DIV><FONT color=#0000ff face=Arial size=2><SPAN class=083021216-14122000>I 
+guess we could be clever and, in keeping with the name Jakarta, try to find an 
+Indonesian word as the package name -- something either conceptually-related or 
+a language pun.</SPAN></FONT></DIV>
+<DIV><FONT color=#0000ff face=Arial size=2><SPAN 
+class=083021216-14122000></SPAN></FONT>&nbsp;</DIV>
+<DIV><FONT color=#0000ff face=Arial size=2><SPAN class=083021216-14122000>The 
+JSR-0047 group wasn't particularly imaginative, but we might&nbsp;choose to 
+follow their lead. The package name that they currently propose is 
+java.util.logging. Our equivalent would be 
+org.apache.logging.</SPAN></FONT></DIV>
+<DIV><FONT color=#0000ff face=Arial size=2><SPAN 
+class=083021216-14122000></SPAN></FONT>&nbsp;</DIV>
+<DIV><FONT color=#0000ff face=Arial size=2><SPAN class=083021216-14122000>
+<DIV><FONT color=#0000ff face=Arial size=2><SPAN class=083021216-14122000>Naming 
+could be a concern given&nbsp;that log4j has just recently gotten some good 
+publicity with the publication of a 3rd party article in the Java Developer's 
+Journal and your article, Ceki, on JavaWorld. This move to apache might be a 
+good thing but I think we want to be sure to maintain some trail of crumbs that 
+leads anyone looking for log4j to the new package.</SPAN></FONT></DIV>
+<DIV><FONT color=#0000ff face=Arial size=2><SPAN 
+class=083021216-14122000></SPAN></FONT>&nbsp;</DIV></SPAN></FONT></DIV>
+<DIV><FONT color=#0000ff face=Arial size=2><SPAN class=083021216-14122000>I'll 
+have to give it more thought. </SPAN></FONT></DIV>
+<DIV><FONT color=#0000ff face=Arial size=2><SPAN 
+class=083021216-14122000>Jim</SPAN></FONT></DIV>
+<BLOCKQUOTE 
+style="BORDER-LEFT: #0000ff 2px solid; MARGIN-LEFT: 5px; MARGIN-RIGHT: 0px; PADDING-LEFT: 5px">
+  <DIV align=left class=OutlookMessageHeader dir=ltr><FONT face=Tahoma 
+  size=2>-----Original Message-----<BR><B>From:</B> Ceki Gulcu 
+  [mailto:cgu@urbanet.ch]<BR><B>Sent:</B> Thursday, December 14, 2000 9:37 
+  AM<BR><B>To:</B> LOG4J Users Mailing List<BR><B>Cc:</B> LOG4J Users Mailing 
+  List; Keith Bennett<BR><B>Subject:</B> RE: Is Log4j getting into 
+  Jakarta?<BR><BR></DIV></FONT><BR>Keith,<BR><BR>How about "catlog"? Sounds much 
+  like catalog but I can't tell if that's good or bad. Cheers, Ceki<BR><BR>At 
+  09:44 14.12.2000 -0500, Keith R. Bennett wrote:<BR>
+  <BLOCKQUOTE class=cite cite type="cite"><FONT color=#0000ff face=arial 
+    size=2>My vote for a new name would be something indicating that the package 
+    does logging.&nbsp; Maybe something with "log" included in it.&nbsp; IMHO, 
+    the problem with "cat" is that it is sufficiently general to include all 
+    manner of things in addition to logging.</FONT><BR>&nbsp;<BR><FONT 
+    color=#0000ff face=arial size=2>- Keith</FONT> 
+    <DL><FONT face=tahoma size=2>
+      <DD>-----Original Message----- 
+      <DD>From:</B> Ceki Gulcu [<A href="mailto:cgu@urbanet.ch" 
+      eudora="autourl">mailto:cgu@urbanet.ch</A>]</FONT><FONT color=#0000ff 
+      face=arial size=2> 
+      <DD>&nbsp;</FONT> 
+      <DD>&nbsp;Some Apache members have suggested abandoning the name "log4j" 
+      altogether. I personally don't have a problem with that since I don't 
+      really like the name log4j</I>. I have proposed the name "cat" (for 
+      cat-egory) or equivalently jakarta-cat. The package hierarchy would start 
+      at "org.apache.cat." Other names/proposals are most welcome. Ceki 
+  </DD></DL></BLOCKQUOTE></BLOCKQUOTE></BODY></HTML>
+
+------_=_NextPart_001_01C065F8.2FB13010--
+
+From guyn@tantian.com  Thu Dec 14 18:51:41 2000
+Return-Path: <guyn@tantian.com>
+Mailing-List: contact log4j-user-help@jakarta.apache.org; run by ezmlm
+Delivered-To: mailing list log4j-user@jakarta.apache.org
+Delivered-To: moderator for log4j-user@jakarta.apache.org
+Received: (qmail 85746 invoked from network); 14 Dec 2000 18:51:41 -0000
+Received: from illustrious.concentric.net (HELO illustrious.cnchost.com) (207.155.252.7)
+  by locus.apache.org with SMTP; 14 Dec 2000 18:51:41 -0000
+Received: from guypc ([212.179.25.94])
+	by illustrious.cnchost.com
+	id NAA15389; Thu, 14 Dec 2000 13:51:35 -0500 (EST)
+	[ConcentricHost SMTP Relay 1.10]
+Errors-To: <guyn@tantian.com>
+Message-ID: <020c01c065fe$def9df30$0100000a@tantian.local>
+From: "Guy Nirpaz" <guyn@tantian.com>
+To: "LOG4J Developers Mailing List" <log4j-dev@jakarta.apache.org>
+Cc: <log4j-dev@jakarta.apache.org>, <log4j-user@jakarta.apache.org>
+References: <5.0.0.25.0.20001214150902.00aefaa0@mail.urbanet.ch>
+Subject: Re: Is Log4j getting into Jakarta?
+Date: Thu, 14 Dec 2000 20:51:25 +0200
+MIME-Version: 1.0
+Content-Type: multipart/alternative;
+	boundary="----=_NextPart_000_0209_01C0660F.9FE85540"
+X-Priority: 3
+X-MSMail-Priority: Normal
+X-Mailer: Microsoft Outlook Express 5.50.4133.2400
+X-MIMEOLE: Produced By Microsoft MimeOLE V5.50.4133.2400
+X-Spam-Rating: locus.apache.org 1.6.2 0/1000/N
+
+------=_NextPart_000_0209_01C0660F.9FE85540
+Content-Type: text/plain;
+	charset="iso-8859-1"
+Content-Transfer-Encoding: quoted-printable
+
+Hi Ceki,
+
+I like very much the idea of Log4j going into Jakarta. I hope you feel =
+very proud about that, I do - It just reinsures my selection of Log4j.
+About the name - well, I kind of got used to log4j - but if you want cat =
+I'm 'Miyahuing' right after you.
+
+Cheers,=20
+
+Guy
+  ----- Original Message -----=20
+  From: Ceki Gulcu=20
+  To: Guy Nirpaz=20
+  Cc: log4j-dev@jakarta.apache.org ; log4j-user@jakarta.apache.org=20
+  Sent: Thursday, December 14, 2000 4:38 PM
+  Subject: Re: Is Log4j getting into Jakarta?
+
+
+
+  Hi Guy,
+
+  It's not public yet but since you have asked: yes, log4j should become =
+a jakarta project in the next few days.=20
+
+  There are now two new mailing lists: log4j-dev@jakarta.apache.org and =
+log4j-user@jakarta.apache.org which replace the old log4j-dev@log4j.org =
+and log4j-public@log4j.org mailing lists. The members of the old lists =
+have been automatically subscribed to the corresponding list on =
+jakarta.apache.org. The CVS repository has also moved to Apache.
+
+  There is a strong push to rename the package to "org.apache.log4j". I =
+have already committed to do this for the next major log4j release =
+scheduled for 1Q 2001. If you have a good reason to oppose a name =
+change, then let us know so that we can raise the issue with the apache =
+group.  This is your chance to speak up.
+
+  Some Apache members have suggested abandoning the name "log4j" =
+altogether. I personally don't have a problem with that since I don't =
+really like the name log4j. I have proposed the name "cat" (for =
+cat-egory) or equivalently jakarta-cat. The package hierarchy would =
+start at "org.apache.cat." Other names/proposals are most welcome. Ceki=20
+
+
+
+  At 15:36 14.12.2000 +0200, Guy Nirpaz wrote:
+
+    Hi,
+
+    I was wondering, is Log4j going into Jakarta? If so, when?
+
+    Thanks,
+
+    Guy Nirpaz
+    Java Architect
+
+    Tantian Corp.
+    guyn@tantian.com
+
+    _______________________________________________
+    log4j-dev mailing list
+    log4j-dev@log4j.org
+    http://lists.sourceforge.net/mailman/listinfo/log4j-dev
+
+------=_NextPart_000_0209_01C0660F.9FE85540
+Content-Type: text/html;
+	charset="iso-8859-1"
+Content-Transfer-Encoding: quoted-printable
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML><HEAD>
+<META content=3D"text/html; charset=3Diso-8859-1" =
+http-equiv=3DContent-Type>
+<META content=3D"MSHTML 5.00.3103.1000" name=3DGENERATOR>
+<STYLE></STYLE>
+</HEAD>
+<BODY bgColor=3D#ffffff>
+<DIV><FONT face=3DArial size=3D2>Hi Ceki,</FONT></DIV>
+<DIV>&nbsp;</DIV>
+<DIV><FONT face=3DArial size=3D2>I like very much the idea&nbsp;of Log4j =
+going into=20
+Jakarta. I hope you feel very proud about that, I do - It just reinsures =
+my=20
+selection of Log4j.</FONT></DIV>
+<DIV><FONT face=3DArial size=3D2>About the name - well, I kind of got =
+used to log4j=20
+- but if you want cat I'm 'Miyahuing' right after you.</FONT></DIV>
+<DIV>&nbsp;</DIV>
+<DIV><FONT face=3DArial size=3D2>Cheers, </FONT></DIV>
+<DIV>&nbsp;</DIV>
+<DIV><FONT face=3DArial size=3D2>Guy</FONT></DIV>
+<BLOCKQUOTE=20
+style=3D"BORDER-LEFT: #000000 2px solid; MARGIN-LEFT: 5px; MARGIN-RIGHT: =
+0px; PADDING-LEFT: 5px; PADDING-RIGHT: 0px">
+  <DIV style=3D"FONT: 10pt arial">----- Original Message ----- </DIV>
+  <DIV=20
+  style=3D"BACKGROUND: #e4e4e4; FONT: 10pt arial; font-color: =
+black"><B>From:</B>=20
+  <A href=3D"mailto:cgu@urbanet.ch" title=3Dcgu@urbanet.ch>Ceki =
+Gulcu</A> </DIV>
+  <DIV style=3D"FONT: 10pt arial"><B>To:</B> <A =
+href=3D"mailto:guyn@tantian.com"=20
+  title=3Dguyn@tantian.com>Guy Nirpaz</A> </DIV>
+  <DIV style=3D"FONT: 10pt arial"><B>Cc:</B> <A=20
+  href=3D"mailto:log4j-dev@jakarta.apache.org"=20
+  title=3Dlog4j-dev@jakarta.apache.org>log4j-dev@jakarta.apache.org</A> =
+; <A=20
+  href=3D"mailto:log4j-user@jakarta.apache.org"=20
+  =
+title=3Dlog4j-user@jakarta.apache.org>log4j-user@jakarta.apache.org</A> =
+</DIV>
+  <DIV style=3D"FONT: 10pt arial"><B>Sent:</B> Thursday, December 14, =
+2000 4:38=20
+  PM</DIV>
+  <DIV style=3D"FONT: 10pt arial"><B>Subject:</B> Re: Is Log4j getting =
+into=20
+  Jakarta?</DIV>
+  <DIV><BR></DIV><BR>Hi Guy,<BR><BR>It's not public yet but since you =
+have=20
+  asked: yes, log4j should become a jakarta project in the next few =
+days.=20
+  <BR><BR>There are now two new mailing lists: <A=20
+  =
+href=3D"mailto:log4j-dev@jakarta.apache.org">log4j-dev@jakarta.apache.org=
+</A>=20
+  and <A=20
+  =
+href=3D"mailto:log4j-user@jakarta.apache.org">log4j-user@jakarta.apache.o=
+rg</A>=20
+  which replace the old <A=20
+  href=3D"mailto:log4j-dev@log4j.org">log4j-dev@log4j.org</A> and <A=20
+  href=3D"mailto:log4j-public@log4j.org">log4j-public@log4j.org</A> =
+mailing lists.=20
+  The members of the old lists have been automatically subscribed to the =
+
+  corresponding list on jakarta.apache.org. The CVS repository has also =
+moved to=20
+  Apache.<BR><BR>There is a strong push to rename the package to=20
+  "org.apache.log4j". I have already committed to do this for the next =
+major=20
+  log4j release scheduled for 1Q 2001. If you have a good reason to =
+oppose a=20
+  name change, then let us know so that we can raise the issue with the =
+apache=20
+  group.&nbsp; This is your chance to speak up.<BR><BR>Some Apache =
+members have=20
+  suggested abandoning the name "log4j" altogether. I personally don't =
+have a=20
+  problem with that since I don't really like the name <I>log4j</I>. I =
+have=20
+  proposed the name "cat" (for cat-egory) or equivalently jakarta-cat. =
+The=20
+  package hierarchy would start at "org.apache.cat." Other =
+names/proposals are=20
+  most welcome. Ceki <BR><BR><BR><BR>At 15:36 14.12.2000 +0200, Guy =
+Nirpaz=20
+  wrote:<BR>
+  <BLOCKQUOTE class=3Dcite cite type=3D"cite">Hi,<BR><BR>I was =
+wondering, is Log4j=20
+    going into Jakarta? If so, when?<BR><BR>Thanks,<BR><BR>Guy =
+Nirpaz<BR>Java=20
+    Architect<BR><BR>Tantian=20
+    =
+Corp.<BR>guyn@tantian.com<BR><BR>________________________________________=
+_______<BR>log4j-dev=20
+    mailing list<BR>log4j-dev@log4j.org<BR><A=20
+    href=3D"http://lists.sourceforge.net/mailman/listinfo/log4j-dev"=20
+    =
+eudora=3D"autourl">http://lists.sourceforge.net/mailman/listinfo/log4j-de=
+v</A></BLOCKQUOTE></BLOCKQUOTE></BODY></HTML>
+
+------=_NextPart_000_0209_01C0660F.9FE85540--
+
+
+From Michael_Brennan@Allegis.com  Thu Dec 14 22:30:16 2000
+Return-Path: <Michael_Brennan@Allegis.com>
+Mailing-List: contact log4j-user-help@jakarta.apache.org; run by ezmlm
+Delivered-To: mailing list log4j-user@jakarta.apache.org
+Received: (qmail 48171 invoked from network); 14 Dec 2000 22:30:16 -0000
+Received: from lyon.allegis.com (HELO lyon.hq.allegis.com) (199.242.245.4)
+  by locus.apache.org with SMTP; 14 Dec 2000 22:30:16 -0000
+Received: from mailhost.hq.allegis.com (mailhost.hq.allegis.com [172.16.0.23])
+	by lyon.hq.allegis.com (8.9.3/8.9.3) with ESMTP id OAA00277
+	for <log4j-user@jakarta.apache.org>; Thu, 14 Dec 2000 14:06:43 -0800
+Received: by mailhost.hq.allegis.com with Internet Mail Service (5.5.2650.21)
+	id <Y4T159MS>; Thu, 14 Dec 2000 14:30:20 -0800
+Message-ID: <753B28EF1C2DD411AF1C00B0D0202CB5AE30D8@mailhost.hq.allegis.com>
+From: Michael Brennan <Michael_Brennan@Allegis.com>
+To: "''log4j-user@jakarta.apache.org' '" <log4j-user@jakarta.apache.org>
+Subject: RE: Is Log4j getting into Jakarta?
+Date: Thu, 14 Dec 2000 14:30:19 -0800
+MIME-Version: 1.0
+X-Mailer: Internet Mail Service (5.5.2650.21)
+Content-Type: text/plain;
+	charset="iso-8859-1"
+X-Spam-Rating: locus.apache.org 1.6.2 0/1000/N
+
+I think keeping the log4j name is the best way to leave the trail of crumbs.
+It is also consistent with what Apache has done with some other packages.
+For instance, the ORO regular expression packages are now
+"org.apache.oro.*". I think "org.apache.log4j" is fine. 
+
+Of course, "org.apache.logging" is fine to me, as well. But I like keeping
+that thread of continuity of having "log4j" in the name.
+
+-----Original Message-----
+From: Cakalic, James P.
+To: 'LOG4J Users Mailing List'
+Sent: 12/14/00 8:27 AM
+Subject: RE: Is Log4j getting into Jakarta?
+
+I guess we could be clever and, in keeping with the name Jakarta, try to
+find an Indonesian word as the package name -- something either
+conceptually-related or a language pun.
+ 
+The JSR-0047 group wasn't particularly imaginative, but we might choose
+to follow their lead. The package name that they currently propose is
+java.util.logging. Our equivalent would be org.apache.logging.
+ 
+Naming could be a concern given that log4j has just recently gotten some
+good publicity with the publication of a 3rd party article in the Java
+Developer's Journal and your article, Ceki, on JavaWorld. This move to
+apache might be a good thing but I think we want to be sure to maintain
+some trail of crumbs that leads anyone looking for log4j to the new
+package.
+ 
+I'll have to give it more thought. 
+Jim
+
+-----Original Message-----
+From: Ceki Gulcu [mailto:cgu@urbanet.ch]
+Sent: Thursday, December 14, 2000 9:37 AM
+To: LOG4J Users Mailing List
+Cc: LOG4J Users Mailing List; Keith Bennett
+Subject: RE: Is Log4j getting into Jakarta?
+
+
+
+Keith,
+
+How about "catlog"? Sounds much like catalog but I can't tell if that's
+good or bad. Cheers, Ceki
+
+At 09:44 14.12.2000 -0500, Keith R. Bennett wrote:
+
+
+My vote for a new name would be something indicating that the package
+does logging.  Maybe something with "log" included in it.  IMHO, the
+problem with "cat" is that it is sufficiently general to include all
+manner of things in addition to logging.
+ 
+- Keith 
+
+
+-----Original Message----- 
+
+From: Ceki Gulcu [ mailto:cgu@urbanet.ch <mailto:cgu@urbanet.ch> ] 
+
+  
+
+ Some Apache members have suggested abandoning the name "log4j"
+altogether. I personally don't have a problem with that since I don't
+really like the name log4j. I have proposed the name "cat" (for
+cat-egory) or equivalently jakarta-cat. The package hierarchy would
+start at "org.apache.cat." Other names/proposals are most welcome. Ceki 
+
+
+From cgu@urbanet.ch  Fri Dec 15 01:15:49 2000
+Return-Path: <cgu@urbanet.ch>
+Mailing-List: contact log4j-user-help@jakarta.apache.org; run by ezmlm
+Delivered-To: mailing list log4j-user@jakarta.apache.org
+Received: (qmail 95237 invoked from network); 15 Dec 2000 01:15:49 -0000
+Received: from monterosa.urbanet.ch (qmailr@195.202.193.104)
+  by locus.apache.org with SMTP; 15 Dec 2000 01:15:49 -0000
+Received: (qmail 11904 invoked from network); 15 Dec 2000 01:15:47 -0000
+Received: from unknown (HELO gil.urbanet.ch) (195.202.202.140)
+  by monterosa.urbanet.ch with SMTP; 15 Dec 2000 01:15:47 -0000
+Message-Id: <5.0.0.25.0.20001215015223.0294d090@mail.urbanet.ch>
+X-Sender: urba19978@mail.urbanet.ch
+X-Mailer: QUALCOMM Windows Eudora Version 5.0
+Date: Fri, 15 Dec 2000 02:16:28 +0100
+To: log4j-user@jakarta.apache.org,log4j-dev@jakarta.apache.org
+From: Ceki Gulcu <cgu@urbanet.ch>
+Subject: What's in a name?
+Mime-Version: 1.0
+Content-Type: text/plain; charset="us-ascii"; format=flowed
+X-Spam-Rating: locus.apache.org 1.6.2 500/1000/N
+
+
+Hi Folks,
+
+The Apache members have argued that the 4J suffix oozes with IBM. Moreover, 
+as in any case the project code will be placed under "org.apache.XYZ", this 
+is absolutely the best time to change the name of the project.
+
+Even if we rename the project, http://www.log4j.org won't disappear and 
+will point to the new project at Apache. Thus, the log4j name recognition 
+argument, although very convincing at first,  does not hold much water (IMHO).
+
+Here are some possible choices:
+
+- org.apache.cat
+- org.apache.pebble
+- org.apache.grit
+
+This is a reference to the Henzel and Gretel fairy tale. Logging is a lot 
+like placing pebbles in a forest except that the forest is the application.
+
+- org.apache.log4j          Duh!
+- org.apache.logging      JSR47 copy cat.
+- org.apache.log            This one is already taken by Peter Donald's 
+LogKit in Avalon.
+- org.apache.hlog          'H' for hierarchical.
+- org.apache.moa          Moa is a teeny island at the edge of Indonesia.
+
+You are encouraged to make new project name proposals but please do not 
+vote yet. We'll vote after new proposals are made. Regards, Ceki
+
+
+
+
+From jeff@socialchange.net.au  Fri Dec 15 01:53:10 2000
+Return-Path: <jeff@socialchange.net.au>
+Mailing-List: contact log4j-user-help@jakarta.apache.org; run by ezmlm
+Delivered-To: mailing list log4j-user@jakarta.apache.org
+Received: (qmail 13340 invoked from network); 15 Dec 2000 01:53:10 -0000
+Received: from unknown (HELO homer.socialchange.net.au) (210.9.15.241)
+  by locus.apache.org with SMTP; 15 Dec 2000 01:53:10 -0000
+Received: from homer.socialchange.net.au (homer.socialchange.net.au [10.10.1.10])
+	by homer.socialchange.net.au (8.9.3+Sun/8.9.3) with ESMTP id MAA25649;
+	Fri, 15 Dec 2000 12:53:48 +1100 (EST)
+Date: Fri, 15 Dec 2000 12:53:48 +1100 (EST)
+From: Jeff Turner <jeff@socialchange.net.au>
+To: LOG4J Users Mailing List <log4j-user@jakarta.apache.org>
+cc: log4j-dev@jakarta.apache.org
+Subject: Re: What's in a name?
+In-Reply-To: <5.0.0.25.0.20001215015223.0294d090@mail.urbanet.ch>
+Message-ID: <Pine.GSO.4.05.10012151223060.24161-100000@homer.socialchange.net.au>
+MIME-Version: 1.0
+Content-Type: TEXT/PLAIN; charset=US-ASCII
+X-Spam-Rating: locus.apache.org 1.6.2 0/1000/N
+
+On Fri, 15 Dec 2000, Ceki Gulcu wrote:
+
+> 
+> Hi Folks,
+> 
+> The Apache members have argued that the 4J suffix oozes with IBM. Moreover, 
+
+bwahaha.. is that the best reason they could come up with? ;)
+
+> as in any case the project code will be placed under "org.apache.XYZ", this 
+> is absolutely the best time to change the name of the project.
+> 
+> Even if we rename the project, http://www.log4j.org won't disappear and 
+> will point to the new project at Apache. Thus, the log4j name recognition 
+> argument, although very convincing at first,  does not hold much water (IMHO).
+
+A name change is *guaranteed* to cause confusion, not least because people
+won't understand WHY the name changed at all. Most project name-changes
+reflect a change in focus, or implementation, or *something* more
+substantial than someone's aversion to "IBM-like" names. Now you can leave
+a trail pointing "log4j"-seekers to the new project, but.. that's just
+harm minimization. Where's the compelling reason to cause the harm in the
+first place?
+
+I doubt if the log4c++ and log4p maintainers would support a name-change
+either ;)
+
+> 
+> Here are some possible choices:
+> 
+> - org.apache.cat
+> - org.apache.pebble
+> - org.apache.grit
+
+All missing the crucial word "log". Apache project names are famously
+non-descriptive, but I don't think it's necessarily a good thing.
+
+> This is a reference to the Henzel and Gretel fairy tale. Logging is a lot 
+> like placing pebbles in a forest except that the forest is the application.
+
+Erm. Is it? ;) 
+
+--Jeff
+
+> - org.apache.log4j          Duh!
+> - org.apache.logging      JSR47 copy cat.
+> - org.apache.log            This one is already taken by Peter Donald's 
+> LogKit in Avalon.
+> - org.apache.hlog          'H' for hierarchical.
+> - org.apache.moa          Moa is a teeny island at the edge of Indonesia.
+> 
+> You are encouraged to make new project name proposals but please do not 
+> vote yet. We'll vote after new proposals are made. Regards, Ceki
+> 
+> 
+> 
+> 
+> ---------------------------------------------------------------------
+> To unsubscribe, e-mail: log4j-user-unsubscribe@jakarta.apache.org
+> For additional commands, e-mail: log4j-user-help@jakarta.apache.org
+> 
+
+
+
+From Endre@Stolsvik.com  Fri Dec 15 10:14:30 2000
+Return-Path: <Endre@Stolsvik.com>
+Mailing-List: contact log4j-user-help@jakarta.apache.org; run by ezmlm
+Delivered-To: mailing list log4j-user@jakarta.apache.org
+Received: (qmail 19294 invoked from network); 15 Dec 2000 10:14:30 -0000
+Received: from flodhest.stud.ntnu.no (0@129.241.56.24)
+  by locus.apache.org with SMTP; 15 Dec 2000 10:14:30 -0000
+Received: from jeeves.stud.ntnu.no (jeeves [129.241.56.14])
+	by flodhest.stud.ntnu.no (8.10.0.Beta12/8.10.0.Beta12) with ESMTP id eBFAESX28786
+	for <log4j-user@jakarta.apache.org>; Fri, 15 Dec 2000 11:14:28 +0100 (MET)
+Received: from localhost (endrs@localhost)
+	by jeeves.stud.ntnu.no (8.10.0.Beta12/8.10.0.Beta12) with ESMTP id eBFAEah20752
+	for <log4j-user@jakarta.apache.org>; Fri, 15 Dec 2000 11:14:36 +0100 (MET)
+X-Authentication-Warning: jeeves.stud.ntnu.no: endrs owned process doing -bs
+Date: Fri, 15 Dec 2000 11:14:36 +0100 (MET)
+From: =?iso-8859-1?Q?Endre_St=F8lsvik?= <Endre@Stolsvik.com>
+X-Sender: endrs@jeeves.stud.ntnu.no
+To: log4j-user@jakarta.apache.org
+Subject: Multiple log lines..
+Message-ID: <Pine.GS4.4.21.0012151101410.12470-100000@jeeves.stud.ntnu.no>
+MIME-Version: 1.0
+Content-Type: TEXT/PLAIN; charset=US-ASCII
+X-Spam-Rating: locus.apache.org 1.6.2 0/1000/N
+
+Hi!
+
+I've just started using log4j. Seems nice, but I'm having this weird
+problem. I'm using it with Tomcat in a framework we've devised.
+
+At first things are perfectly OK, but after some log lines I start to get
+multiple copies of the lines. It's exactly the same line, since it has the
+same timestamp. After some time there is like thirty repetitions of each
+logged message.
+
+Anybody have any ideas?
+
+-- 
+Mvh,
+Endre
+
+
+From saicheong@cls.uob.com.sg  Fri Dec 15 10:38:48 2000
+Return-Path: <saicheong@cls.uob.com.sg>
+Mailing-List: contact log4j-user-help@jakarta.apache.org; run by ezmlm
+Delivered-To: mailing list log4j-user@jakarta.apache.org
+Delivered-To: moderator for log4j-user@jakarta.apache.org
+Received: (qmail 35467 invoked from network); 15 Dec 2000 10:38:48 -0000
+Received: from mail.cls.uob.com.sg (HELO uxclsdom.cls.uob.com.sg) (203.120.245.2)
+  by locus.apache.org with SMTP; 15 Dec 2000 10:38:48 -0000
+Received: from cls.uob.com.sg ([8.34.3.44]) by uxclsdom.cls.uob.com.sg
+          (Netscape Messaging Server 3.6)  with ESMTP id AAA3F92
+          for <log4j-user@jakarta.apache.org>;
+          Fri, 15 Dec 2000 18:39:06 +0800
+Message-ID: <3A39F4FD.C1F1F285@cls.uob.com.sg>
+Date: Fri, 15 Dec 2000 18:39:58 +0800
+From: "Yow Sai Cheong" <saicheong@cls.uob.com.sg>
+Organization: United Overseas bank
+X-Mailer: Mozilla 4.6 [en] (WinNT; I)
+X-Accept-Language: en
+MIME-Version: 1.0
+To: LOG4J Users Mailing List <log4j-user@jakarta.apache.org>
+Subject: Re: Multiple log lines..
+References: <Pine.GS4.4.21.0012151101410.12470-100000@jeeves.stud.ntnu.no>
+Content-Type: text/plain; charset=iso-8859-1
+Content-Transfer-Encoding: 8bit
+X-Spam-Rating: locus.apache.org 1.6.2 0/1000/N
+
+One possible reason is that the configurator (BasicConfigurator.configure for
+example) is called more than once.
+
+Endre Stølsvik wrote:
+
+> Hi!
+>
+> I've just started using log4j. Seems nice, but I'm having this weird
+> problem. I'm using it with Tomcat in a framework we've devised.
+>
+> At first things are perfectly OK, but after some log lines I start to get
+> multiple copies of the lines. It's exactly the same line, since it has the
+> same timestamp. After some time there is like thirty repetitions of each
+> logged message.
+>
+> Anybody have any ideas?
+>
+> --
+> Mvh,
+> Endre
+>
+> ---------------------------------------------------------------------
+> To unsubscribe, e-mail: log4j-user-unsubscribe@jakarta.apache.org
+> For additional commands, e-mail: log4j-user-help@jakarta.apache.org
+
+
+From ito@integrationtech.com.br  Fri Dec 15 13:02:28 2000
+Return-Path: <ito@integrationtech.com.br>
+Mailing-List: contact log4j-user-help@jakarta.apache.org; run by ezmlm
+Delivered-To: mailing list log4j-user@jakarta.apache.org
+Delivered-To: moderator for log4j-user@jakarta.apache.org
+Received: (qmail 63054 invoked from network); 15 Dec 2000 13:02:28 -0000
+Received: from unknown (HELO server.eurosoft.com.br) (@200.182.9.30)
+  by locus.apache.org with SMTP; 15 Dec 2000 13:02:28 -0000
+Received: from www.integrationtech.com.br by server.eurosoft.com.br
+          via smtpd (for locus.apache.org [63.211.145.10]) with SMTP; 15 Dec 2000 14:05:30 UT
+Received: from integrationtech.com.br (IDENT:ito@speedy.integrationtech.com.br [172.17.17.67])
+	by www.integrationtech.com.br (8.10.0.Beta12/8.8.7) with ESMTP id eBFD2NW15664;
+	Fri, 15 Dec 2000 11:02:23 -0200
+Message-ID: <3A3A16D5.9070506@integrationtech.com.br>
+Date: Fri, 15 Dec 2000 11:04:21 -0200
+From: Eduardo Issao Ito <ito@integrationtech.com.br>
+User-Agent: Mozilla/5.0 (X11; U; Linux 2.2.16-22 i686; en-US; m18) Gecko/20001107 Netscape6/6.0
+X-Accept-Language: en
+MIME-Version: 1.0
+To: LOG4J Users Mailing List <log4j-user@jakarta.apache.org>
+CC: log4j-dev@jakarta.apache.org
+Subject: Re: What's in a name?
+References: <Pine.GSO.4.05.10012151223060.24161-100000@homer.socialchange.net.au>
+Content-Type: text/plain; charset=us-ascii; format=flowed
+Content-Transfer-Encoding: 7bit
+X-Spam-Rating: locus.apache.org 1.6.2 0/1000/N
+
+
+
+Jeff Turner wrote:
+
+>> Here are some possible choices:
+>> 
+>> - org.apache.cat
+>> - org.apache.pebble
+>> - org.apache.grit
+> 
+> 
+> All missing the crucial word "log". Apache project names are famously
+> non-descriptive, but I don't think it's necessarily a good thing.
+
+When using Xerces and Xalan, I always have to stop and think what is the 
+xml parser and what is the xslt processor...
+
+
+--
+Eduardo Issao Ito <ito@integrationtech.com.br>
+Integration Technologies Ltda. <http://www.integrationtech.com.br>
+Rua Marina Saddi Haidar, 176
+04650-050 / Sao Paulo / SP / Brasil
+Phone: +55 11 5522-4848 x311
+Fax:   +55 11 5524-1125
+
+
+From jcarlson@is.com  Fri Dec 15 14:21:07 2000
+Return-Path: <jcarlson@is.com>
+Mailing-List: contact log4j-user-help@jakarta.apache.org; run by ezmlm
+Delivered-To: mailing list log4j-user@jakarta.apache.org
+Received: (qmail 41431 invoked from network); 15 Dec 2000 14:21:07 -0000
+Received: from valkyrie.is.com (206.145.189.35)
+  by locus.apache.org with SMTP; 15 Dec 2000 14:21:07 -0000
+Received: by valkyrie.is.com with Internet Mail Service (5.5.2650.21)
+	id <Y2KGYH8B>; Fri, 15 Dec 2000 08:20:20 -0600
+Message-ID: <F483AD0DB13BD411A38300104B2E651E3B43BF@valkyrie.is.com>
+From: Jonathan Carlson <jcarlson@is.com>
+To: 'LOG4J Users Mailing List' <log4j-user@jakarta.apache.org>
+Subject: RE: Is Log4j getting into Jakarta?
+Date: Fri, 15 Dec 2000 08:20:16 -0600
+MIME-Version: 1.0
+X-Mailer: Internet Mail Service (5.5.2650.21)
+Content-Type: text/plain;
+	charset="iso-8859-1"
+X-Spam-Rating: locus.apache.org 1.6.2 0/1000/N
+
+I have to second that.  I like log4j because it's easy to guess what the
+package does by it's name, and the "j" makes it obvious that this is a java
+tool.
+ 
+I don't even like naming a Category instance variable "category" because the
+name is not very reflective of the fact that it is just used for logging.
+ 
+If we were voting, I would vote to keep log4j, or else have some name with
+"log" in it.
+ 
+Jonathan
+ 
+-----Original Message-----
+From: Keith R. Bennett [mailto:keithb@fgm.com]
+Sent: Thursday, December 14, 2000 8:44 AM
+To: LOG4J Users Mailing List
+Cc: Keith Bennett
+Subject: RE: Is Log4j getting into Jakarta?
+
+
+My vote for a new name would be something indicating that the package does
+logging.  Maybe something with "log" included in it.  IMHO, the problem with
+"cat" is that it is sufficiently general to include all manner of things in
+addition to logging.
+ 
+- Keith
+
+-----Original Message-----
+From: Ceki Gulcu [mailto:cgu@urbanet.ch]
+
+ 
+ Some Apache members have suggested abandoning the name "log4j" altogether.
+I personally don't have a problem with that since I don't really like the
+name log4j. I have proposed the name "cat" (for cat-egory) or equivalently
+jakarta-cat. The package hierarchy would start at "org.apache.cat." Other
+names/proposals are most welcome. Ceki 
+
+
+
+From Endre@Stolsvik.com  Sun Dec 17 11:39:16 2000
+Return-Path: <Endre@Stolsvik.com>
+Mailing-List: contact log4j-user-help@jakarta.apache.org; run by ezmlm
+Delivered-To: mailing list log4j-user@jakarta.apache.org
+Received: (qmail 17307 invoked from network); 17 Dec 2000 11:39:16 -0000
+Received: from elefant.stud.ntnu.no (0@129.241.56.22)
+  by locus.apache.org with SMTP; 17 Dec 2000 11:39:16 -0000
+Received: from jeeves.stud.ntnu.no (jeeves [129.241.56.14])
+	by elefant.stud.ntnu.no (8.10.0.Beta12/8.10.0.Beta12) with ESMTP id eBHBdBv06180
+	for <log4j-user@jakarta.apache.org>; Sun, 17 Dec 2000 12:39:11 +0100 (MET)
+Received: from localhost (endrs@localhost)
+	by jeeves.stud.ntnu.no (8.10.0.Beta12/8.10.0.Beta12) with ESMTP id eBHBdJ314244
+	for <log4j-user@jakarta.apache.org>; Sun, 17 Dec 2000 12:39:19 +0100 (MET)
+X-Authentication-Warning: jeeves.stud.ntnu.no: endrs owned process doing -bs
+Date: Sun, 17 Dec 2000 12:39:19 +0100 (MET)
+From: =?iso-8859-1?Q?Endre_St=F8lsvik?= <Endre@Stolsvik.com>
+X-Sender: endrs@jeeves.stud.ntnu.no
+To: log4j-user@jakarta.apache.org
+Subject: XML parsing problem..
+Message-ID: <Pine.GS4.4.21.0012171208340.18354-100000@jeeves.stud.ntnu.no>
+MIME-Version: 1.0
+Content-Type: TEXT/PLAIN; charset=US-ASCII
+X-Spam-Rating: locus.apache.org 1.6.2 0/1000/N
+
+I'm trying to get the XML config thing to work with the jaxp early access
+1.1 from SUN. This is my classpath, where the three last ones is the jaxp
+thingy :
+
+.:/usr/java/jdk1.3/jre/lib/rt.jar
+/usr/java/jsdk2.2/servlet.jar
+/usr/java/third/webmacro/webmacro.jar
+/usr/java/jaxp-1.1ea/crimson.jar
+/usr/java/jaxp-1.1ea/jaxp.jar
+/usr/java/jaxp-1.1ea/xalan.jar
+
+------------
+  I then try to run a class called Test. It's an adaption of the xerces
+based XMLSample to jaxp1.1, and uses one of the config files there. Check
+the log4j log entries at the bottom of the run here:
+
+endre@endresin:~/testlog/classes$ java Test testconf1.xml 
+"doc.getDocumentElement()" gives:
+
+<configuration configDebug="null" disableOverride="null">
+
+        <appender name="A1" class="org.log4j.FileAppender">
+            <param name="File" value="A1.log" />
+            <param name="Append" value="false" />
+            <layout class="org.log4j.PatternLayout">
+                <param name="ConversionPattern" value="%t %-5p %c{2} - %m\n" />
+            </layout>
+        </appender>
+        
+        <appender name="STDOUT" class="org.log4j.FileAppender">
+                <param name="File" value="System.out" />
+                
+                <layout class="org.log4j.PatternLayout">
+                   <param name="ConversionPattern" value="%d %-5p [%t] %C{2} (%F:%L) - %m\n" />
+                </layout>
+        </appender>
+        
+        <category name="Test" additivity="true">
+          <priority value="debug" />
+          <appender-ref ref="A1" />
+        </category>
+        
+        <root>
+           <priority value="debug" />
+           <appender-ref ref="STDOUT" />
+        </root>
+        
+</configuration>
+
+log4j: No appender named [A1] could be found.
+log4j: No appender named [STDOUT] could be found.
+log4j: No appenders could be found for category (Test).
+log4j: Please initialize the log4j system properly.
+
+------------------ 
+
+What's happening is apparently that these lines in DOMConfigurator.java
+mess up (it does parse the root and categories "correctly", but when it
+needs the appenders, it fails):
+
+... 
+Document doc = appenderRef.getOwnerDocument(); 
+Element element = doc.getElementById(appenderName); 
+if(element == null) {
+    LogLog.error("No appender named ["+appenderName+"] could be found.");
+    return null;
+} else {
+...
+
+So, the getElementById isn't giving anything back. Why is this? I guess it
+have something to do with me using jaxp1.1 and this being made for xerces,
+but then there is something wrong somewhere, right?
+
+Anybody had any experience with this?
+
+Thanks!
+
+-- 
+Mvh,
+Endre
+
+
+From cgu@urbanet.ch  Mon Dec 18 13:44:13 2000
+Return-Path: <cgu@urbanet.ch>
+Mailing-List: contact log4j-user-help@jakarta.apache.org; run by ezmlm
+Delivered-To: mailing list log4j-user@jakarta.apache.org
+Received: (qmail 10682 invoked from network); 18 Dec 2000 13:44:13 -0000
+Received: from monterosa.urbanet.ch (qmailr@195.202.193.104)
+  by locus.apache.org with SMTP; 18 Dec 2000 13:44:13 -0000
+Received: (qmail 20512 invoked from network); 18 Dec 2000 13:44:11 -0000
+Received: from unknown (HELO gil.urbanet.ch) (195.202.236.207)
+  by monterosa.urbanet.ch with SMTP; 18 Dec 2000 13:44:11 -0000
+Message-Id: <5.0.0.25.0.20001218144056.00aa5150@mail.urbanet.ch>
+X-Sender: urba19978@mail.urbanet.ch
+X-Mailer: QUALCOMM Windows Eudora Version 5.0
+Date: Mon, 18 Dec 2000 14:44:51 +0100
+To: "LOG4J Users Mailing List" <log4j-user@jakarta.apache.org>
+From: Ceki Gulcu <cgu@urbanet.ch>
+Subject: Re: XML parsing problem..
+Cc: log4j-user@jakarta.apache.org
+In-Reply-To: <Pine.GS4.4.21.0012171208340.18354-100000@jeeves.stud.ntnu.
+ no>
+Mime-Version: 1.0
+Content-Type: text/plain; charset="iso-8859-1"; format=flowed
+Content-Transfer-Encoding: quoted-printable
+X-Spam-Rating: locus.apache.org 1.6.2 0/1000/N
+
+Endre,
+
+The DOMConfigurator requires the DOM Level 2 API which is not provided by=20
+Sun's implementation of JAXP. So you need the Apache Xerces parser which=20
+surprisingly also contains Sun's JAXP API... I hope this helps, Ceki
+
+
+At 12:39 17.12.2000 +0100, Endre St=F8lsvik wrote:
+>I'm trying to get the XML config thing to work with the jaxp early access
+>1.1 from SUN. This is my classpath, where the three last ones is the jaxp
+>thingy :
+>
+>.:/usr/java/jdk1.3/jre/lib/rt.jar
+>/usr/java/jsdk2.2/servlet.jar
+>/usr/java/third/webmacro/webmacro.jar
+>/usr/java/jaxp-1.1ea/crimson.jar
+>/usr/java/jaxp-1.1ea/jaxp.jar
+>/usr/java/jaxp-1.1ea/xalan.jar
+>
+>------------
+>   I then try to run a class called Test. It's an adaption of the xerces
+>based XMLSample to jaxp1.1, and uses one of the config files there. Check
+>the log4j log entries at the bottom of the run here:
+>
+>endre@endresin:~/testlog/classes$ java Test testconf1.xml
+>"doc.getDocumentElement()" gives:
+>
+><configuration configDebug=3D"null" disableOverride=3D"null">
+>
+>         <appender name=3D"A1" class=3D"org.log4j.FileAppender">
+>             <param name=3D"File" value=3D"A1.log" />
+>             <param name=3D"Append" value=3D"false" />
+>             <layout class=3D"org.log4j.PatternLayout">
+>                 <param name=3D"ConversionPattern" value=3D"%t %-5p %c{2} -=
+=20
+> %m\n" />
+>             </layout>
+>         </appender>
+>
+>         <appender name=3D"STDOUT" class=3D"org.log4j.FileAppender">
+>                 <param name=3D"File" value=3D"System.out" />
+>
+>                 <layout class=3D"org.log4j.PatternLayout">
+>                    <param name=3D"ConversionPattern" value=3D"%d %-5p [%t]=
+=20
+> %C{2} (%F:%L) - %m\n" />
+>                 </layout>
+>         </appender>
+>
+>         <category name=3D"Test" additivity=3D"true">
+>           <priority value=3D"debug" />
+>           <appender-ref ref=3D"A1" />
+>         </category>
+>
+>         <root>
+>            <priority value=3D"debug" />
+>            <appender-ref ref=3D"STDOUT" />
+>         </root>
+>
+></configuration>
+>
+>log4j: No appender named [A1] could be found.
+>log4j: No appender named [STDOUT] could be found.
+>log4j: No appenders could be found for category (Test).
+>log4j: Please initialize the log4j system properly.
+>
+>------------------
+>
+>What's happening is apparently that these lines in DOMConfigurator.java
+>mess up (it does parse the root and categories "correctly", but when it
+>needs the appenders, it fails):
+>
+>...
+>Document doc =3D appenderRef.getOwnerDocument();
+>Element element =3D doc.getElementById(appenderName);
+>if(element =3D=3D null) {
+>     LogLog.error("No appender named ["+appenderName+"] could be found.");
+>     return null;
+>} else {
+>...
+>
+>So, the getElementById isn't giving anything back. Why is this? I guess it
+>have something to do with me using jaxp1.1 and this being made for xerces,
+>but then there is something wrong somewhere, right?
+>
+>Anybody had any experience with this?
+>
+>Thanks!
+>
+>--
+>Mvh,
+>Endre
+>
+>
+>---------------------------------------------------------------------
+>To unsubscribe, e-mail: log4j-user-unsubscribe@jakarta.apache.org
+>For additional commands, e-mail: log4j-user-help@jakarta.apache.org
+
+
+From cgu@urbanet.ch  Mon Dec 18 13:44:13 2000
+Return-Path: <cgu@urbanet.ch>
+Mailing-List: contact log4j-user-help@jakarta.apache.org; run by ezmlm
+Delivered-To: mailing list log4j-user@jakarta.apache.org
+Received: (qmail 10681 invoked from network); 18 Dec 2000 13:44:13 -0000
+Received: from monterosa.urbanet.ch (qmailr@195.202.193.104)
+  by locus.apache.org with SMTP; 18 Dec 2000 13:44:13 -0000
+Received: (qmail 20512 invoked from network); 18 Dec 2000 13:44:11 -0000
+Received: from unknown (HELO gil.urbanet.ch) (195.202.236.207)
+  by monterosa.urbanet.ch with SMTP; 18 Dec 2000 13:44:11 -0000
+Message-Id: <5.0.0.25.0.20001218144056.00aa5150@mail.urbanet.ch>
+X-Sender: urba19978@mail.urbanet.ch
+X-Mailer: QUALCOMM Windows Eudora Version 5.0
+Date: Mon, 18 Dec 2000 14:44:51 +0100
+To: "LOG4J Users Mailing List" <log4j-user@jakarta.apache.org>
+From: Ceki Gulcu <cgu@urbanet.ch>
+Subject: Re: XML parsing problem..
+Cc: log4j-user@jakarta.apache.org
+In-Reply-To: <Pine.GS4.4.21.0012171208340.18354-100000@jeeves.stud.ntnu.
+ no>
+Mime-Version: 1.0
+Content-Type: text/plain; charset="iso-8859-1"; format=flowed
+Content-Transfer-Encoding: quoted-printable
+X-Spam-Rating: locus.apache.org 1.6.2 0/1000/N
+
+Endre,
+
+The DOMConfigurator requires the DOM Level 2 API which is not provided by=20
+Sun's implementation of JAXP. So you need the Apache Xerces parser which=20
+surprisingly also contains Sun's JAXP API... I hope this helps, Ceki
+
+
+At 12:39 17.12.2000 +0100, Endre St=F8lsvik wrote:
+>I'm trying to get the XML config thing to work with the jaxp early access
+>1.1 from SUN. This is my classpath, where the three last ones is the jaxp
+>thingy :
+>
+>.:/usr/java/jdk1.3/jre/lib/rt.jar
+>/usr/java/jsdk2.2/servlet.jar
+>/usr/java/third/webmacro/webmacro.jar
+>/usr/java/jaxp-1.1ea/crimson.jar
+>/usr/java/jaxp-1.1ea/jaxp.jar
+>/usr/java/jaxp-1.1ea/xalan.jar
+>
+>------------
+>   I then try to run a class called Test. It's an adaption of the xerces
+>based XMLSample to jaxp1.1, and uses one of the config files there. Check
+>the log4j log entries at the bottom of the run here:
+>
+>endre@endresin:~/testlog/classes$ java Test testconf1.xml
+>"doc.getDocumentElement()" gives:
+>
+><configuration configDebug=3D"null" disableOverride=3D"null">
+>
+>         <appender name=3D"A1" class=3D"org.log4j.FileAppender">
+>             <param name=3D"File" value=3D"A1.log" />
+>             <param name=3D"Append" value=3D"false" />
+>             <layout class=3D"org.log4j.PatternLayout">
+>                 <param name=3D"ConversionPattern" value=3D"%t %-5p %c{2} -=
+=20
+> %m\n" />
+>             </layout>
+>         </appender>
+>
+>         <appender name=3D"STDOUT" class=3D"org.log4j.FileAppender">
+>                 <param name=3D"File" value=3D"System.out" />
+>
+>                 <layout class=3D"org.log4j.PatternLayout">
+>                    <param name=3D"ConversionPattern" value=3D"%d %-5p [%t]=
+=20
+> %C{2} (%F:%L) - %m\n" />
+>                 </layout>
+>         </appender>
+>
+>         <category name=3D"Test" additivity=3D"true">
+>           <priority value=3D"debug" />
+>           <appender-ref ref=3D"A1" />
+>         </category>
+>
+>         <root>
+>            <priority value=3D"debug" />
+>            <appender-ref ref=3D"STDOUT" />
+>         </root>
+>
+></configuration>
+>
+>log4j: No appender named [A1] could be found.
+>log4j: No appender named [STDOUT] could be found.
+>log4j: No appenders could be found for category (Test).
+>log4j: Please initialize the log4j system properly.
+>
+>------------------
+>
+>What's happening is apparently that these lines in DOMConfigurator.java
+>mess up (it does parse the root and categories "correctly", but when it
+>needs the appenders, it fails):
+>
+>...
+>Document doc =3D appenderRef.getOwnerDocument();
+>Element element =3D doc.getElementById(appenderName);
+>if(element =3D=3D null) {
+>     LogLog.error("No appender named ["+appenderName+"] could be found.");
+>     return null;
+>} else {
+>...
+>
+>So, the getElementById isn't giving anything back. Why is this? I guess it
+>have something to do with me using jaxp1.1 and this being made for xerces,
+>but then there is something wrong somewhere, right?
+>
+>Anybody had any experience with this?
+>
+>Thanks!
+>
+>--
+>Mvh,
+>Endre
+>
+>
+>---------------------------------------------------------------------
+>To unsubscribe, e-mail: log4j-user-unsubscribe@jakarta.apache.org
+>For additional commands, e-mail: log4j-user-help@jakarta.apache.org
+
+
+From Endre@Stolsvik.com  Mon Dec 18 14:45:43 2000
+Return-Path: <Endre@Stolsvik.com>
+Mailing-List: contact log4j-user-help@jakarta.apache.org; run by ezmlm
+Delivered-To: mailing list log4j-user@jakarta.apache.org
+Received: (qmail 73637 invoked from network); 18 Dec 2000 14:45:43 -0000
+Received: from neshorn.stud.ntnu.no (0@129.241.56.23)
+  by locus.apache.org with SMTP; 18 Dec 2000 14:45:43 -0000
+Received: from jeeves.stud.ntnu.no (jeeves [129.241.56.14])
+	by neshorn.stud.ntnu.no (8.10.0.Beta12/8.10.0.Beta12) with ESMTP id eBIEjYc04536
+	for <log4j-user@jakarta.apache.org>; Mon, 18 Dec 2000 15:45:34 +0100 (MET)
+Received: from localhost (endrs@localhost)
+	by jeeves.stud.ntnu.no (8.10.0.Beta12/8.10.0.Beta12) with ESMTP id eBIEjgr29184
+	for <log4j-user@jakarta.apache.org>; Mon, 18 Dec 2000 15:45:42 +0100 (MET)
+X-Authentication-Warning: jeeves.stud.ntnu.no: endrs owned process doing -bs
+Date: Mon, 18 Dec 2000 15:45:42 +0100 (MET)
+From: =?iso-8859-1?Q?Endre_St=F8lsvik?= <Endre@Stolsvik.com>
+X-Sender: endrs@jeeves.stud.ntnu.no
+To: LOG4J Users Mailing List <log4j-user@jakarta.apache.org>
+Subject: Re: XML parsing problem..
+In-Reply-To: <5.0.0.25.0.20001218144056.00aa5150@mail.urbanet.ch>
+Message-ID: <Pine.GS4.4.21.0012181521180.4368-100000@jeeves.stud.ntnu.no>
+MIME-Version: 1.0
+Content-Type: TEXT/PLAIN; charset=US-ASCII
+X-Spam-Rating: locus.apache.org 1.6.2 0/1000/N
+
+On Mon, 18 Dec 2000, Ceki Gulcu wrote:
+
+| Endre,
+| 
+| The DOMConfigurator requires the DOM Level 2 API which is not provided by 
+| Sun's implementation of JAXP. So you need the Apache Xerces parser which 
+| surprisingly also contains Sun's JAXP API... I hope this helps, Ceki
+
+Thanks!
+
+But it is a bit weird, since this is jaxp1.1 (Early Release, mind you!),
+and it says in the doc:
+
+" This release aims to be conformant to the following specifications: 
+
+       JAXP 1.1 JSR-63 
+       XML 1.0 Second Edition 
+       XML Namespaces 
+       SAX 2.0 
+       SAX2 Extensions version 1.0 
+       DOM Level 2 Core Recommendation 
+       XSLT 1.0 "
+
+But I hacked my way around it with this crude thing. I mean, it's just in
+the _configuration_ that this is a problem, so it won't degrade the actual
+logging performance anyway.
+
+        /**
+	 Used internally to parse appenders by IDREF.
+	 */
+	protected
+		Appender findAppenderByReference(Element appenderRef) {
+		String appenderName = appenderRef.getAttribute(REF_ATTR);
+		Appender appender = (Appender) appenderBag.get(appenderName);
+		if(appender != null) {
+			return appender;
+		} else {
+			Document doc = appenderRef.getOwnerDocument();
+
+			// DOESN'T WORK!! :
+			// Element element = doc.getElementById(appenderName);
+			
+			// Endre's hack:
+			Element element = null;
+			NodeList list = doc.getElementsByTagName("appender");
+			for (int t=0; t<list.getLength(); t++) {
+				Node node = list.item(t);
+				NamedNodeMap map= node.getAttributes();
+				Node attrNode = map.getNamedItem("name");
+				if (appenderName.equals(attrNode.getNodeValue())) {
+					element = (Element) node;
+					break;
+				}
+			}
+			// Hack finished.
+			
+			if(element == null) {
+				LogLog.error("No appender named ["+appenderName+"] could be found.");
+				return null;
+			} else {
+				appender = parseAppender(element);
+				appenderBag.put(appenderName, appender);
+				return appender;
+			}
+		}
+	}
+
+
+-- 
+Mvh,
+Endre
+
+
+From cgu@urbanet.ch  Mon Dec 18 18:28:33 2000
+Return-Path: <cgu@urbanet.ch>
+Mailing-List: contact log4j-user-help@jakarta.apache.org; run by ezmlm
+Delivered-To: mailing list log4j-user@jakarta.apache.org
+Received: (qmail 72972 invoked from network); 18 Dec 2000 18:28:33 -0000
+Received: from monterosa.urbanet.ch (195.202.193.104)
+  by locus.apache.org with SMTP; 18 Dec 2000 18:28:33 -0000
+Received: (qmail 28552 invoked from network); 18 Dec 2000 18:23:17 -0000
+Received: from unknown (HELO gil.urbanet.ch) (195.202.236.207)
+  by monterosa.urbanet.ch with SMTP; 18 Dec 2000 18:23:17 -0000
+Message-Id: <5.0.0.25.0.20001218192041.02950d98@mail.urbanet.ch>
+X-Sender: urba19978@mail.urbanet.ch
+X-Mailer: QUALCOMM Windows Eudora Version 5.0
+Date: Mon, 18 Dec 2000 19:23:57 +0100
+To: "LOG4J Users Mailing List" <log4j-user@jakarta.apache.org>
+From: Ceki Gulcu <cgu@urbanet.ch>
+Subject: Re: XML parsing problem..
+In-Reply-To: <Pine.GS4.4.21.0012181521180.4368-100000@jeeves.stud.ntnu.n
+ o>
+References: <5.0.0.25.0.20001218144056.00aa5150@mail.urbanet.ch>
+Mime-Version: 1.0
+Content-Type: text/plain; charset="iso-8859-1"; format=flowed
+Content-Transfer-Encoding: quoted-printable
+X-Spam-Rating: locus.apache.org 1.6.2 0/1000/N
+
+Endre,
+
+Your hack is obviously the right way to go. I don't know what I was=20
+thinking when to require DOM Level 2 (getElementById method) when the same=
+=20
+effect can be achieved with a few lines of code. Thanks!. I'll modify the=20
+code as you have suggested for the next version. Ceki
+
+At 15:45 18.12.2000 +0100, Endre St=F8lsvik wrote:
+>On Mon, 18 Dec 2000, Ceki Gulcu wrote:
+>
+>| Endre,
+>|
+>| The DOMConfigurator requires the DOM Level 2 API which is not provided by
+>| Sun's implementation of JAXP. So you need the Apache Xerces parser which
+>| surprisingly also contains Sun's JAXP API... I hope this helps, Ceki
+>
+>Thanks!
+>
+>But it is a bit weird, since this is jaxp1.1 (Early Release, mind you!),
+>and it says in the doc:
+>
+>" This release aims to be conformant to the following specifications:
+>
+>        JAXP 1.1 JSR-63
+>        XML 1.0 Second Edition
+>        XML Namespaces
+>        SAX 2.0
+>        SAX2 Extensions version 1.0
+>        DOM Level 2 Core Recommendation
+>        XSLT 1.0 "
+>
+>But I hacked my way around it with this crude thing. I mean, it's just in
+>the _configuration_ that this is a problem, so it won't degrade the actual
+>logging performance anyway.
+>
+>         /**
+>         Used internally to parse appenders by IDREF.
+>         */
+>         protected
+>                 Appender findAppenderByReference(Element appenderRef) {
+>                 String appenderName =3D=
+ appenderRef.getAttribute(REF_ATTR);
+>                 Appender appender =3D (Appender)=
+ appenderBag.get(appenderName);
+>                 if(appender !=3D null) {
+>                         return appender;
+>                 } else {
+>                         Document doc =3D appenderRef.getOwnerDocument();
+>
+>                         // DOESN'T WORK!! :
+>                         // Element element =3D=20
+> doc.getElementById(appenderName);
+>
+>                         // Endre's hack:
+>                         Element element =3D null;
+>                         NodeList list =3D=
+ doc.getElementsByTagName("appender");
+>                         for (int t=3D0; t<list.getLength(); t++) {
+>                                 Node node =3D list.item(t);
+>                                 NamedNodeMap map=3D node.getAttributes();
+>                                 Node attrNode =3D=
+ map.getNamedItem("name");
+>                                 if=20
+> (appenderName.equals(attrNode.getNodeValue())) {
+>                                         element =3D (Element) node;
+>                                         break;
+>                                 }
+>                         }
+>                         // Hack finished.
+>
+>                         if(element =3D=3D null) {
+>                                 LogLog.error("No appender named=20
+> ["+appenderName+"] could be found.");
+>                                 return null;
+>                         } else {
+>                                 appender =3D parseAppender(element);
+>                                 appenderBag.put(appenderName, appender);
+>                                 return appender;
+>                         }
+>                 }
+>         }
+>
+>
+>--
+>Mvh,
+>Endre
+>
+>
+>---------------------------------------------------------------------
+>To unsubscribe, e-mail: log4j-user-unsubscribe@jakarta.apache.org
+>For additional commands, e-mail: log4j-user-help@jakarta.apache.org
+
+
+From cgu@urbanet.ch  Mon Dec 18 21:52:00 2000
+Return-Path: <cgu@urbanet.ch>
+Mailing-List: contact log4j-user-help@jakarta.apache.org; run by ezmlm
+Delivered-To: mailing list log4j-user@jakarta.apache.org
+Received: (qmail 19153 invoked from network); 18 Dec 2000 21:52:00 -0000
+Received: from monterosa.urbanet.ch (195.202.193.104)
+  by locus.apache.org with SMTP; 18 Dec 2000 21:52:00 -0000
+Received: (qmail 25959 invoked from network); 18 Dec 2000 21:51:29 -0000
+Received: from unknown (HELO gil.urbanet.ch) (195.202.236.207)
+  by monterosa.urbanet.ch with SMTP; 18 Dec 2000 21:51:29 -0000
+Message-Id: <5.0.0.25.0.20001218224532.0297d2d8@mail.urbanet.ch>
+X-Sender: urba19978@mail.urbanet.ch
+X-Mailer: QUALCOMM Windows Eudora Version 5.0
+Date: Mon, 18 Dec 2000 22:52:11 +0100
+To: log4j-user@jakarta.apache.org
+From: Ceki Gulcu <cgu@urbanet.ch>
+Subject: logi is not logy
+Cc: log4j-dev@jakarta.apache.org
+Mime-Version: 1.0
+Content-Type: multipart/alternative;
+	boundary="=====================_25171354==_.ALT"
+X-Spam-Rating: locus.apache.org 1.6.2 0/1000/N
+
+--=====================_25171354==_.ALT
+Content-Type: text/plain; charset="us-ascii"; format=flowed
+
+
+Hi again,
+
+How about the name logi? The project motto would be: "logi is not logy." Is 
+this reasonable or just plain silly? Cheers, Ceki
+--=====================_25171354==_.ALT
+Content-Type: text/html; charset="us-ascii"
+
+<html>
+<br>
+Hi again,<br>
+<br>
+How about the name <b>logi</b>? The project motto would be: &quot;logi is
+not logy.&quot; Is this reasonable or just plain silly? Cheers,
+Ceki</html>
+
+--=====================_25171354==_.ALT--
+
+
+From jochen.hiller@bauer-partner.de  Mon Dec 18 22:16:27 2000
+Return-Path: <jochen.hiller@bauer-partner.de>
+Mailing-List: contact log4j-user-help@jakarta.apache.org; run by ezmlm
+Delivered-To: mailing list log4j-user@jakarta.apache.org
+Received: (qmail 36171 invoked from network); 18 Dec 2000 22:16:27 -0000
+Received: from mailsrv.bauer-partner.de (HELO mail.bauer-partner.de) (@194.123.103.66)
+  by locus.apache.org with SMTP; 18 Dec 2000 22:16:27 -0000
+Received: (qmail 17134 invoked from network); 18 Dec 2000 22:10:58 -0000
+Received: from unknown (HELO chkrltnt536) (192.168.69.162)
+  by bauer-partner.de with SMTP; 18 Dec 2000 22:10:58 -0000
+From: "Jochen Hiller" <jochen.hiller@bauer-partner.de>
+To: "LOG4J Developers Mailing List" <log4j-dev@jakarta.apache.org>,
+	<log4j-user@jakarta.apache.org>,
+	<cgu@urbanet.ch>
+Subject: New name for log4j
+Date: Mon, 18 Dec 2000 23:11:03 +0100
+Message-ID: <NEBBKPNECKCKEEENNACJIEDKCHAA.jochen.hiller@bauer-partner.de>
+MIME-Version: 1.0
+Content-Type: multipart/alternative;
+	boundary="----=_NextPart_000_0020_01C06947.CB25F1F0"
+X-Priority: 3 (Normal)
+X-MSMail-Priority: Normal
+X-Mailer: Microsoft Outlook IMO, Build 9.0.2416 (9.0.2910.0)
+Importance: Normal
+X-MimeOLE: Produced By Microsoft MimeOLE V5.00.2314.1300
+In-Reply-To: <5.0.0.25.0.20001218224532.0297d2d8@mail.urbanet.ch>
+Disposition-Notification-To: "Jochen Hiller" <jochen.hiller@bauer-partner.de>
+X-Spam-Rating: locus.apache.org 1.6.2 0/1000/N
+
+------=_NextPart_000_0020_01C06947.CB25F1F0
+Content-Type: text/plain;
+	charset="us-ascii"
+Content-Transfer-Encoding: 7bit
+
+Hi all,
+
+I am not sure, whether org.apache.logging will be a good idea. This will
+imply, that log4j is "only" a different implementation of the SUN api.
+
+If you, Ceki, would like to focus on compatibilty with this API, I would
+propose to use it. But for my opinion, I think, log4j should be known as a
+separate logging implementation with its own "brand" name and its own
+features, as it is really more than the JSR 047.
+
+I personally like log4j very much, and especially its corresponding log4?
+implementations (like ?Unit...).
+
+Bye, Jochen
+  -----Original Message-----
+  From: Ceki Gulcu [mailto:cgu@urbanet.ch]
+  Sent: Montag, 18. Dezember 2000 22:52
+  To: log4j-user@jakarta.apache.org
+  Cc: log4j-dev@jakarta.apache.org
+  Subject: logi is not logy
+
+
+
+  Hi again,
+
+  How about the name logi? The project motto would be: "logi is not logy."
+Is this reasonable or just plain silly? Cheers, Ceki
+
+------=_NextPart_000_0020_01C06947.CB25F1F0
+Content-Type: text/html;
+	charset="us-ascii"
+Content-Transfer-Encoding: quoted-printable
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML><HEAD>
+<META content=3D"text/html; charset=3Dus-ascii" =
+http-equiv=3DContent-Type>
+<META content=3D"MSHTML 5.00.2314.1000" name=3DGENERATOR></HEAD>
+<BODY>
+<DIV><FONT color=3D#0000ff face=3DArial size=3D2><SPAN =
+class=3D902140522-18122000>Hi=20
+all,</SPAN></FONT></DIV>
+<DIV><FONT color=3D#0000ff face=3DArial size=3D2><SPAN=20
+class=3D902140522-18122000></SPAN></FONT>&nbsp;</DIV>
+<DIV><FONT color=3D#0000ff face=3DArial size=3D2><SPAN =
+class=3D902140522-18122000>I am=20
+not sure, whether</SPAN></FONT><FONT color=3D#0000ff face=3DArial =
+size=3D2><SPAN=20
+class=3D902140522-18122000>&nbsp;org.apache.logging will be a good idea. =
+This will=20
+imply, that log4j is "only" a different implementation of the SUN api.=20
+</SPAN></FONT></DIV>
+<DIV><FONT color=3D#0000ff face=3DArial size=3D2><SPAN=20
+class=3D902140522-18122000></SPAN></FONT>&nbsp;</DIV>
+<DIV><FONT color=3D#0000ff face=3DArial size=3D2><SPAN =
+class=3D902140522-18122000>If=20
+you, Ceki, would like to focus on compatibilty with this API, I would =
+propose to=20
+use it. But for my opinion, I think, log4j should be known as a separate =
+logging=20
+implementation with its own "brand" name and its own features, as it is =
+really=20
+more than the JSR 047.</SPAN></FONT></DIV>
+<DIV><FONT color=3D#0000ff face=3DArial size=3D2><SPAN=20
+class=3D902140522-18122000></SPAN></FONT>&nbsp;</DIV>
+<DIV><FONT color=3D#0000ff face=3DArial size=3D2><SPAN =
+class=3D902140522-18122000>I=20
+personally like log4j very much, and especially its corresponding log4?=20
+implementations (like ?Unit...).</SPAN></FONT></DIV>
+<DIV><FONT color=3D#0000ff face=3DArial size=3D2><SPAN=20
+class=3D902140522-18122000></SPAN></FONT>&nbsp;</DIV>
+<DIV><FONT color=3D#0000ff face=3DArial size=3D2><SPAN =
+class=3D902140522-18122000>Bye,=20
+Jochen</SPAN></FONT></DIV>
+<BLOCKQUOTE>
+  <DIV align=3Dleft class=3DOutlookMessageHeader dir=3Dltr><FONT =
+face=3DTahoma=20
+  size=3D2>-----Original Message-----<BR><B>From:</B> Ceki Gulcu=20
+  [mailto:cgu@urbanet.ch]<BR><B>Sent:</B> Montag, 18. Dezember 2000=20
+  22:52<BR><B>To:</B> log4j-user@jakarta.apache.org<BR><B>Cc:</B>=20
+  log4j-dev@jakarta.apache.org<BR><B>Subject:</B> logi is not=20
+  logy<BR><BR></DIV></FONT><BR>Hi again,<BR><BR>How about the name =
+<B>logi</B>?=20
+  The project motto would be: "logi is not logy." Is this reasonable or =
+just=20
+  plain silly? Cheers, Ceki </BLOCKQUOTE></BODY></HTML>
+
+------=_NextPart_000_0020_01C06947.CB25F1F0--
+
+
+From cgu@urbanet.ch  Wed Dec 20 18:57:51 2000
+Return-Path: <cgu@urbanet.ch>
+Mailing-List: contact log4j-user-help@jakarta.apache.org; run by ezmlm
+Delivered-To: mailing list log4j-user@jakarta.apache.org
+Received: (qmail 62947 invoked from network); 20 Dec 2000 18:57:51 -0000
+Received: from monterosa.urbanet.ch (qmailr@195.202.193.104)
+  by locus.apache.org with SMTP; 20 Dec 2000 18:57:51 -0000
+Received: (qmail 15989 invoked from network); 20 Dec 2000 18:57:48 -0000
+Received: from unknown (HELO gil.urbanet.ch) (195.202.202.71)
+  by monterosa.urbanet.ch with SMTP; 20 Dec 2000 18:57:48 -0000
+Message-Id: <5.0.0.25.0.20001220195810.00aa3cc8@mail.urbanet.ch>
+X-Sender: urba19978@mail.urbanet.ch
+X-Mailer: QUALCOMM Windows Eudora Version 5.0
+Date: Wed, 20 Dec 2000 19:58:32 +0100
+To: log4j-user@jakarta.apache.org
+From: Ceki Gulcu <cgu@urbanet.ch>
+Subject: JMSAppender
+Mime-Version: 1.0
+Content-Type: text/plain; charset="us-ascii"; format=flowed
+X-Spam-Rating: locus.apache.org 1.6.2 0/1000/N
+
+
+
+Hello everyone,.
+
+I have just started to implement a JMSAppedner. Would you recommend any one
+of the following opensource implementations of JMS?
+objectCube, Inc.
+OpenJMS
+ObjectWeb - Joram
+spyderMQ
+Thanks for the information. Ceki 
+
+
+From ssahuc@imediation.com  Thu Dec 21 14:24:51 2000
+Return-Path: <ssahuc@imediation.com>
+Mailing-List: contact log4j-user-help@jakarta.apache.org; run by ezmlm
+Delivered-To: mailing list log4j-user@jakarta.apache.org
+Received: (qmail 46655 invoked from network); 21 Dec 2000 14:24:51 -0000
+Received: from unknown (HELO ?195.115.98.1?) (195.115.98.1)
+  by locus.apache.org with SMTP; 21 Dec 2000 14:24:51 -0000
+Received: from maileu.imediation.com by [195.115.98.1]
+          via smtpd (for locus.apache.org [63.211.145.10]) with SMTP; 21 Dec 2000 15:24:37 UT
+Received: (private information removed)
+Message-ID: <9B3E950CB293D411ADF4009027B0A4D25A1EC3@maileu.imediation.com>
+From: Sebastien Sahuc <ssahuc@imediation.com>
+To: LOG4J Users Mailing List <log4j-user@jakarta.apache.org>
+Subject: RE: JMSAppender
+Date: Thu, 21 Dec 2000 14:27:18 -0000
+MIME-Version: 1.0
+X-Mailer: Internet Mail Service (5.5.2650.21)
+Content-Type: multipart/alternative;
+	boundary="----_=_NextPart_001_01C06B5A.23E7DB00"
+X-Spam-Rating: locus.apache.org 1.6.2 0/1000/N
+
+------_=_NextPart_001_01C06B5A.23E7DB00
+Content-Type: text/plain;
+	charset="iso-8859-1"
+
+I'll go with OpenJMS... but this is MHO only what I got from experiencing
+with OpenJMS and SpyderM. 
+
+I've never used the others product though.
+
+Sebastien
+
+
+
+> -----Original Message-----
+> From: Ceki Gulcu [mailto:cgu@urbanet.ch]
+> Sent: Wednesday, December 20, 2000 7:59 PM
+> To: log4j-user@jakarta.apache.org
+> Subject: JMSAppender
+> 
+> 
+> 
+> 
+> Hello everyone,.
+> 
+> I have just started to implement a JMSAppedner. Would you 
+> recommend any one
+> of the following opensource implementations of JMS?
+> objectCube, Inc.
+> OpenJMS
+> ObjectWeb - Joram
+> spyderMQ
+> Thanks for the information. Ceki 
+> 
+> 
+> ---------------------------------------------------------------------
+> To unsubscribe, e-mail: log4j-user-unsubscribe@jakarta.apache.org
+> For additional commands, e-mail: log4j-user-help@jakarta.apache.org
+> 
+
+------_=_NextPart_001_01C06B5A.23E7DB00
+Content-Type: text/html;
+	charset="iso-8859-1"
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<HTML>
+<HEAD>
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<META NAME="Generator" CONTENT="MS Exchange Server version 5.5.2650.12">
+<TITLE>RE: JMSAppender</TITLE>
+</HEAD>
+<BODY>
+
+<P><FONT SIZE=2>I'll go with OpenJMS... but this is MHO only what I got from experiencing with OpenJMS and SpyderM. </FONT>
+</P>
+
+<P><FONT SIZE=2>I've never used the others product though.</FONT>
+</P>
+
+<P><FONT SIZE=2>Sebastien</FONT>
+</P>
+<BR>
+<BR>
+
+<P><FONT SIZE=2>&gt; -----Original Message-----</FONT>
+<BR><FONT SIZE=2>&gt; From: Ceki Gulcu [<A HREF="mailto:cgu@urbanet.ch">mailto:cgu@urbanet.ch</A>]</FONT>
+<BR><FONT SIZE=2>&gt; Sent: Wednesday, December 20, 2000 7:59 PM</FONT>
+<BR><FONT SIZE=2>&gt; To: log4j-user@jakarta.apache.org</FONT>
+<BR><FONT SIZE=2>&gt; Subject: JMSAppender</FONT>
+<BR><FONT SIZE=2>&gt; </FONT>
+<BR><FONT SIZE=2>&gt; </FONT>
+<BR><FONT SIZE=2>&gt; </FONT>
+<BR><FONT SIZE=2>&gt; </FONT>
+<BR><FONT SIZE=2>&gt; Hello everyone,.</FONT>
+<BR><FONT SIZE=2>&gt; </FONT>
+<BR><FONT SIZE=2>&gt; I have just started to implement a JMSAppedner. Would you </FONT>
+<BR><FONT SIZE=2>&gt; recommend any one</FONT>
+<BR><FONT SIZE=2>&gt; of the following opensource implementations of JMS?</FONT>
+<BR><FONT SIZE=2>&gt; objectCube, Inc.</FONT>
+<BR><FONT SIZE=2>&gt; OpenJMS</FONT>
+<BR><FONT SIZE=2>&gt; ObjectWeb - Joram</FONT>
+<BR><FONT SIZE=2>&gt; spyderMQ</FONT>
+<BR><FONT SIZE=2>&gt; Thanks for the information. Ceki </FONT>
+<BR><FONT SIZE=2>&gt; </FONT>
+<BR><FONT SIZE=2>&gt; </FONT>
+<BR><FONT SIZE=2>&gt; ---------------------------------------------------------------------</FONT>
+<BR><FONT SIZE=2>&gt; To unsubscribe, e-mail: log4j-user-unsubscribe@jakarta.apache.org</FONT>
+<BR><FONT SIZE=2>&gt; For additional commands, e-mail: log4j-user-help@jakarta.apache.org</FONT>
+<BR><FONT SIZE=2>&gt; </FONT>
+</P>
+
+</BODY>
+</HTML>
+------_=_NextPart_001_01C06B5A.23E7DB00--
+
+From cgu@urbanet.ch  Thu Dec 21 15:42:27 2000
+Return-Path: <cgu@urbanet.ch>
+Mailing-List: contact log4j-user-help@jakarta.apache.org; run by ezmlm
+Delivered-To: mailing list log4j-user@jakarta.apache.org
+Received: (qmail 15641 invoked from network); 21 Dec 2000 15:42:27 -0000
+Received: from monterosa.urbanet.ch (qmailr@195.202.193.104)
+  by locus.apache.org with SMTP; 21 Dec 2000 15:42:27 -0000
+Received: (qmail 1029 invoked from network); 21 Dec 2000 15:42:25 -0000
+Received: from unknown (HELO gil.urbanet.ch) (195.202.202.71)
+  by monterosa.urbanet.ch with SMTP; 21 Dec 2000 15:42:25 -0000
+Message-Id: <5.0.0.25.0.20001221164158.00acbe80@mail.urbanet.ch>
+X-Sender: urba19978@mail.urbanet.ch
+X-Mailer: QUALCOMM Windows Eudora Version 5.0
+Date: Thu, 21 Dec 2000 16:43:07 +0100
+To: "LOG4J Users Mailing List" <log4j-user@jakarta.apache.org>
+From: Ceki Gulcu <cgu@urbanet.ch>
+Subject: RE: JMSAppender
+Cc: Sebastien Sahuc <ssahuc@imediation.com>
+In-Reply-To: <9B3E950CB293D411ADF4009027B0A4D25A1EC3@maileu.imediation.c
+ om>
+Mime-Version: 1.0
+Content-Type: multipart/alternative;
+	boundary="=====================_262227453==_.ALT"
+X-Spam-Rating: locus.apache.org 1.6.2 0/1000/N
+
+--=====================_262227453==_.ALT
+Content-Type: text/plain; charset="us-ascii"; format=flowed
+
+
+OK. Thanks. In the mean time I started using Sun's JMQ1.1. I'll test my 
+code with OpenJMS too. Cheers, Ceki
+
+At 14:27 21.12.2000 +0000, you wrote:
+
+>I'll go with OpenJMS... but this is MHO only what I got from experiencing 
+>with OpenJMS and SpyderM.
+>
+>I've never used the others product though.
+>
+>Sebastien
+>
+>
+> > -----Original Message-----
+> > From: Ceki Gulcu [<mailto:cgu@urbanet.ch>mailto:cgu@urbanet.ch]
+> > Sent: Wednesday, December 20, 2000 7:59 PM
+> > To: log4j-user@jakarta.apache.org
+> > Subject: JMSAppender
+> >
+> >
+> >
+> >
+> > Hello everyone,.
+> >
+> > I have just started to implement a JMSAppedner. Would you
+> > recommend any one
+> > of the following opensource implementations of JMS?
+> > objectCube, Inc.
+> > OpenJMS
+> > ObjectWeb - Joram
+> > spyderMQ
+> > Thanks for the information. Ceki
+> >
+> >
+> > ---------------------------------------------------------------------
+> > To unsubscribe, e-mail: log4j-user-unsubscribe@jakarta.apache.org
+> > For additional commands, e-mail: log4j-user-help@jakarta.apache.org
+> >
+
+--=====================_262227453==_.ALT
+Content-Type: text/html; charset="us-ascii"
+
+<html>
+<br>
+OK. Thanks. In the mean time I started using Sun's JMQ1.1. I'll test my
+code with OpenJMS too. Cheers, Ceki<br>
+<br>
+At 14:27 21.12.2000 +0000, you wrote:<br>
+<br>
+<blockquote type=cite class=cite cite><font size=2>I'll go with
+OpenJMS... but this is MHO only what I got from experiencing with OpenJMS
+and SpyderM. <br>
+</font><br>
+<font size=2>I've never used the others product though.</font> <br>
+<br>
+<font size=2>Sebastien</font> <br>
+<br>
+<br>
+<font size=2>&gt; -----Original Message-----</font> <br>
+<font size=2>&gt; From: Ceki Gulcu
+[<a href="mailto:cgu@urbanet.ch">mailto:cgu@urbanet.ch</a>]</font> <br>
+<font size=2>&gt; Sent: Wednesday, December 20, 2000 7:59 PM</font> 
+<br>
+<font size=2>&gt; To: log4j-user@jakarta.apache.org</font> <br>
+<font size=2>&gt; Subject: JMSAppender</font> <br>
+<font size=2>&gt; </font><br>
+<font size=2>&gt; </font><br>
+<font size=2>&gt; </font><br>
+<font size=2>&gt; </font><br>
+<font size=2>&gt; Hello everyone,.</font> <br>
+<font size=2>&gt; </font><br>
+<font size=2>&gt; I have just started to implement a JMSAppedner. Would you </font><br>
+<font size=2>&gt; recommend any one</font> <br>
+<font size=2>&gt; of the following opensource implementations of JMS?</font> <br>
+<font size=2>&gt; objectCube, Inc.</font> <br>
+<font size=2>&gt; OpenJMS</font> <br>
+<font size=2>&gt; ObjectWeb - Joram</font> <br>
+<font size=2>&gt; spyderMQ</font> <br>
+<font size=2>&gt; Thanks for the information. Ceki </font><br>
+<font size=2>&gt; </font><br>
+<font size=2>&gt; </font><br>
+<font size=2>&gt; ---------------------------------------------------------------------</font> <br>
+<font size=2>&gt; To unsubscribe, e-mail: log4j-user-unsubscribe@jakarta.apache.org</font> <br>
+<font size=2>&gt; For additional commands, e-mail: log4j-user-help@jakarta.apache.org</font> <br>
+<font size=2>&gt; </font></blockquote></html>
+
+--=====================_262227453==_.ALT--
+
+
+From ito@integrationtech.com.br  Thu Dec 21 18:57:23 2000
+Return-Path: <ito@integrationtech.com.br>
+Mailing-List: contact log4j-user-help@jakarta.apache.org; run by ezmlm
+Delivered-To: mailing list log4j-user@jakarta.apache.org
+Delivered-To: moderator for log4j-user@jakarta.apache.org
+Received: (qmail 19511 invoked from network); 21 Dec 2000 18:57:23 -0000
+Received: from unknown (HELO server.eurosoft.com.br) (@200.182.9.30)
+  by locus.apache.org with SMTP; 21 Dec 2000 18:57:23 -0000
+Received: from www.integrationtech.com.br by server.eurosoft.com.br
+          via smtpd (for locus.apache.org [63.211.145.10]) with SMTP; 21 Dec 2000 20:00:00 UT
+Received: from integrationtech.com.br (IDENT:ito@speedy.integrationtech.com.br [172.17.17.67])
+	by www.integrationtech.com.br (8.10.0.Beta12/8.8.7) with ESMTP id eBLIvJW20574;
+	Thu, 21 Dec 2000 16:57:19 -0200
+Message-ID: <3A425326.9020802@integrationtech.com.br>
+Date: Thu, 21 Dec 2000 16:59:50 -0200
+From: Eduardo Issao Ito <ito@integrationtech.com.br>
+User-Agent: Mozilla/5.0 (X11; U; Linux 2.2.16-22 i686; en-US; m18) Gecko/20001107 Netscape6/6.0
+X-Accept-Language: en
+MIME-Version: 1.0
+To: LOG4J Users Mailing List <log4j-user@jakarta.apache.org>
+CC: Sebastien Sahuc <ssahuc@imediation.com>
+Subject: Re: JMSAppender
+References: <5.0.0.25.0.20001221164158.00acbe80@mail.urbanet.ch>
+Content-Type: text/plain; charset=us-ascii; format=flowed
+Content-Transfer-Encoding: 7bit
+X-Spam-Rating: locus.apache.org 1.6.2 0/1000/N
+
+
+I think JMQ is a commercial product. Try SwiftMQ, that is no open source 
+but its free also for comercial use.
+
+http://www.swiftmq.com/
+
+Ceki Gulcu wrote:
+
+> 
+> OK. Thanks. In the mean time I started using Sun's JMQ1.1. I'll test my 
+> code with OpenJMS too. Cheers, Ceki
+> 
+> At 14:27 21.12.2000 +0000, you wrote:
+> 
+>> I'll go with OpenJMS... but this is MHO only what I got from 
+>> experiencing with OpenJMS and SpyderM.
+>> 
+>> I've never used the others product though.
+>> 
+>> Sebastien
+>> 
+>> 
+>>  > -----Original Message-----
+>>  > From: Ceki Gulcu [mailto:cgu@urbanet.ch]
+>>  > Sent: Wednesday, December 20, 2000 7:59 PM
+>>  > To: log4j-user@jakarta.apache.org
+>>  > Subject: JMSAppender
+>>  >
+>>  >
+>>  >
+>>  >
+>>  > Hello everyone,.
+>>  >
+>>  > I have just started to implement a JMSAppedner. Would you
+>>  > recommend any one
+>>  > of the following opensource implementations of JMS?
+>>  > objectCube, Inc.
+>>  > OpenJMS
+>>  > ObjectWeb - Joram
+>>  > spyderMQ
+>>  > Thanks for the information. Ceki
+>>  >
+>>  >
+>>  > ---------------------------------------------------------------------
+>>  > To unsubscribe, e-mail: log4j-user-unsubscribe@jakarta.apache.org
+>>  > For additional commands, e-mail: log4j-user-help@jakarta.apache.org
+>>  > 
+
+
+-- 
+--
+Eduardo Issao Ito <ito@integrationtech.com.br>
+Integration Technologies Ltda. <http://www.integrationtech.com.br>
+Rua Marina Saddi Haidar, 176
+04650-050 / Sao Paulo / SP / Brasil
+Phone: +55 11 5522-4848 x311
+Fax:   +55 11 5524-1125
+
+
+From cgu@urbanet.ch  Thu Dec 21 21:46:10 2000
+Return-Path: <cgu@urbanet.ch>
+Mailing-List: contact log4j-user-help@jakarta.apache.org; run by ezmlm
+Delivered-To: mailing list log4j-user@jakarta.apache.org
+Received: (qmail 23574 invoked from network); 21 Dec 2000 21:46:10 -0000
+Received: from monterosa.urbanet.ch (qmailr@195.202.193.104)
+  by locus.apache.org with SMTP; 21 Dec 2000 21:46:10 -0000
+Received: (qmail 21221 invoked from network); 21 Dec 2000 21:46:04 -0000
+Received: from unknown (HELO gil) (195.202.202.71)
+  by monterosa.urbanet.ch with SMTP; 21 Dec 2000 21:46:04 -0000
+Message-ID: <6987074.977435209962.JavaMail.cgu@gil>
+Date: Thu, 21 Dec 2000 22:46:49 +0100 (GMT+01:00)
+From: cgu@urbanet.ch
+To: log4j-announce@log4j.org, log4j-user@jakarta.apache.org, 
+	log4j-dev@jakarta.apache.org
+Subject: Happy new year
+Mime-Version: 1.0
+Content-Type: multipart/mixed; boundary="----=_Part_0_1377187.977435209842"
+X-Spam-Rating: locus.apache.org 1.6.2 0/1000/N
+
+------=_Part_0_1377187.977435209842
+Content-Type: text/html
+Content-Transfer-Encoding: 7bit
+
+<html><body>
+<table border="1" cellpadding="2">
+<tr>
+<th>Time</th><th>Thread</th><th>Priority</th><th>Category</th><th>NDC</th><th>File:Line</th><th>Message</th></tr>
+
+<tr><td>0</td>
+<td>main</td>
+<td>INFO</td>
+<td>holiday.greetings</td>
+<td>2000 CE</td>
+<td>NewYear.java:39</td>
+<td>Greetings everyone,</td>
+</tr>
+
+<tr><td>11</td>
+<td>main</td>
+<td>DEBUG</td>
+<td>holiday.greetings</td>
+<td>2000 CE</td>
+<td>NewYear.java:40</td>
+<td></td>
+</tr>
+
+<tr><td>11</td>
+<td>main</td>
+<td>INFO</td>
+<td>holiday.greetings</td>
+<td>2000 CE</td>
+<td>NewYear.java:41</td>
+<td>I would like to wish a merry Christmas and a happy new year to all. The next log4j distribution, version <b>1.0</b> mind you, should become ready for relase before the end of the year.</td>
+</tr>
+
+<tr><td>11</td>
+<td>main</td>
+<td><font color="#FF0000">WARN</font></td>
+<td>holiday.greetings</td>
+<td>2000 CE</td>
+<td>NewYear.java:44</td>
+<td>But again it might not. :-)</td>
+</tr>
+
+<tr><td>11</td>
+<td>main</td>
+<td>INFO</td>
+<td>holiday.greetings</td>
+<td>2000 CE</td>
+<td>NewYear.java:45</td>
+<td>It will have a myriad of useful new features, such as<br>- bug fixes,<br>- SMTPAppender that sends e-mail notes after a triggering event,<br>- HTMLLayout for formatting logs in an convenient HTML table,<br>- JMSAppender for sending log events through a JMS channel,<br>- support for customized ObjectRenders,<br>- <em>lots</em> of other improvements.</td>
+</tr>
+
+<tr><td>21</td>
+<td>main</td>
+<td>DEBUG</td>
+<td>holiday.greetings</td>
+<td>2000 CE</td>
+<td>NewYear.java:52</td>
+<td></td>
+</tr>
+
+<tr><td>21</td>
+<td>main</td>
+<td>INFO</td>
+<td>holiday.greetings</td>
+<td>2000 CE</td>
+<td>NewYear.java:53</td>
+<td>I think the combination of the SMTPAppender and HTMLLayout is the neatest recent addition to log4j.</td>
+</tr>
+
+<tr><td>21</td>
+<td>main</td>
+<td>INFO</td>
+<td>holiday.greetings</td>
+<td>2000 CE</td>
+<td>NewYear.java:57</td>
+<td>On another register, I have proposed a log4j talk for the 2001 ApacheCon 2001 event to be held in April in Santa Clara. If you intend to attend this conference, you might want to check out the list of talks. Did I mention that <em>you can vote</em> to imporve the chances of your favorite talk to get accepted? You need to <a href="http://ApacheCon.Com/html/login.html"> login</a> at ApacheCon first.</td>
+</tr>
+
+<tr><td>21</td>
+<td>main</td>
+<td>INFO</td>
+<td>holiday.greetings</td>
+<td>2000 CE</td>
+<td>NewYear.java:63</td>
+<td>Best regards, Ceki G&uuml;lc&uuml;</td>
+</tr>
+
+<tr><td>21</td>
+<td>main</td>
+<td><font color="#FF0000">FATAL</font></td>
+<td>holiday.greetings</td>
+<td>2000 CE</td>
+<td>NewYear.java:64</td>
+<td>Millenium change not expected before a thousand years!</td>
+</tr>
+<tr><td colspan="7">NewYearException: Unexpected millenium change, will automatically e-mail log4j users.
+<br>&nbsp;&nbsp;&nbsp;&nbsp;	at NewYear.greet(NewYear.java:64)<br>&nbsp;&nbsp;&nbsp;&nbsp;	at NewYear.main(NewYear.java:19)</td></tr></table></body></html>
+------=_Part_0_1377187.977435209842--
+
+
+From cstaylor@pacbell.net  Sat Dec 23 08:36:33 2000
+Return-Path: <cstaylor@pacbell.net>
+Mailing-List: contact log4j-user-help@jakarta.apache.org; run by ezmlm
+Delivered-To: mailing list log4j-user@jakarta.apache.org
+Received: (qmail 97371 invoked from network); 23 Dec 2000 08:36:33 -0000
+Received: from unknown (HELO mx3-e.mail.home.com) (24.2.2.198)
+  by locus.apache.org with SMTP; 23 Dec 2000 08:36:33 -0000
+Received: from [192.168.50.116] (c68278-b.stcla1.sfba.home.com [24.7.85.143])
+	by mx3-e.mail.home.com (8.9.1/8.9.1) with ESMTP id AAA07787
+	for <log4j-user@jakarta.apache.org>; Sat, 23 Dec 2000 00:35:57 -0800 (PST)
+User-Agent: Microsoft-Entourage/9.0.2509
+Date: Sat, 23 Dec 2000 00:35:47 -0800
+Subject: Re: XML parsing problem..
+From: Christopher Taylor <cstaylor@pacbell.net>
+To: LOG4J Users Mailing List <log4j-user@jakarta.apache.org>
+Message-ID: <B6629B6B.19F%cstaylor@pacbell.net>
+In-Reply-To: <Pine.GS4.4.21.0012171208340.18354-100000@jeeves.stud.ntnu.no>
+Mime-version: 1.0
+Content-type: text/plain; charset="ISO-8859-1"
+Content-transfer-encoding: quoted-printable
+X-Spam-Rating: locus.apache.org 1.6.2 0/1000/N
+
+On 12/17/00 3:39 AM, "Endre St=F8lsvik" <Endre@Stolsvik.com> wrote:
+
+> I'm trying to get the XML config thing to work with the jaxp early access
+Jaxp 1.1 isn't ready yet.  I think Ceki mentioned that earlier in the
+mailing list, but I could be mistaken.
+
+For now, we're stuck with single-sourcing the XML parser (Xerces... At a
+700K footprint), although DOMConfigurator could be rewritten to use a hollo=
+w
+replacement approach:
+
+- For every ID encountered in the config file, add the constructed componen=
+t
+into a hashtable using the value of the ID attribute as the key
+- For every IDREF encountered in the config file, lookup the associated
+object from the hashtable.  If that association has not been made (the ID'd
+component comes later in the document), defer the construction of the
+component until later (add it to a stack?)
+- Once the file has been completely traversed, revisit the deferred
+components
+
+This solution is convoluted and error-prone, which is why (IMHO) Ceki chose
+to require DOM level 2 so he could safely search the document after each
+encountered IDREF.
+
+The only limitation to the new system that I am aware of is if you're
+residing within an application server (such as Jakarta's Tomcat) and you tr=
+y
+and use DOM level 2 interface bindings.  Since Tomcat uses JAXP (AFAIK) for
+loading the server's configuration file information, only the DOM level 1
+bindings are loaded (and anything using Log4j's DOMConfigurator will crash)=
+.
+The solution is replacing the parser.jar from Sun with the xerces.jar from
+xml.apache.org in your Tomcat lib directory.
+
+-Chris=20
+
+> 1.1 from SUN. This is my classpath, where the three last ones is the jaxp
+> thingy :
+>=20
+> .:/usr/java/jdk1.3/jre/lib/rt.jar
+> /usr/java/jsdk2.2/servlet.jar
+> /usr/java/third/webmacro/webmacro.jar
+> /usr/java/jaxp-1.1ea/crimson.jar
+> /usr/java/jaxp-1.1ea/jaxp.jar
+> /usr/java/jaxp-1.1ea/xalan.jar
+>=20
+> ------------
+> I then try to run a class called Test. It's an adaption of the xerces
+> based XMLSample to jaxp1.1, and uses one of the config files there. Check
+> the log4j log entries at the bottom of the run here:
+>=20
+> endre@endresin:~/testlog/classes$ java Test testconf1.xml
+> "doc.getDocumentElement()" gives:
+>=20
+> <configuration configDebug=3D"null" disableOverride=3D"null">
+>=20
+>       <appender name=3D"A1" class=3D"org.log4j.FileAppender">
+>           <param name=3D"File" value=3D"A1.log" />
+>           <param name=3D"Append" value=3D"false" />
+>           <layout class=3D"org.log4j.PatternLayout">
+>               <param name=3D"ConversionPattern" value=3D"%t %-5p %c{2} - %m\n=
+" />
+>           </layout>
+>       </appender>
+>      =20
+>       <appender name=3D"STDOUT" class=3D"org.log4j.FileAppender">
+>               <param name=3D"File" value=3D"System.out" />
+>              =20
+>               <layout class=3D"org.log4j.PatternLayout">
+>                  <param name=3D"ConversionPattern" value=3D"%d %-5p [%t] %C{2=
+}
+> (%F:%L) - %m\n" />
+>               </layout>
+>       </appender>
+>      =20
+>       <category name=3D"Test" additivity=3D"true">
+>         <priority value=3D"debug" />
+>         <appender-ref ref=3D"A1" />
+>       </category>
+>      =20
+>       <root>
+>          <priority value=3D"debug" />
+>          <appender-ref ref=3D"STDOUT" />
+>       </root>
+>      =20
+> </configuration>
+>=20
+> log4j: No appender named [A1] could be found.
+> log4j: No appender named [STDOUT] could be found.
+> log4j: No appenders could be found for category (Test).
+> log4j: Please initialize the log4j system properly.
+>=20
+> ------------------
+>=20
+> What's happening is apparently that these lines in DOMConfigurator.java
+> mess up (it does parse the root and categories "correctly", but when it
+> needs the appenders, it fails):
+>=20
+> ...=20
+> Document doc =3D appenderRef.getOwnerDocument();
+> Element element =3D doc.getElementById(appenderName);
+> if(element =3D=3D null) {
+>   LogLog.error("No appender named ["+appenderName+"] could be found.");
+>   return null;
+> } else {
+> ...
+>=20
+> So, the getElementById isn't giving anything back. Why is this? I guess i=
+t
+> have something to do with me using jaxp1.1 and this being made for xerces=
+,
+> but then there is something wrong somewhere, right?
+>=20
+> Anybody had any experience with this?
+>=20
+> Thanks!
+
+
+From cgu@urbanet.ch  Sat Dec 23 10:02:08 2000
+Return-Path: <cgu@urbanet.ch>
+Mailing-List: contact log4j-user-help@jakarta.apache.org; run by ezmlm
+Delivered-To: mailing list log4j-user@jakarta.apache.org
+Received: (qmail 13475 invoked from network); 23 Dec 2000 10:02:08 -0000
+Received: from monterosa.urbanet.ch (195.202.193.104)
+  by locus.apache.org with SMTP; 23 Dec 2000 10:02:08 -0000
+Received: (qmail 3582 invoked from network); 23 Dec 2000 10:02:08 -0000
+Received: from unknown (HELO gil.urbanet.ch) (195.202.202.71)
+  by monterosa.urbanet.ch with SMTP; 23 Dec 2000 10:02:08 -0000
+Message-Id: <5.0.0.25.0.20001223104410.00b05da8@mail.urbanet.ch>
+X-Sender: urba19978@mail.urbanet.ch
+X-Mailer: QUALCOMM Windows Eudora Version 5.0
+Date: Sat, 23 Dec 2000 11:02:48 +0100
+To: "LOG4J Users Mailing List" <log4j-user@jakarta.apache.org>
+From: Ceki Gulcu <cgu@urbanet.ch>
+Subject: Re: XML parsing problem..
+In-Reply-To: <B6629B6B.19F%cstaylor@pacbell.net>
+References: <Pine.GS4.4.21.0012171208340.18354-100000@jeeves.stud.ntnu.no>
+Mime-Version: 1.0
+Content-Type: text/plain; charset="iso-8859-1"; format=flowed
+Content-Transfer-Encoding: quoted-printable
+X-Spam-Rating: locus.apache.org 1.6.2 0/1000/N
+
+
+Hello,
+
+This problem is corrected in log4j 1.0 such that the DOMConfigurator will=20
+require only DOM Level 1 instead of DOM Level 2.
+
+If you can't wait until 1.0 is released, then try the hack suggested by=20
+Endre St=F8lsvik <Endre@Stolsvik.com> which works very well:
+
+/**
+    Used internally to parse appenders by IDREF.
+*/
+protected
+Appender findAppenderByReference(Element appenderRef) {
+   String appenderName =3D appenderRef.getAttribute(REF_ATTR);
+   Appender appender =3D (Appender) appenderBag.get(appenderName);
+   if(appender !=3D null) {
+     return appender;
+   } else {
+     Document doc =3D appenderRef.getOwnerDocument();
+
+
+     // DOESN'T WORK!! :
+     // Element element =3D doc.getElementById(appenderName);
+
+     // Endre's hack:
+     Element element =3D null;
+     NodeList list =3D doc.getElementsByTagName("appender");
+     for (int t=3D0; t<list.getLength(); t++) {
+       Node node =3D list.item(t);
+       NamedNodeMap map=3D node.getAttributes();
+       Node attrNode =3D map.getNamedItem("name");
+       if (appenderName.equals(attrNode.getNodeValue())) {
+         element =3D (Element) node;
+         break;
+       }
+     }
+     // Hack finished.
+
+     if(element =3D=3D null) {
+       LogLog.error("No appender named ["+appenderName+"] could be found.");
+       return null;
+     } else {
+       appender =3D parseAppender(element);
+       appenderBag.put(appenderName, appender);
+       return appender;
+     }
+   }
+}
+
+This fixes the jaxp parser problem.
+
+Chris' explanation is right on target. Endre's solution, that is=20
+replacing  getElementById with an equivalent for loop, is exactly the right=
+=20
+approach. I must have been very confused when switching to the DOM level 2=
+=20
+API. :-)
+
+Hope this helps, Ceki
+
+
+
+
+At 00:35 23.12.2000 -0800, Christopher Taylor wrote:
+>On 12/17/00 3:39 AM, "Endre St=F8lsvik" <Endre@Stolsvik.com> wrote:
+>
+> > I'm trying to get the XML config thing to work with the jaxp early=
+ access
+>Jaxp 1.1 isn't ready yet.  I think Ceki mentioned that earlier in the
+>mailing list, but I could be mistaken.
+>
+>For now, we're stuck with single-sourcing the XML parser (Xerces... At a
+>700K footprint), although DOMConfigurator could be rewritten to use a=
+ hollow
+>replacement approach:
+>
+>- For every ID encountered in the config file, add the constructed=
+ component
+>into a hashtable using the value of the ID attribute as the key
+>- For every IDREF encountered in the config file, lookup the associated
+>object from the hashtable.  If that association has not been made (the ID'd
+>component comes later in the document), defer the construction of the
+>component until later (add it to a stack?)
+>- Once the file has been completely traversed, revisit the deferred
+>components
+>
+>This solution is convoluted and error-prone, which is why (IMHO) Ceki chose
+>to require DOM level 2 so he could safely search the document after each
+>encountered IDREF.
+>
+>The only limitation to the new system that I am aware of is if you're
+>residing within an application server (such as Jakarta's Tomcat) and you=
+ try
+>and use DOM level 2 interface bindings.  Since Tomcat uses JAXP (AFAIK) for
+>loading the server's configuration file information, only the DOM level 1
+>bindings are loaded (and anything using Log4j's DOMConfigurator will=
+ crash).
+>The solution is replacing the parser.jar from Sun with the xerces.jar from
+>xml.apache.org in your Tomcat lib directory.
+>
+>-Chris
+>
+> > 1.1 from SUN. This is my classpath, where the three last ones is the=
+ jaxp
+> > thingy :
+> >
+> > .:/usr/java/jdk1.3/jre/lib/rt.jar
+> > /usr/java/jsdk2.2/servlet.jar
+> > /usr/java/third/webmacro/webmacro.jar
+> > /usr/java/jaxp-1.1ea/crimson.jar
+> > /usr/java/jaxp-1.1ea/jaxp.jar
+> > /usr/java/jaxp-1.1ea/xalan.jar
+> >
+> > ------------
+> > I then try to run a class called Test. It's an adaption of the xerces
+> > based XMLSample to jaxp1.1, and uses one of the config files there.=
+ Check
+> > the log4j log entries at the bottom of the run here:
+> >
+> > endre@endresin:~/testlog/classes$ java Test testconf1.xml
+> > "doc.getDocumentElement()" gives:
+> >
+> > <configuration configDebug=3D"null" disableOverride=3D"null">
+> >
+> >       <appender name=3D"A1" class=3D"org.log4j.FileAppender">
+> >           <param name=3D"File" value=3D"A1.log" />
+> >           <param name=3D"Append" value=3D"false" />
+> >           <layout class=3D"org.log4j.PatternLayout">
+> >               <param name=3D"ConversionPattern" value=3D"%t %-5p %c{2} -=
+=20
+> %m\n" />
+> >           </layout>
+> >       </appender>
+> >
+> >       <appender name=3D"STDOUT" class=3D"org.log4j.FileAppender">
+> >               <param name=3D"File" value=3D"System.out" />
+> >
+> >               <layout class=3D"org.log4j.PatternLayout">
+> >                  <param name=3D"ConversionPattern" value=3D"%d %-5p [%t]=
+ %C{2}
+> > (%F:%L) - %m\n" />
+> >               </layout>
+> >       </appender>
+> >
+> >       <category name=3D"Test" additivity=3D"true">
+> >         <priority value=3D"debug" />
+> >         <appender-ref ref=3D"A1" />
+> >       </category>
+> >
+> >       <root>
+> >          <priority value=3D"debug" />
+> >          <appender-ref ref=3D"STDOUT" />
+> >       </root>
+> >
+> > </configuration>
+> >
+> > log4j: No appender named [A1] could be found.
+> > log4j: No appender named [STDOUT] could be found.
+> > log4j: No appenders could be found for category (Test).
+> > log4j: Please initialize the log4j system properly.
+> >
+> > ------------------
+> >
+> > What's happening is apparently that these lines in DOMConfigurator.java
+> > mess up (it does parse the root and categories "correctly", but when it
+> > needs the appenders, it fails):
+> >
+> > ...
+> > Document doc =3D appenderRef.getOwnerDocument();
+> > Element element =3D doc.getElementById(appenderName);
+> > if(element =3D=3D null) {
+> >   LogLog.error("No appender named ["+appenderName+"] could be found.");
+> >   return null;
+> > } else {
+> > ...
+> >
+> > So, the getElementById isn't giving anything back. Why is this? I guess=
+ it
+> > have something to do with me using jaxp1.1 and this being made for=
+ xerces,
+> > but then there is something wrong somewhere, right?
+> >
+> > Anybody had any experience with this?
+> >
+> > Thanks!
+>
+>
+>---------------------------------------------------------------------
+>To unsubscribe, e-mail: log4j-user-unsubscribe@jakarta.apache.org
+>For additional commands, e-mail: log4j-user-help@jakarta.apache.org
+
+
+From achan@altaworks.com  Tue Dec 26 19:08:18 2000
+Return-Path: <achan@altaworks.com>
+Mailing-List: contact log4j-user-help@jakarta.apache.org; run by ezmlm
+Delivered-To: mailing list log4j-user@jakarta.apache.org
+Delivered-To: moderator for log4j-user@jakarta.apache.org
+Received: (qmail 45995 invoked from network); 26 Dec 2000 19:08:18 -0000
+Received: from blossom.altaworks.com (HELO mulan.altaworks.com) (64.69.111.219)
+  by h29.sny.collab.net with SMTP; 26 Dec 2000 19:08:18 -0000
+Received: from CHANA ([10.9.100.226]) by mulan.altaworks.com
+          (Netscape Messaging Server 4.15) with SMTP id G66VNZ00.AME for
+          <log4j-user@jakarta.apache.org>; Tue, 26 Dec 2000 14:04:47 -0500 
+Message-ID: <005601c06f6f$36d0cb00$e264090a@CHANA>
+From: "Aston Chan" <achan@altaworks.com>
+To: <log4j-user@jakarta.apache.org>
+Subject: SocketAppender question
+Date: Tue, 26 Dec 2000 14:08:21 -0500
+MIME-Version: 1.0
+Content-Type: text/plain;
+	charset="iso-8859-1"
+Content-Transfer-Encoding: 7bit
+X-Priority: 3
+X-MSMail-Priority: Normal
+X-Mailer: Microsoft Outlook Express 5.50.4133.2400
+X-MimeOLE: Produced By Microsoft MimeOLE V5.50.4133.2400
+X-Spam-Rating: h29.sny.collab.net 1.6.2 0/1000/N
+
+Hi,
+
+I tried the Sort.java example file with sort3.lcf.  The messages did get
+logged to the server process.  However, I notice that as soon as the
+client is exit, there is an exception thrown on the server console:
+
+2053 INFO  [main]      org.log4j.examples.SortAlgo.DUMP     - Element
+[98]=98
+2053 INFO  [main]      org.log4j.examples.SortAlgo.DUMP     - Element
+[99]=99
+2053 INFO  [main]               org.log4j.examples.Sort     - The next log
+state
+ment should be an error message.
+2053 ERROR [main]      org.log4j.examples.SortAlgo.DUMP     - Tried to dump
+an u
+ninitialized array.
+2053 INFO  [main]               org.log4j.examples.Sort     - Exiting main
+metho
+d.
+7110 INFO  [Thread-0]              org.log4j.net.SocketNode     - Caught
+java.ne
+t.SocketException, will close conneciton.
+java.net.SocketException: Connection reset by peer: JVM_recv in socket input
+str
+eam read
+        at java.net.SocketInputStream.socketRead(Native Method)
+        at java.net.SocketInputStream.read(Unknown Source)
+        at java.net.SocketInputStream.read(Unknown Source)
+        at java.io.ObjectInputStream.peekCode(Unknown Source)
+        at java.io.ObjectInputStream.refill(Unknown Source)
+        at java.io.ObjectInputStream.readObject(Unknown Source)
+        at java.io.ObjectInputStream.readObject(Unknown Source)
+        at org.log4j.net.SocketNode.run(SocketNode.java:68)
+        at java.lang.Thread.run(Unknown Source)
+
+What can I do to avoid this exception?
+
+Thanks.
+
+-Aston
+
+p.s. please send your answer to achan@altaworks.com
+
+
+From cgu@urbanet.ch  Tue Dec 26 23:44:04 2000
+Return-Path: <cgu@urbanet.ch>
+Mailing-List: contact log4j-user-help@jakarta.apache.org; run by ezmlm
+Delivered-To: mailing list log4j-user@jakarta.apache.org
+Received: (qmail 88976 invoked from network); 26 Dec 2000 23:44:04 -0000
+Received: from monterosa.urbanet.ch (qmailr@195.202.193.104)
+  by h29.sny.collab.net with SMTP; 26 Dec 2000 23:44:04 -0000
+Received: (qmail 29270 invoked from network); 26 Dec 2000 23:44:00 -0000
+Received: from unknown (HELO gil.urbanet.ch) (195.202.202.71)
+  by monterosa.urbanet.ch with SMTP; 26 Dec 2000 23:44:00 -0000
+Message-Id: <5.0.0.25.0.20001227004216.00abef88@mail.urbanet.ch>
+X-Sender: urba19978@mail.urbanet.ch
+X-Mailer: QUALCOMM Windows Eudora Version 5.0
+Date: Wed, 27 Dec 2000 00:45:02 +0100
+To: "LOG4J Users Mailing List" <log4j-user@jakarta.apache.org>
+From: Ceki Gulcu <cgu@urbanet.ch>
+Subject: Re: SocketAppender question
+Cc: <log4j-user@jakarta.apache.org>
+In-Reply-To: <005601c06f6f$36d0cb00$e264090a@CHANA>
+Mime-Version: 1.0
+Content-Type: text/plain; charset="us-ascii"; format=flowed
+X-Spam-Rating: h29.sny.collab.net 1.6.2 0/1000/N
+
+
+Aston,
+
+The exception is informational. (It is caught.)
+
+If you are bothered by it for esthetic reasons, then set the priority of 
+the category named  "org.log4j.net.SocketNode" to a value higher than INFO. 
+Hope this helps, Ceki
+
+
+
+At 14:08 26.12.2000 -0500, Aston Chan wrote:
+>Hi,
+>
+>I tried the Sort.java example file with sort3.lcf.  The messages did get
+>logged to the server process.  However, I notice that as soon as the
+>client is exit, there is an exception thrown on the server console:
+>
+>2053 INFO  [main]      org.log4j.examples.SortAlgo.DUMP     - Element
+>[98]=98
+>2053 INFO  [main]      org.log4j.examples.SortAlgo.DUMP     - Element
+>[99]=99
+>2053 INFO  [main]               org.log4j.examples.Sort     - The next log
+>state
+>ment should be an error message.
+>2053 ERROR [main]      org.log4j.examples.SortAlgo.DUMP     - Tried to dump
+>an u
+>ninitialized array.
+>2053 INFO  [main]               org.log4j.examples.Sort     - Exiting main
+>metho
+>d.
+>7110 INFO  [Thread-0]              org.log4j.net.SocketNode     - Caught
+>java.ne
+>t.SocketException, will close conneciton.
+>java.net.SocketException: Connection reset by peer: JVM_recv in socket input
+>str
+>eam read
+>         at java.net.SocketInputStream.socketRead(Native Method)
+>         at java.net.SocketInputStream.read(Unknown Source)
+>         at java.net.SocketInputStream.read(Unknown Source)
+>         at java.io.ObjectInputStream.peekCode(Unknown Source)
+>         at java.io.ObjectInputStream.refill(Unknown Source)
+>         at java.io.ObjectInputStream.readObject(Unknown Source)
+>         at java.io.ObjectInputStream.readObject(Unknown Source)
+>         at org.log4j.net.SocketNode.run(SocketNode.java:68)
+>         at java.lang.Thread.run(Unknown Source)
+>
+>What can I do to avoid this exception?
+>
+>Thanks.
+>
+>-Aston
+>
+>p.s. please send your answer to achan@altaworks.com
+>
+>
+>---------------------------------------------------------------------
+>To unsubscribe, e-mail: log4j-user-unsubscribe@jakarta.apache.org
+>For additional commands, e-mail: log4j-user-help@jakarta.apache.org
+
+
+From cgu@urbanet.ch  Tue Dec 26 23:44:04 2000
+Return-Path: <cgu@urbanet.ch>
+Mailing-List: contact log4j-user-help@jakarta.apache.org; run by ezmlm
+Delivered-To: mailing list log4j-user@jakarta.apache.org
+Received: (qmail 88977 invoked from network); 26 Dec 2000 23:44:04 -0000
+Received: from monterosa.urbanet.ch (qmailr@195.202.193.104)
+  by h29.sny.collab.net with SMTP; 26 Dec 2000 23:44:04 -0000
+Received: (qmail 29270 invoked from network); 26 Dec 2000 23:44:00 -0000
+Received: from unknown (HELO gil.urbanet.ch) (195.202.202.71)
+  by monterosa.urbanet.ch with SMTP; 26 Dec 2000 23:44:00 -0000
+Message-Id: <5.0.0.25.0.20001227004216.00abef88@mail.urbanet.ch>
+X-Sender: urba19978@mail.urbanet.ch
+X-Mailer: QUALCOMM Windows Eudora Version 5.0
+Date: Wed, 27 Dec 2000 00:45:02 +0100
+To: "LOG4J Users Mailing List" <log4j-user@jakarta.apache.org>
+From: Ceki Gulcu <cgu@urbanet.ch>
+Subject: Re: SocketAppender question
+Cc: <log4j-user@jakarta.apache.org>
+In-Reply-To: <005601c06f6f$36d0cb00$e264090a@CHANA>
+Mime-Version: 1.0
+Content-Type: text/plain; charset="us-ascii"; format=flowed
+X-Spam-Rating: h29.sny.collab.net 1.6.2 0/1000/N
+
+
+Aston,
+
+The exception is informational. (It is caught.)
+
+If you are bothered by it for esthetic reasons, then set the priority of 
+the category named  "org.log4j.net.SocketNode" to a value higher than INFO. 
+Hope this helps, Ceki
+
+
+
+At 14:08 26.12.2000 -0500, Aston Chan wrote:
+>Hi,
+>
+>I tried the Sort.java example file with sort3.lcf.  The messages did get
+>logged to the server process.  However, I notice that as soon as the
+>client is exit, there is an exception thrown on the server console:
+>
+>2053 INFO  [main]      org.log4j.examples.SortAlgo.DUMP     - Element
+>[98]=98
+>2053 INFO  [main]      org.log4j.examples.SortAlgo.DUMP     - Element
+>[99]=99
+>2053 INFO  [main]               org.log4j.examples.Sort     - The next log
+>state
+>ment should be an error message.
+>2053 ERROR [main]      org.log4j.examples.SortAlgo.DUMP     - Tried to dump
+>an u
+>ninitialized array.
+>2053 INFO  [main]               org.log4j.examples.Sort     - Exiting main
+>metho
+>d.
+>7110 INFO  [Thread-0]              org.log4j.net.SocketNode     - Caught
+>java.ne
+>t.SocketException, will close conneciton.
+>java.net.SocketException: Connection reset by peer: JVM_recv in socket input
+>str
+>eam read
+>         at java.net.SocketInputStream.socketRead(Native Method)
+>         at java.net.SocketInputStream.read(Unknown Source)
+>         at java.net.SocketInputStream.read(Unknown Source)
+>         at java.io.ObjectInputStream.peekCode(Unknown Source)
+>         at java.io.ObjectInputStream.refill(Unknown Source)
+>         at java.io.ObjectInputStream.readObject(Unknown Source)
+>         at java.io.ObjectInputStream.readObject(Unknown Source)
+>         at org.log4j.net.SocketNode.run(SocketNode.java:68)
+>         at java.lang.Thread.run(Unknown Source)
+>
+>What can I do to avoid this exception?
+>
+>Thanks.
+>
+>-Aston
+>
+>p.s. please send your answer to achan@altaworks.com
+>
+>
+>---------------------------------------------------------------------
+>To unsubscribe, e-mail: log4j-user-unsubscribe@jakarta.apache.org
+>For additional commands, e-mail: log4j-user-help@jakarta.apache.org
+
+
+From acolic@yahoo.com  Fri Dec 29 14:48:38 2000
+Return-Path: <acolic@yahoo.com>
+Mailing-List: contact log4j-user-help@jakarta.apache.org; run by ezmlm
+Delivered-To: mailing list log4j-user@jakarta.apache.org
+Received: (qmail 92316 invoked from network); 29 Dec 2000 14:48:38 -0000
+Received: from web10005.mail.yahoo.com (216.136.130.41)
+  by h29.sny.collab.net with SMTP; 29 Dec 2000 14:48:38 -0000
+Message-ID: <20001229144836.71174.qmail@web10005.mail.yahoo.com>
+Received: from [216.185.76.3] by web10005.mail.yahoo.com; Fri, 29 Dec 2000 06:48:36 PST
+Date: Fri, 29 Dec 2000 06:48:36 -0800 (PST)
+From: Alex Colic <acolic@yahoo.com>
+Reply-To: alex.colic@pop-ware.com
+Subject: Trying to figure out how to get Log4J to work with Properties
+To: log4j-user@jakarta.apache.org
+MIME-Version: 1.0
+Content-Type: text/plain; charset=us-ascii
+X-Spam-Rating: h29.sny.collab.net 1.6.2 0/1000/N
+
+Hi,
+
+I am trying to figure out how to get Log4J to work with a properties file which I have created and
+I am having a bit of a problem. I think I have done everything correctly but Log4J can't find my
+properties file. I have created a class called Test with the following code in the Main:
+
+  PropertyConfigurator.configure("LogSetting");
+  Category cat=Category.getInstance("test");
+  cat.info("Info Entry");
+  cat.warn("Warn entry");
+  cat.error("Error entry");
+  cat.debug("Debug entry");
+
+I have also created a properties file called "LogSetting.properties" and placed it with the test
+class file. I have checked and this is on my class path. The properties file consists of:
+
+log4j.configDebug=true
+log4j.appender.A1=org.log4j.FileAppender
+log4j.appender.A1.File=System.out
+
+log4j.rootCategory=DEBUG, A1
+
+log4j.appender.A1.layout=org.log4j.PatternLayout
+log4j.appender.A1.layout.ConversionPattern=%-4r [%t] %-5p %c %x-%m%n
+
+
+When I run my test program I get the following error:
+
+
+log4j: Could not read configuration file [LogSetting].
+java.io.FileNotFoundException: LogSetting (The system cannot find the file specified)
+
+Any ideas or help in getting this to work will be greatly appreciated.
+
+Alex
+
+
+
+__________________________________________________
+Do You Yahoo!?
+Yahoo! Photos - Share your holiday photos online!
+http://photos.yahoo.com/
+
+From keithb@fgm.com  Fri Dec 29 15:41:56 2000
+Return-Path: <keithb@fgm.com>
+Mailing-List: contact log4j-user-help@jakarta.apache.org; run by ezmlm
+Delivered-To: mailing list log4j-user@jakarta.apache.org
+Received: (qmail 15941 invoked from network); 29 Dec 2000 15:41:56 -0000
+Received: from ns.fgm.com (216.1.16.66)
+  by h29.sny.collab.net with SMTP; 29 Dec 2000 15:41:56 -0000
+Received: from minime (port1.fgm.com [216.2.55.241])
+	by ns.fgm.com (8.9.3/8.9.3) with SMTP id KAA24439;
+	Fri, 29 Dec 2000 10:40:52 -0500
+From: "Keith R. Bennett" <keithb@fgm.com>
+To: "LOG4J Users Mailing List" <log4j-user@jakarta.apache.org>,
+        <alex.colic@pop-ware.com>
+Subject: RE: Trying to figure out how to get Log4J to work with Properties
+Date: Fri, 29 Dec 2000 10:43:12 -0500
+Message-ID: <NDBBJDFBHKOONKOPMDMLAENGCAAA.keithb@fgm.com>
+MIME-Version: 1.0
+Content-Type: text/plain;
+	charset="iso-8859-1"
+Content-Transfer-Encoding: 7bit
+X-Priority: 3 (Normal)
+X-MSMail-Priority: Normal
+X-Mailer: Microsoft Outlook IMO, Build 9.0.2416 (9.0.2910.0)
+Importance: Normal
+X-MimeOLE: Produced By Microsoft MimeOLE V4.72.3612.1700
+In-Reply-To: <20001229144836.71174.qmail@web10005.mail.yahoo.com>
+X-Spam-Rating: h29.sny.collab.net 1.6.2 0/1000/N
+
+Alex -
+
+I don't know if this will address your problem, but...
+
+I have a method that takes a ResourceBundle and returns a Properties object:
+
+    static public Properties getPropertiesFromResourceBundle(
+            ResourceBundle bundle)
+    {
+        Properties props = new Properties();
+
+        Enumeration keys = bundle.getKeys();
+
+        while( keys.hasMoreElements()) {
+            String key = (String) keys.nextElement();
+            String val = bundle.getString( key);
+            props.setProperty( key, val);
+        }
+
+        return props;
+    }
+
+
+Then I call it something like this:
+
+ResourceBundle logProps = ResourceBundle.getBundle( "com.fgm.TrackerRes");
+Properties props = AggregationUtils.getPropertiesFromResourceBundle(
+logProps);
+PropertyConfigurator.configure( props);
+
+I think I went to that trouble because I wanted to take advantage of
+ResourceBundle.getBundle()'s automatic scanning of the classpath for the
+file, and its locale functionality.
+
+I may be exposing a major misunderstanding on my part of how log4j works.  I
+welcome any comments on the above.
+
+- Keith Bennett
+
+
+
+> -----Original Message-----
+> From: Alex Colic [mailto:acolic@yahoo.com]
+> Sent: Friday, December 29, 2000 9:49 AM
+> To: log4j-user@jakarta.apache.org
+> Subject: Trying to figure out how to get Log4J to work with Properties
+>
+>
+> Hi,
+>
+> I am trying to figure out how to get Log4J to work with a
+> properties file which I have created and
+> I am having a bit of a problem. I think I have done everything
+> correctly but Log4J can't find my
+> properties file. I have created a class called Test with the
+> following code in the Main:
+>
+>   PropertyConfigurator.configure("LogSetting");
+>   Category cat=Category.getInstance("test");
+>   cat.info("Info Entry");
+>   cat.warn("Warn entry");
+>   cat.error("Error entry");
+>   cat.debug("Debug entry");
+>
+> I have also created a properties file called
+> "LogSetting.properties" and placed it with the test
+> class file. I have checked and this is on my class path. The
+> properties file consists of:
+>
+> log4j.configDebug=true
+> log4j.appender.A1=org.log4j.FileAppender
+> log4j.appender.A1.File=System.out
+>
+> log4j.rootCategory=DEBUG, A1
+>
+> log4j.appender.A1.layout=org.log4j.PatternLayout
+> log4j.appender.A1.layout.ConversionPattern=%-4r [%t] %-5p %c %x-%m%n
+>
+>
+> When I run my test program I get the following error:
+>
+>
+> log4j: Could not read configuration file [LogSetting].
+> java.io.FileNotFoundException: LogSetting (The system cannot find
+> the file specified)
+>
+> Any ideas or help in getting this to work will be greatly appreciated.
+>
+> Alex
+>
+>
+>
+> __________________________________________________
+> Do You Yahoo!?
+> Yahoo! Photos - Share your holiday photos online!
+> http://photos.yahoo.com/
+>
+> ---------------------------------------------------------------------
+> To unsubscribe, e-mail: log4j-user-unsubscribe@jakarta.apache.org
+> For additional commands, e-mail: log4j-user-help@jakarta.apache.org
+>
+>
+
+
+From cgu@urbanet.ch  Fri Dec 29 18:38:56 2000
+Return-Path: <cgu@urbanet.ch>
+Mailing-List: contact log4j-user-help@jakarta.apache.org; run by ezmlm
+Delivered-To: mailing list log4j-user@jakarta.apache.org
+Received: (qmail 86081 invoked from network); 29 Dec 2000 18:38:56 -0000
+Received: from monterosa.urbanet.ch (qmailr@195.202.193.104)
+  by h29.sny.collab.net with SMTP; 29 Dec 2000 18:38:56 -0000
+Received: (qmail 11985 invoked from network); 29 Dec 2000 18:38:49 -0000
+Received: from unknown (HELO gil.urbanet.ch) (195.202.202.71)
+  by monterosa.urbanet.ch with SMTP; 29 Dec 2000 18:38:49 -0000
+Message-Id: <5.0.0.25.0.20001229193443.00ac63a8@mail.urbanet.ch>
+X-Sender: urba19978@mail.urbanet.ch
+X-Mailer: QUALCOMM Windows Eudora Version 5.0
+Date: Fri, 29 Dec 2000 19:39:42 +0100
+To: "LOG4J Users Mailing List" <log4j-user@jakarta.apache.org>
+From: Ceki Gulcu <cgu@urbanet.ch>
+Subject: Re: Trying to figure out how to get Log4J to work with
+  Properties
+In-Reply-To: <20001229144836.71174.qmail@web10005.mail.yahoo.com>
+Mime-Version: 1.0
+Content-Type: text/plain; charset="us-ascii"; format=flowed
+X-Spam-Rating: h29.sny.collab.net 1.6.2 0/1000/N
+
+Alex,
+
+When you call the PropertyConfigurator.configure() the argument must match 
+the name of the file.
+So, the call should 
+be  PropertyConfigurator.configure("LogSetting.properties");
+
+Hope this helps, Ceki
+
+ps: To see what log4j is doing, define the system property 
+log4j.configDebug as in
+
+    java -Dlog4j.configDebug your.application
+
+At 06:48 29.12.2000 -0800, Alex Colic wrote:
+>Hi,
+>
+>I am trying to figure out how to get Log4J to work with a properties file 
+>which I have created and
+>I am having a bit of a problem. I think I have done everything correctly 
+>but Log4J can't find my
+>properties file. I have created a class called Test with the following 
+>code in the Main:
+>
+>   PropertyConfigurator.configure("LogSetting");
+>   Category cat=Category.getInstance("test");
+>   cat.info("Info Entry");
+>   cat.warn("Warn entry");
+>   cat.error("Error entry");
+>   cat.debug("Debug entry");
+>
+>I have also created a properties file called "LogSetting.properties" and 
+>placed it with the test
+>class file. I have checked and this is on my class path. The properties 
+>file consists of:
+>
+>log4j.configDebug=true
+>log4j.appender.A1=org.log4j.FileAppender
+>log4j.appender.A1.File=System.out
+>
+>log4j.rootCategory=DEBUG, A1
+>
+>log4j.appender.A1.layout=org.log4j.PatternLayout
+>log4j.appender.A1.layout.ConversionPattern=%-4r [%t] %-5p %c %x-%m%n
+>
+>
+>When I run my test program I get the following error:
+>
+>
+>log4j: Could not read configuration file [LogSetting].
+>java.io.FileNotFoundException: LogSetting (The system cannot find the file 
+>specified)
+>
+>Any ideas or help in getting this to work will be greatly appreciated.
+>
+>Alex
+>
+>
+>
+>__________________________________________________
+>Do You Yahoo!?
+>Yahoo! Photos - Share your holiday photos online!
+>http://photos.yahoo.com/
+>
+>---------------------------------------------------------------------
+>To unsubscribe, e-mail: log4j-user-unsubscribe@jakarta.apache.org
+>For additional commands, e-mail: log4j-user-help@jakarta.apache.org
+
+
+From cgu@urbanet.ch  Fri Dec 29 18:59:19 2000
+Return-Path: <cgu@urbanet.ch>
+Mailing-List: contact log4j-user-help@jakarta.apache.org; run by ezmlm
+Delivered-To: mailing list log4j-user@jakarta.apache.org
+Received: (qmail 97307 invoked from network); 29 Dec 2000 18:59:19 -0000
+Received: from monterosa.urbanet.ch (qmailr@195.202.193.104)
+  by h29.sny.collab.net with SMTP; 29 Dec 2000 18:59:19 -0000
+Received: (qmail 26169 invoked from network); 29 Dec 2000 18:59:16 -0000
+Received: from unknown (HELO gil.urbanet.ch) (195.202.202.71)
+  by monterosa.urbanet.ch with SMTP; 29 Dec 2000 18:59:16 -0000
+Message-Id: <5.0.0.25.0.20001229195854.00b0f0c8@mail.urbanet.ch>
+X-Sender: urba19978@mail.urbanet.ch
+X-Mailer: QUALCOMM Windows Eudora Version 5.0
+Date: Fri, 29 Dec 2000 20:00:09 +0100
+To: "LOG4J Users Mailing List" <log4j-user@jakarta.apache.org>
+From: Ceki Gulcu <cgu@urbanet.ch>
+Subject: RE: Trying to figure out how to get Log4J to work with
+  Properties
+In-Reply-To: <NDBBJDFBHKOONKOPMDMLAENGCAAA.keithb@fgm.com>
+References: <20001229144836.71174.qmail@web10005.mail.yahoo.com>
+Mime-Version: 1.0
+Content-Type: text/plain; charset="us-ascii"; format=flowed
+X-Spam-Rating: h29.sny.collab.net 1.6.2 0/1000/N
+
+
+Keith,
+
+You might want to try Class.getResource instead of ResourceBundle. Regards, 
+Ceki
+
+At 10:43 29.12.2000 -0500, Keith R. Bennett wrote:
+>Alex -
+>
+>I don't know if this will address your problem, but...
+>
+>I have a method that takes a ResourceBundle and returns a Properties object:
+>
+>     static public Properties getPropertiesFromResourceBundle(
+>             ResourceBundle bundle)
+>     {
+>         Properties props = new Properties();
+>
+>         Enumeration keys = bundle.getKeys();
+>
+>         while( keys.hasMoreElements()) {
+>             String key = (String) keys.nextElement();
+>             String val = bundle.getString( key);
+>             props.setProperty( key, val);
+>         }
+>
+>         return props;
+>     }
+>
+>
+>Then I call it something like this:
+>
+>ResourceBundle logProps = ResourceBundle.getBundle( "com.fgm.TrackerRes");
+>Properties props = AggregationUtils.getPropertiesFromResourceBundle(
+>logProps);
+>PropertyConfigurator.configure( props);
+>
+>I think I went to that trouble because I wanted to take advantage of
+>ResourceBundle.getBundle()'s automatic scanning of the classpath for the
+>file, and its locale functionality.
+>
+>I may be exposing a major misunderstanding on my part of how log4j works.  I
+>welcome any comments on the above.
+>
+>- Keith Bennett
+>
+>
+>
+> > -----Original Message-----
+> > From: Alex Colic [mailto:acolic@yahoo.com]
+> > Sent: Friday, December 29, 2000 9:49 AM
+> > To: log4j-user@jakarta.apache.org
+> > Subject: Trying to figure out how to get Log4J to work with Properties
+> >
+> >
+> > Hi,
+> >
+> > I am trying to figure out how to get Log4J to work with a
+> > properties file which I have created and
+> > I am having a bit of a problem. I think I have done everything
+> > correctly but Log4J can't find my
+> > properties file. I have created a class called Test with the
+> > following code in the Main:
+> >
+> >   PropertyConfigurator.configure("LogSetting");
+> >   Category cat=Category.getInstance("test");
+> >   cat.info("Info Entry");
+> >   cat.warn("Warn entry");
+> >   cat.error("Error entry");
+> >   cat.debug("Debug entry");
+> >
+> > I have also created a properties file called
+> > "LogSetting.properties" and placed it with the test
+> > class file. I have checked and this is on my class path. The
+> > properties file consists of:
+> >
+> > log4j.configDebug=true
+> > log4j.appender.A1=org.log4j.FileAppender
+> > log4j.appender.A1.File=System.out
+> >
+> > log4j.rootCategory=DEBUG, A1
+> >
+> > log4j.appender.A1.layout=org.log4j.PatternLayout
+> > log4j.appender.A1.layout.ConversionPattern=%-4r [%t] %-5p %c %x-%m%n
+> >
+> >
+> > When I run my test program I get the following error:
+> >
+> >
+> > log4j: Could not read configuration file [LogSetting].
+> > java.io.FileNotFoundException: LogSetting (The system cannot find
+> > the file specified)
+> >
+> > Any ideas or help in getting this to work will be greatly appreciated.
+> >
+> > Alex
+> >
+> >
+> >
+> > __________________________________________________
+> > Do You Yahoo!?
+> > Yahoo! Photos - Share your holiday photos online!
+> > http://photos.yahoo.com/
+> >
+> > ---------------------------------------------------------------------
+> > To unsubscribe, e-mail: log4j-user-unsubscribe@jakarta.apache.org
+> > For additional commands, e-mail: log4j-user-help@jakarta.apache.org
+> >
+> >
+>
+>
+>---------------------------------------------------------------------
+>To unsubscribe, e-mail: log4j-user-unsubscribe@jakarta.apache.org
+>For additional commands, e-mail: log4j-user-help@jakarta.apache.org
+
+
+From acolic@yahoo.com  Fri Dec 29 20:58:07 2000
+Return-Path: <acolic@yahoo.com>
+Mailing-List: contact log4j-user-help@jakarta.apache.org; run by ezmlm
+Delivered-To: mailing list log4j-user@jakarta.apache.org
+Received: (qmail 80355 invoked from network); 29 Dec 2000 20:58:07 -0000
+Received: from web10003.mail.yahoo.com (216.136.130.39)
+  by h29.sny.collab.net with SMTP; 29 Dec 2000 20:58:07 -0000
+Message-ID: <20001229205807.96354.qmail@web10003.mail.yahoo.com>
+Received: from [216.185.76.3] by web10003.mail.yahoo.com; Fri, 29 Dec 2000 12:58:07 PST
+Date: Fri, 29 Dec 2000 12:58:07 -0800 (PST)
+From: Alex Colic <acolic@yahoo.com>
+Reply-To: alex.colic@pop-ware.com
+Subject: Re: Trying to figure out how to get Log4J to work with  Properties
+To: LOG4J Users Mailing List <log4j-user@jakarta.apache.org>
+MIME-Version: 1.0
+Content-Type: text/plain; charset=us-ascii
+X-Spam-Rating: h29.sny.collab.net 1.6.2 0/1000/N
+
+Hi, thanks but that did not help. I don't get what the problem is. I am using JBuilder and as I
+run my test app JBuilder prints to the screen the class path. I can see that my classes directory
+is in the path. Within that directory I have a file called "LogSetting.properties." I have tried:
+
+PropertyConfigurator.configure("LogSetting.properties");
+
+but that has not helped, the file still can not be found. Any ideas what else could be the
+problem?
+
+Alex
+--- Ceki Gulcu <cgu@urbanet.ch> wrote:
+> Alex,
+> 
+> When you call the PropertyConfigurator.configure() the argument must match 
+> the name of the file.
+> So, the call should 
+> be  PropertyConfigurator.configure("LogSetting.properties");
+> 
+> Hope this helps, Ceki
+> 
+> ps: To see what log4j is doing, define the system property 
+> log4j.configDebug as in
+> 
+>     java -Dlog4j.configDebug your.application
+> 
+> At 06:48 29.12.2000 -0800, Alex Colic wrote:
+> >Hi,
+> >
+> >I am trying to figure out how to get Log4J to work with a properties file 
+> >which I have created and
+> >I am having a bit of a problem. I think I have done everything correctly 
+> >but Log4J can't find my
+> >properties file. I have created a class called Test with the following 
+> >code in the Main:
+> >
+> >   PropertyConfigurator.configure("LogSetting");
+> >   Category cat=Category.getInstance("test");
+> >   cat.info("Info Entry");
+> >   cat.warn("Warn entry");
+> >   cat.error("Error entry");
+> >   cat.debug("Debug entry");
+> >
+> >I have also created a properties file called "LogSetting.properties" and 
+> >placed it with the test
+> >class file. I have checked and this is on my class path. The properties 
+> >file consists of:
+> >
+> >log4j.configDebug=true
+> >log4j.appender.A1=org.log4j.FileAppender
+> >log4j.appender.A1.File=System.out
+> >
+> >log4j.rootCategory=DEBUG, A1
+> >
+> >log4j.appender.A1.layout=org.log4j.PatternLayout
+> >log4j.appender.A1.layout.ConversionPattern=%-4r [%t] %-5p %c %x-%m%n
+> >
+> >
+> >When I run my test program I get the following error:
+> >
+> >
+> >log4j: Could not read configuration file [LogSetting].
+> >java.io.FileNotFoundException: LogSetting (The system cannot find the file 
+> >specified)
+> >
+> >Any ideas or help in getting this to work will be greatly appreciated.
+> >
+> >Alex
+> >
+> >
+> >
+> >__________________________________________________
+> >Do You Yahoo!?
+> >Yahoo! Photos - Share your holiday photos online!
+> >http://photos.yahoo.com/
+> >
+> >---------------------------------------------------------------------
+> >To unsubscribe, e-mail: log4j-user-unsubscribe@jakarta.apache.org
+> >For additional commands, e-mail: log4j-user-help@jakarta.apache.org
+> 
+> 
+> ---------------------------------------------------------------------
+> To unsubscribe, e-mail: log4j-user-unsubscribe@jakarta.apache.org
+> For additional commands, e-mail: log4j-user-help@jakarta.apache.org
+> 
+
+
+=====
+Regards
+
+Alex Colic, HBA, B. Ed
+PopWare Inc. "Driving down the cost of conversions"
+E-Mail: Alex.Colic@pop-ware.com
+Tel: 1-905-777-8171 ext. 104
+Fax: 1-905-777-0132
+
+__________________________________________________
+Do You Yahoo!?
+Yahoo! Photos - Share your holiday photos online!
+http://photos.yahoo.com/
+
+From acolic@yahoo.com  Fri Dec 29 21:20:18 2000
+Return-Path: <acolic@yahoo.com>
+Mailing-List: contact log4j-user-help@jakarta.apache.org; run by ezmlm
+Delivered-To: mailing list log4j-user@jakarta.apache.org
+Received: (qmail 87769 invoked from network); 29 Dec 2000 21:20:18 -0000
+Received: from web10003.mail.yahoo.com (216.136.130.39)
+  by h29.sny.collab.net with SMTP; 29 Dec 2000 21:20:18 -0000
+Message-ID: <20001229212016.98536.qmail@web10003.mail.yahoo.com>
+Received: from [216.185.76.3] by web10003.mail.yahoo.com; Fri, 29 Dec 2000 13:20:16 PST
+Date: Fri, 29 Dec 2000 13:20:16 -0800 (PST)
+From: Alex Colic <acolic@yahoo.com>
+Reply-To: alex.colic@pop-ware.com
+Subject: Re: Trying to figure out how to get Log4J to work with  Properties
+To: LOG4J Users Mailing List <log4j-user@jakarta.apache.org>
+MIME-Version: 1.0
+Content-Type: text/plain; charset=us-ascii
+X-Spam-Rating: h29.sny.collab.net 1.6.2 0/1000/N
+
+Ah, I got it to work. Even though classes is in the class path the properties file needed to be
+one directory above classes. Don't know why, don't care. At least I know where to put the
+properties file from now on.
+
+Alex
+--- Ceki Gulcu <cgu@urbanet.ch> wrote:
+> Alex,
+> 
+> When you call the PropertyConfigurator.configure() the argument must match 
+> the name of the file.
+> So, the call should 
+> be  PropertyConfigurator.configure("LogSetting.properties");
+> 
+> Hope this helps, Ceki
+> 
+> ps: To see what log4j is doing, define the system property 
+> log4j.configDebug as in
+> 
+>     java -Dlog4j.configDebug your.application
+> 
+> At 06:48 29.12.2000 -0800, Alex Colic wrote:
+> >Hi,
+> >
+> >I am trying to figure out how to get Log4J to work with a properties file 
+> >which I have created and
+> >I am having a bit of a problem. I think I have done everything correctly 
+> >but Log4J can't find my
+> >properties file. I have created a class called Test with the following 
+> >code in the Main:
+> >
+> >   PropertyConfigurator.configure("LogSetting");
+> >   Category cat=Category.getInstance("test");
+> >   cat.info("Info Entry");
+> >   cat.warn("Warn entry");
+> >   cat.error("Error entry");
+> >   cat.debug("Debug entry");
+> >
+> >I have also created a properties file called "LogSetting.properties" and 
+> >placed it with the test
+> >class file. I have checked and this is on my class path. The properties 
+> >file consists of:
+> >
+> >log4j.configDebug=true
+> >log4j.appender.A1=org.log4j.FileAppender
+> >log4j.appender.A1.File=System.out
+> >
+> >log4j.rootCategory=DEBUG, A1
+> >
+> >log4j.appender.A1.layout=org.log4j.PatternLayout
+> >log4j.appender.A1.layout.ConversionPattern=%-4r [%t] %-5p %c %x-%m%n
+> >
+> >
+> >When I run my test program I get the following error:
+> >
+> >
+> >log4j: Could not read configuration file [LogSetting].
+> >java.io.FileNotFoundException: LogSetting (The system cannot find the file 
+> >specified)
+> >
+> >Any ideas or help in getting this to work will be greatly appreciated.
+> >
+> >Alex
+> >
+> >
+> >
+> >__________________________________________________
+> >Do You Yahoo!?
+> >Yahoo! Photos - Share your holiday photos online!
+> >http://photos.yahoo.com/
+> >
+> >---------------------------------------------------------------------
+> >To unsubscribe, e-mail: log4j-user-unsubscribe@jakarta.apache.org
+> >For additional commands, e-mail: log4j-user-help@jakarta.apache.org
+> 
+> 
+> ---------------------------------------------------------------------
+> To unsubscribe, e-mail: log4j-user-unsubscribe@jakarta.apache.org
+> For additional commands, e-mail: log4j-user-help@jakarta.apache.org
+> 
+
+
+__________________________________________________
+Do You Yahoo!?
+Yahoo! Photos - Share your holiday photos online!
+http://photos.yahoo.com/
+
+From ito@integrationtech.com.br  Fri Dec 29 19:06:53 2000
+Return-Path: <ito@integrationtech.com.br>
+Mailing-List: contact log4j-user-help@jakarta.apache.org; run by ezmlm
+Delivered-To: mailing list log4j-user@jakarta.apache.org
+Delivered-To: moderator for log4j-user@jakarta.apache.org
+Received: (qmail 2678 invoked from network); 29 Dec 2000 19:06:53 -0000
+Received: from unknown (HELO server.eurosoft.com.br) (@200.182.9.30)
+  by h29.sny.collab.net with SMTP; 29 Dec 2000 19:06:53 -0000
+Received: from www.integrationtech.com.br by server.eurosoft.com.br
+          via smtpd (for h29.sny.collab.net [64.208.42.39]) with SMTP; 29 Dec 2000 20:09:20 UT
+Received: from integrationtech.com.br (IDENT:ito@[172.17.17.67])
+	by www.integrationtech.com.br (8.10.0.Beta12/8.8.7) with ESMTP id eBTJ6oL11753
+	for <log4j-user@jakarta.apache.org>; Fri, 29 Dec 2000 17:06:50 -0200
+Message-ID: <3A4CE18B.201@integrationtech.com.br>
+Date: Fri, 29 Dec 2000 17:10:03 -0200
+From: Eduardo Issao Ito <ito@integrationtech.com.br>
+User-Agent: Mozilla/5.0 (X11; U; Linux 2.2.16-22 i686; en-US; m18) Gecko/20001107 Netscape6/6.0
+X-Accept-Language: en
+MIME-Version: 1.0
+To: LOG4J Users Mailing List <log4j-user@jakarta.apache.org>
+Subject: Database appender
+References: <5.0.0.25.0.20001229193443.00ac63a8@mail.urbanet.ch>
+Content-Type: text/plain; charset=us-ascii; format=flowed
+Content-Transfer-Encoding: 7bit
+X-Spam-Rating: h29.sny.collab.net 1.6.2 0/1000/N
+
+
+Does anybody already done a Database appender, and could share it with us?
+
+
+--
+Eduardo Issao Ito <ito@integrationtech.com.br>
+Integration Technologies Ltda. <http://www.integrationtech.com.br>
+Rua Marina Saddi Haidar, 176
+04650-050 / Sao Paulo / SP / Brasil
+Phone: +55 11 5522-4848 x311
+Fax:   +55 11 5524-1125
+
+
+From ito@integrationtech.com.br  Fri Dec 29 21:04:56 2000
+Return-Path: <ito@integrationtech.com.br>
+Mailing-List: contact log4j-user-help@jakarta.apache.org; run by ezmlm
+Delivered-To: mailing list log4j-user@jakarta.apache.org
+Delivered-To: moderator for log4j-user@jakarta.apache.org
+Received: (qmail 82237 invoked from network); 29 Dec 2000 21:04:56 -0000
+Received: from unknown (HELO server.eurosoft.com.br) (@200.182.9.30)
+  by h29.sny.collab.net with SMTP; 29 Dec 2000 21:04:56 -0000
+Received: from www.integrationtech.com.br by server.eurosoft.com.br
+          via smtpd (for h29.sny.collab.net [64.208.42.39]) with SMTP; 29 Dec 2000 22:07:23 UT
+Received: from integrationtech.com.br (IDENT:ito@[172.17.17.67])
+	by www.integrationtech.com.br (8.10.0.Beta12/8.8.7) with ESMTP id eBTL4rL12097
+	for <log4j-user@jakarta.apache.org>; Fri, 29 Dec 2000 19:04:53 -0200
+Message-ID: <3A4CFD36.1000209@integrationtech.com.br>
+Date: Fri, 29 Dec 2000 19:08:06 -0200
+From: Eduardo Issao Ito <ito@integrationtech.com.br>
+User-Agent: Mozilla/5.0 (X11; U; Linux 2.2.16-22 i686; en-US; m18) Gecko/20001107 Netscape6/6.0
+X-Accept-Language: en
+MIME-Version: 1.0
+To: LOG4J Users Mailing List <log4j-user@jakarta.apache.org>
+Subject: Re: Trying to figure out how to get Log4J to work with  Properties
+References: <20001229205807.96354.qmail@web10003.mail.yahoo.com>
+Content-Type: text/plain; charset=us-ascii; format=flowed
+Content-Transfer-Encoding: 7bit
+X-Spam-Rating: h29.sny.collab.net 1.6.2 0/1000/N
+
+
+It seems that it is looking for the file in the current direcotry of 
+JBuilder. Try using the full path.
+
+I'm not sure but the search in the class path is only done when loading 
+the default configuration file (log4j.properties)
+
+
+
+Alex Colic wrote:
+
+> Hi, thanks but that did not help. I don't get what the problem is. I am using JBuilder and as I
+> run my test app JBuilder prints to the screen the class path. I can see that my classes directory
+> is in the path. Within that directory I have a file called "LogSetting.properties." I have tried:
+> 
+> PropertyConfigurator.configure("LogSetting.properties");
+> 
+> but that has not helped, the file still can not be found. Any ideas what else could be the
+> problem?
+> 
+> Alex
+> --- Ceki Gulcu <cgu@urbanet.ch> wrote:
+> 
+>> Alex,
+>> 
+>> When you call the PropertyConfigurator.configure() the argument must match 
+>> the name of the file.
+>> So, the call should 
+>> be  PropertyConfigurator.configure("LogSetting.properties");
+>> 
+>> Hope this helps, Ceki
+>> 
+>> ps: To see what log4j is doing, define the system property 
+>> log4j.configDebug as in
+>> 
+>>     java -Dlog4j.configDebug your.application
+>> 
+>> At 06:48 29.12.2000 -0800, Alex Colic wrote:
+>> 
+>>> Hi,
+>>> 
+>>> I am trying to figure out how to get Log4J to work with a properties file 
+>>> which I have created and
+>>> I am having a bit of a problem. I think I have done everything correctly 
+>>> but Log4J can't find my
+>>> properties file. I have created a class called Test with the following 
+>>> code in the Main:
+>>> 
+>>>   PropertyConfigurator.configure("LogSetting");
+>>>   Category cat=Category.getInstance("test");
+>>>   cat.info("Info Entry");
+>>>   cat.warn("Warn entry");
+>>>   cat.error("Error entry");
+>>>   cat.debug("Debug entry");
+>>> 
+>>> I have also created a properties file called "LogSetting.properties" and 
+>>> placed it with the test
+>>> class file. I have checked and this is on my class path. The properties 
+>>> file consists of:
+>>> 
+>>> log4j.configDebug=true
+>>> log4j.appender.A1=org.log4j.FileAppender
+>>> log4j.appender.A1.File=System.out
+>>> 
+>>> log4j.rootCategory=DEBUG, A1
+>>> 
+>>> log4j.appender.A1.layout=org.log4j.PatternLayout
+>>> log4j.appender.A1.layout.ConversionPattern=%-4r [%t] %-5p %c %x-%m%n
+>>> 
+>>> 
+>>> When I run my test program I get the following error:
+>>> 
+>>> 
+>>> log4j: Could not read configuration file [LogSetting].
+>>> java.io.FileNotFoundException: LogSetting (The system cannot find the file 
+>>> specified)
+>>> 
+>>> Any ideas or help in getting this to work will be greatly appreciated.
+>>> 
+>>> Alex
+>>> 
+>>> 
+>>> 
+>>> __________________________________________________
+>>> Do You Yahoo!?
+>>> Yahoo! Photos - Share your holiday photos online!
+>>> http://photos.yahoo.com/
+>>> 
+>>> ---------------------------------------------------------------------
+>>> To unsubscribe, e-mail: log4j-user-unsubscribe@jakarta.apache.org
+>>> For additional commands, e-mail: log4j-user-help@jakarta.apache.org
+>> 
+>> 
+>> ---------------------------------------------------------------------
+>> To unsubscribe, e-mail: log4j-user-unsubscribe@jakarta.apache.org
+>> For additional commands, e-mail: log4j-user-help@jakarta.apache.org
+>> 
+> 
+> 
+> 
+> =====
+> Regards
+> 
+> Alex Colic, HBA, B. Ed
+> PopWare Inc. "Driving down the cost of conversions"
+> E-Mail: Alex.Colic@pop-ware.com
+> Tel: 1-905-777-8171 ext. 104
+> Fax: 1-905-777-0132
+> 
+> __________________________________________________
+> Do You Yahoo!?
+> Yahoo! Photos - Share your holiday photos online!
+> http://photos.yahoo.com/
+> 
+> ---------------------------------------------------------------------
+> To unsubscribe, e-mail: log4j-user-unsubscribe@jakarta.apache.org
+> For additional commands, e-mail: log4j-user-help@jakarta.apache.org
+
+
+-- 
+--
+Eduardo Issao Ito <ito@integrationtech.com.br>
+Integration Technologies Ltda. <http://www.integrationtech.com.br>
+Rua Marina Saddi Haidar, 176
+04650-050 / Sao Paulo / SP / Brasil
+Phone: +55 11 5522-4848 x311
+Fax:   +55 11 5524-1125
+
+

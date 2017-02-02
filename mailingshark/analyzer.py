@@ -37,8 +37,17 @@ def to_unicode(text, charset):
 
 
 class ParsedMessage(object):
+    """
+    Model to which the raw message is given that turns it into a parsed message
+    """
 
     def __init__(self, cfg, raw_message):
+        """
+        Creates the parsed message using config cfg and message raw_message
+
+        :param cfg: object of class :class:`mailingshark.config.Config`
+        :param raw_message: object of class :class:`email.message.Message`
+        """
         logger.setLevel(cfg.get_debug_level())
 
         # Clean up reply_noise
@@ -92,6 +101,12 @@ class ParsedMessage(object):
         # If the header is 'to' or 'cc', it may contain several items
         # (or it could also be an empty list when such header is missing
         #  in the original message).
+        """
+        Sets the addresses in the email
+
+        :param raw_message: object of class :class:`email.message.Message`
+        :param charset: charset that should be used
+        """
 
         for header in ('from', 'to', 'cc'):
             if not raw_message.get(header):
@@ -104,6 +119,11 @@ class ParsedMessage(object):
 
     @staticmethod
     def __set_msgdate(raw_message):
+        """
+        Sets the message date
+
+        :param raw_message: object of class :class:`email.message.Message`
+        """
         unix_from = raw_message.get_unixfrom()
         try:
             date_to_parse = unix_from.split(' ', 1)[1]
@@ -113,6 +133,11 @@ class ParsedMessage(object):
             return None
 
     def __create_message_id(self, raw_message):
+        """
+        Creates the mssage id, if none is given
+
+        :param raw_message: object of class :class:`email.message.Message`
+        """
         if raw_message.get('message-id') is not None:
             return raw_message.get('message-id')
 
@@ -127,6 +152,11 @@ class ParsedMessage(object):
 
     @staticmethod
     def __get_date(message):
+        """
+        Gets the date from the message
+
+        :param message: object of class :class:`email.message.Message`
+        """
         parsed_date = parsedate_tz(message.get('date'))
 
         if not parsed_date:
@@ -152,6 +182,12 @@ class ParsedMessage(object):
         return msg_date, tz_secs
 
     def __get_decoded_addresses(self, address, charset):
+        """
+        Gets the decoded addresses
+
+        :param address: email address
+        :param charset: charset that should be used
+        """
         result = []
         for name, email in getaddresses([address]):
             decoded_email = self.__decode(email, charset).replace('"', '')
@@ -166,6 +202,11 @@ class ParsedMessage(object):
 
     @staticmethod
     def __check_spam_obscuring(field):
+        """
+        Checks the field for spam obscuring (e.g., at instead of @)
+
+        :param field: content of the email field
+        """
         if not field:
             return field
 
@@ -177,6 +218,12 @@ class ParsedMessage(object):
 
     @staticmethod
     def __get_body(raw_message, charset):
+        """
+        Gets the body for the message using a specific charset
+
+        :param raw_message: object of class :class:`email.message.Message`
+        :param charset: charset that should be used
+        """
         # Non multipart messages should be straightforward
         if not raw_message.is_multipart():
             return to_unicode(raw_message.get_payload(decode=True), charset), None
@@ -198,9 +245,13 @@ class ParsedMessage(object):
 
     @staticmethod
     def __decode(s, charset='latin-1', sep=u' '):
-        """ Decode a header.  A header can be composed by strings with
-            different encoding each.  We convert each group to unicode
-            separately and then we merge them back."""
+        """
+        Decodes a header for a specific charset
+
+        :param s: header
+        :param charset: charset that should be used
+        :param sep: seperator
+        """
 
         charset = charset or 'latin-1'
 

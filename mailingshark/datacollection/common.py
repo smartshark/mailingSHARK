@@ -6,7 +6,12 @@ MOD_MBOX_DATE_FORMAT = '%Y%m'
 
 
 def current_month(mailing_list_updated):
-    """Get a tuple containing the current month in different formats"""
+    """
+    Get a tuple containing the current month in different formats
+
+    :param mailing_list_updated: object of class :class:`datetime.datetime`, which holds the time the mailing list
+     was last parsed
+    """
     # Assuming this is run daily, it's better to take yesterday's date,
     # to ensure we get all of last month's email when the month rolls over.
     if mailing_list_updated is None:
@@ -21,9 +26,15 @@ def current_month(mailing_list_updated):
 
 
 def find_month_were_mailing_list_was_last_parsed(link, mailing_list_updated):
-    """Find the current month in the given string.
+    """
+    Find the current month in the given string.
     If the month is found, the function will return a string
-    containing the current month. Otherwise returns None."""
+    containing the current month. Otherwise returns None.
+
+    :param link: string of the link to the specific mbox or mailing list file
+    :param mailing_list_updated: object of class :class:`datetime.datetime`, which holds the time the mailing list
+     was last parsed
+    """
 
     for this_month in current_month(mailing_list_updated):
         idx = link.find(this_month)

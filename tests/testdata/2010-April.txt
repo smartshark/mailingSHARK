@@ -1,0 +1,365 @@
+From riccardo.magliocchetti at gmail.com  Tue Apr  6 12:05:22 2010
+From: riccardo.magliocchetti at gmail.com (Riccardo Magliocchetti)
+Date: Tue, 06 Apr 2010 14:05:22 +0200
+Subject: [k3b] k3b hal backend not finding devices
+Message-ID: <4BBB2382.8040005@gmail.com>
+
+Hello,
+
+on a machine with debian squeeze and k3b 1.90.0~rc1 i have hal running, 
+but is not finding devices (parallel ata dvd burner). It was upgraded 
+from k3b 1.x which was working beautifully. I've found the same issue in 
+the gentoo bug here:
+
+http://bugs.gentoo.org/292281
+
+In the bug it is suggested to use policykit instead of hal as backend. 
+Would you reccomend that too as safer choice for a distribution?
+
+thanks,
+riccardo
+
+
+From kamikazow at web.de  Tue Apr  6 13:47:17 2010
+From: kamikazow at web.de (Markus)
+Date: Tue, 06 Apr 2010 15:47:17 +0200
+Subject: [k3b] k3b hal backend not finding devices
+In-Reply-To: <4BBB2382.8040005@gmail.com>
+References: <4BBB2382.8040005@gmail.com>
+Message-ID: <201004061547.18196.kamikazow@web.de>
+
+Am Dienstag 06 April 2010 14:05:22 schrieb Riccardo Magliocchetti:
+> In the bug it is suggested to use policykit instead of hal as backend.
+> Would you reccomend that too as safer choice for a distribution?
+
+I've read roughly through the bug report and frankly I don't get it.
+HAL is an abstraction layer for hardware (hence its name) and PolicyKit is 
+used for user authentication which K3b already uses through KAuth
+
+
+From riccardo.magliocchetti at gmail.com  Tue Apr  6 16:34:07 2010
+From: riccardo.magliocchetti at gmail.com (Riccardo Magliocchetti)
+Date: Tue, 06 Apr 2010 18:34:07 +0200
+Subject: [k3b] k3b hal backend not finding devices
+In-Reply-To: <201004061547.18196.kamikazow@web.de>
+References: <4BBB2382.8040005@gmail.com> <201004061547.18196.kamikazow@web.de>
+Message-ID: <4BBB627F.6050101@gmail.com>
+
+Markus ha scritto:
+> Am Dienstag 06 April 2010 14:05:22 schrieb Riccardo Magliocchetti:
+>> In the bug it is suggested to use policykit instead of hal as backend.
+>> Would you reccomend that too as safer choice for a distribution?
+> 
+> I've read roughly through the bug report and frankly I don't get it.
+> HAL is an abstraction layer for hardware (hence its name) and PolicyKit is 
+> used for user authentication which K3b already uses through KAuth
+
+Ok i don't argue with that, so i've digged the issue a bit more:
+- solid does not see the device
+- hal does not see the device
+- kernel sees the device (tried both 2.6.30 and 2.6.32)
+
+So it looks it's not a k3b issue, sorry for the noise :)
+
+thanks,
+riccardo
+
+
+From u3227509 at anu.edu.au  Thu Apr  8 23:17:46 2010
+From: u3227509 at anu.edu.au (Chris Smart)
+Date: Fri, 9 Apr 2010 09:17:46 +1000
+Subject: [k3b] Documentation
+Message-ID: <w2nada98ce1004081617zc5e23e84u28c89514df10bce4@mail.gmail.com>
+
+Hi all,
+
+My name is Chris Smart and I am (among many other things) a masters
+student at the Australian National University. I'm currently taking an
+intensive course on FOSS development and part of the assessment of
+this course is to work with a FOSS project. I'd like to work with K3b
+(cause it's awesome).
+
+I am required to write a report on the project, including history,
+governance and all that sort of thing, but I also need to contribute
+something :-)
+
+I believe that the current documentation for upcoming 2.0 release has
+not yet been updated, so I'm offering to have a crack at that. I have
+already discussed this with Sebastian and Micha?, but if anyone has
+some suggestions, I'm all ears!
+
+Thanks for your time.
+
+Cheers,
+Chris
+
+
+From kamikazow at web.de  Fri Apr  9 00:28:45 2010
+From: kamikazow at web.de (Markus)
+Date: Fri, 09 Apr 2010 02:28:45 +0200
+Subject: [k3b] Documentation
+In-Reply-To: <w2nada98ce1004081617zc5e23e84u28c89514df10bce4@mail.gmail.com>
+References: <w2nada98ce1004081617zc5e23e84u28c89514df10bce4@mail.gmail.com>
+Message-ID: <201004090228.46069.kamikazow@web.de>
+
+Hi.
+
+My personal opinion is that built-in Doxygen-based documentation is read my no 
+one. I'd rather see updated documentation on KDE's UserBase wiki.
+Once the updated k3b.org is launched, the UserBase article will be linked to 
+it anyway.
+
+Markus
+
+
+From michalm at jabster.pl  Fri Apr  9 07:23:59 2010
+From: michalm at jabster.pl (=?UTF-8?B?TWljaGHFgiBNYcWCZWs=?=)
+Date: Fri, 9 Apr 2010 10:23:59 +0300
+Subject: [k3b] Documentation
+In-Reply-To: <201004090228.46069.kamikazow@web.de>
+References: <w2nada98ce1004081617zc5e23e84u28c89514df10bce4@mail.gmail.com> 
+	<201004090228.46069.kamikazow@web.de>
+Message-ID: <k2xe02237501004090023x6d5dc614pa75e736f1860272d@mail.gmail.com>
+
+2010/4/9 Markus <kamikazow at web.de>:
+> Hi.
+>
+> My personal opinion is that built-in Doxygen-based documentation is read my no
+> one. I'd rather see updated documentation on KDE's UserBase wiki.
+> Once the updated k3b.org is launched, the UserBase article will be linked to
+> it anyway.
+
+I also like UserBase more. UserBase article
+(http://userbase.kde.org/K3b) has better chance being updated in the
+future than regular handbook. On the other hand it will be
+inconsistent with other KDE apps.
+
+-- 
+Best regards,
+Micha? Ma?ek
+
+
+From u3227509 at anu.edu.au  Fri Apr  9 07:52:25 2010
+From: u3227509 at anu.edu.au (Chris Smart)
+Date: Fri, 9 Apr 2010 17:52:25 +1000
+Subject: [k3b] Documentation
+In-Reply-To: <k2xe02237501004090023x6d5dc614pa75e736f1860272d@mail.gmail.com>
+References: <w2nada98ce1004081617zc5e23e84u28c89514df10bce4@mail.gmail.com>
+	<201004090228.46069.kamikazow@web.de>
+	<k2xe02237501004090023x6d5dc614pa75e736f1860272d@mail.gmail.com>
+Message-ID: <w2tada98ce1004090052v5536425eob0eb05607c5afeff@mail.gmail.com>
+
+2010/4/9 Micha? Ma?ek <michalm at jabster.pl>:
+> I also like UserBase more. UserBase article
+> (http://userbase.kde.org/K3b) has better chance being updated in the
+> future than regular handbook. On the other hand it will be
+> inconsistent with other KDE apps.
+
+Sorry I replied to Markus off-list accidentally saying that's a good idea.
+OK, I'll look into that. At some point it could probably go to back
+into the Docbook.
+
+-c
+
+
+From trueg at kde.org  Fri Apr  9 07:53:33 2010
+From: trueg at kde.org (=?UTF-8?B?U2ViYXN0aWFuIFRyw7xn?=)
+Date: Fri, 09 Apr 2010 09:53:33 +0200
+Subject: [k3b] Documentation
+In-Reply-To: <k2xe02237501004090023x6d5dc614pa75e736f1860272d@mail.gmail.com>
+References: <w2nada98ce1004081617zc5e23e84u28c89514df10bce4@mail.gmail.com>
+	<201004090228.46069.kamikazow@web.de>
+	<k2xe02237501004090023x6d5dc614pa75e736f1860272d@mail.gmail.com>
+Message-ID: <4BBEDCFD.6080609@kde.org>
+
+You could try to make it a KDE standard by creating a dedicated
+formatting that can be used by the KDE help system in some way or at
+least be linked from the help menu in KDE apps.
+
+Cheers,
+Sebastian
+
+On 04/09/2010 09:23 AM, Micha? Ma?ek wrote:
+> 2010/4/9 Markus <kamikazow at web.de>:
+>> Hi.
+>>
+>> My personal opinion is that built-in Doxygen-based documentation is read my no
+>> one. I'd rather see updated documentation on KDE's UserBase wiki.
+>> Once the updated k3b.org is launched, the UserBase article will be linked to
+>> it anyway.
+> 
+> I also like UserBase more. UserBase article
+> (http://userbase.kde.org/K3b) has better chance being updated in the
+> future than regular handbook. On the other hand it will be
+> inconsistent with other KDE apps.
+> 
+
+
+From u3227509 at anu.edu.au  Fri Apr  9 12:24:02 2010
+From: u3227509 at anu.edu.au (Chris Smart)
+Date: Fri, 9 Apr 2010 22:24:02 +1000
+Subject: [k3b] Documentation
+In-Reply-To: <4BBEDCFD.6080609@kde.org>
+References: <w2nada98ce1004081617zc5e23e84u28c89514df10bce4@mail.gmail.com>
+	<201004090228.46069.kamikazow@web.de>
+	<k2xe02237501004090023x6d5dc614pa75e736f1860272d@mail.gmail.com>
+	<4BBEDCFD.6080609@kde.org>
+Message-ID: <g2tada98ce1004090524tcafa6f7ak8a9b4ef31fbf1c69@mail.gmail.com>
+
+On Fri, Apr 9, 2010 at 5:53 PM, Sebastian Tr?g <trueg at kde.org> wrote:
+> You could try to make it a KDE standard by creating a dedicated
+> formatting that can be used by the KDE help system in some way or at
+> least be linked from the help menu in KDE apps.
+>
+
+Hi Sebastian,
+
+That's an interesting suggestion. Perhaps the UserBase Wiki could be
+linked in K3b's Handbook, rather than having old doco there? Or
+perhaps a change could allow the Handbook to pull the HTML down
+directly from the Wiki and render it in Handbook. Either way, I do
+think that having a manual in the application is useful (what if
+people have no Internet connection?), and at least better than out
+dated information :-)
+
+Anyway, if people are more interested in the UserBase Wiki for now,
+then I could concentrate on that and see if I can improve it. We could
+deal with DocBook (or some other method) down the track. Free time is
+scarce for me in-between full time work, part time study and
+freelancing, but I'll do my best!
+
+Cheers,
+-c
+
+
+From kamikazow at web.de  Fri Apr  9 13:03:57 2010
+From: kamikazow at web.de (Markus)
+Date: Fri, 09 Apr 2010 15:03:57 +0200
+Subject: [k3b] Documentation
+In-Reply-To: <4BBEDCFD.6080609@kde.org>
+References: <w2nada98ce1004081617zc5e23e84u28c89514df10bce4@mail.gmail.com>
+	<k2xe02237501004090023x6d5dc614pa75e736f1860272d@mail.gmail.com>
+	<4BBEDCFD.6080609@kde.org>
+Message-ID: <201004091503.57435.kamikazow@web.de>
+
+Am Freitag 09 April 2010 09:53:33 schrieb Sebastian Tr?g:
+> You could try to make it a KDE standard by creating a dedicated
+> formatting that can be used by the KDE help system in some way or at
+> least be linked from the help menu in KDE apps.
+
+No need. In Kdenlive we simply have the line
+X-DocPath=http://kdenlive.org/user-manual
+in the .desktop file. Works just fine.
+
+One alternative to just link to the wiki could be to create a snapshot of the 
+wiki pages before release and then converting them to KDE's help system.
+I have to add though that I have no idea how easy or hard that would be.
+
+In any case: Existing documentation for all languages has to be imported into 
+UserBase first.
+
+
+From u3227509 at anu.edu.au  Fri Apr  9 13:08:17 2010
+From: u3227509 at anu.edu.au (Chris Smart)
+Date: Fri, 9 Apr 2010 23:08:17 +1000
+Subject: [k3b] Documentation
+In-Reply-To: <201004091503.57435.kamikazow@web.de>
+References: <w2nada98ce1004081617zc5e23e84u28c89514df10bce4@mail.gmail.com>
+	<k2xe02237501004090023x6d5dc614pa75e736f1860272d@mail.gmail.com>
+	<4BBEDCFD.6080609@kde.org> <201004091503.57435.kamikazow@web.de>
+Message-ID: <l2wada98ce1004090608u756bfb6dx30b2e7d3c9510ea8@mail.gmail.com>
+
+On Fri, Apr 9, 2010 at 11:03 PM, Markus <kamikazow at web.de> wrote:
+>
+> No need. In Kdenlive we simply have the line
+> X-DocPath=http://kdenlive.org/user-manual
+> in the .desktop file. Works just fine.
+
+Interesting, thanks for that tip. I might have a play with this myself
+at some point.
+
+> One alternative to just link to the wiki could be to create a snapshot of the
+> wiki pages before release and then converting them to KDE's help system.
+> I have to add though that I have no idea how easy or hard that would be.
+
+I suspect that it will be easier to go from DocBook -> HTML -> Wiki
+markup, but that's just an initial though.
+
+>
+> In any case: Existing documentation for all languages has to be imported into
+> UserBase first.
+
+Understood, thanks.
+
+-c
+
+
+From u3227509 at anu.edu.au  Thu Apr 29 10:45:41 2010
+From: u3227509 at anu.edu.au (Chris Smart)
+Date: Thu, 29 Apr 2010 20:45:41 +1000
+Subject: [k3b] Documentation
+In-Reply-To: <k2xe02237501004090023x6d5dc614pa75e736f1860272d@mail.gmail.com>
+References: <w2nada98ce1004081617zc5e23e84u28c89514df10bce4@mail.gmail.com>
+	<201004090228.46069.kamikazow@web.de>
+	<k2xe02237501004090023x6d5dc614pa75e736f1860272d@mail.gmail.com>
+Message-ID: <t2lada98ce1004290345xead43ebfza9e43fe05825a830@mail.gmail.com>
+
+2010/4/9 Micha? Ma?ek <michalm at jabster.pl>:
+>
+> I also like UserBase more. UserBase article
+> (http://userbase.kde.org/K3b) has better chance being updated in the
+> future than regular handbook. On the other hand it will be
+> inconsistent with other KDE apps.
+
+A quick question about the UserBase documentation - should I update
+this in preparation for the 2.0 release, or wait until 2.0 is out
+before updating it, so that the documentation is correct as of current
+stable version?
+
+Thanks,
+Chris
+
+
+From kamikazow at web.de  Thu Apr 29 13:16:49 2010
+From: kamikazow at web.de (Markus)
+Date: Thu, 29 Apr 2010 15:16:49 +0200
+Subject: [k3b] Documentation
+In-Reply-To: <t2lada98ce1004290345xead43ebfza9e43fe05825a830@mail.gmail.com>
+References: <w2nada98ce1004081617zc5e23e84u28c89514df10bce4@mail.gmail.com>
+	<k2xe02237501004090023x6d5dc614pa75e736f1860272d@mail.gmail.com>
+	<t2lada98ce1004290345xead43ebfza9e43fe05825a830@mail.gmail.com>
+Message-ID: <201004291516.50089.kamikazow@web.de>
+
+Am Donnerstag 29 April 2010 12:45:41 schrieb Chris Smart:
+
+> A quick question about the UserBase documentation - should I update
+> this in preparation for the 2.0 release, or wait until 2.0 is out
+> before updating it, so that the documentation is correct as of current
+> stable version?
+
+The docs there already cover a Platform 4-based prerelease of 2.0. So go ahead 
+and update it. :)
+
+
+From u3227509 at anu.edu.au  Thu Apr 29 22:46:57 2010
+From: u3227509 at anu.edu.au (Chris Smart)
+Date: Fri, 30 Apr 2010 08:46:57 +1000
+Subject: [k3b] Documentation
+In-Reply-To: <201004291516.50089.kamikazow@web.de>
+References: <w2nada98ce1004081617zc5e23e84u28c89514df10bce4@mail.gmail.com>
+	<k2xe02237501004090023x6d5dc614pa75e736f1860272d@mail.gmail.com>
+	<t2lada98ce1004290345xead43ebfza9e43fe05825a830@mail.gmail.com>
+	<201004291516.50089.kamikazow@web.de>
+Message-ID: <q2hada98ce1004291546z7060d488x5b85c63cbe77115f@mail.gmail.com>
+
+On Thu, Apr 29, 2010 at 11:16 PM, Markus <kamikazow at web.de> wrote:
+> The docs there already cover a Platform 4-based prerelease of 2.0. So go ahead
+> and update it. :)
+>
+
+Thanks, just wanted to check so that I didn't upset anyone by doing
+the wrong thing! :-)
+
+-c
+
+

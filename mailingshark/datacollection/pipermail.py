@@ -17,21 +17,39 @@ MOD_MBOX_THREAD_STR = "/thread"
 
 
 class PipermailBackend(BaseDataCollector):
+    """
+    Backend to download emails from pipermail archives
+    """
+
     @property
     def identifier(self):
+        """
+        Identifier of the backend (pipermail)
+        """
         return 'pipermail'
 
     def __init__(self, cfg, project_id):
+        """
+        See: :class:`mailingshark.datacollection.basedatacollector.BaseDataCollector`
+
+        :param cfg: object of class :class:`mailingshark.config.Config` that holds all configuration options
+        :param project_id: id of the project of class :class:`bson.objectid.ObjectId`, to which the mailing list belongs
+        """
         super().__init__(cfg, project_id)
 
         logger.setLevel(self.debug_level)
 
     def download_mail_boxes(self, mailing_list):
+        """
+        See: :func:`mailingshark.datacollection.basedatacollector.BaseDataCollector.download_mail_boxes`
+
+        :param mailing_list: object of MailingList class (see: pycoshark library)
+        """
         base_path = os.path.join(self.config.output_dir, self.config.get_mailing_url_identifier())
         if not os.path.exists(base_path):
             os.makedirs(base_path)
 
-        links = self._get_links()
+        links = self.get_links()
         logger.debug("Got links %s" % links)
 
         paths = []
@@ -66,7 +84,10 @@ class PipermailBackend(BaseDataCollector):
 
         return paths
 
-    def _get_links(self):
+    def get_links(self):
+        """
+        Gets the links to all maling list boxes or archives by parsing the html site
+        """
         req = requests.get(self.config.mailing_url, proxies=self.config.get_proxy_dictionary())
 
         if req.status_code != 200:
@@ -81,7 +102,11 @@ class PipermailBackend(BaseDataCollector):
         return self._filter_links(links)
 
     def _filter_links(self, links):
-        """Filter according to file types found in a Mailman archive index."""
+        """
+        Filter according to file types found in the archive index.
+
+        :param links: list of all found links
+        """
         accepted_types = COMPRESSED_TYPES + ACCEPTED_TYPES
 
         filtered_links = []

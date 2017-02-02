@@ -16,8 +16,8 @@ def setup_logging(default_path=os.path.dirname(os.path.realpath(__file__))+"/log
         Setup logging configuration
 
         :param default_path: path to the logger configuration
-        :param default_level: defines the default logging level if configuration file is not found
-        (default:logging.INFO)
+        :param default_level: defines the default logging level if configuration file is not found \
+         (default:logging.INFO)
         """
         path = default_path
         if os.path.exists(path):
@@ -26,6 +26,7 @@ def setup_logging(default_path=os.path.dirname(os.path.realpath(__file__))+"/log
             logging.config.dictConfig(config)
         else:
             logging.basicConfig(level=default_level)
+
 
 def writable_dir(prospective_dir):
     """ Function that checks if a path is a directory, if it exists and if it is writable and only
@@ -41,10 +42,11 @@ def writable_dir(prospective_dir):
         else:
             raise Exception("output:{0} is not a writable dir".format(prospective_dir))
 
+
 def start():
     """
-    Starts the application. First parses the different command line arguments and then it gives these to the mecoApp
-    :return:
+    Starts the application. First parses the different command line arguments and then it gives these to
+    :class:`mailingshark.mailingshark.MailingSHARK`.
     """
     setup_logging()
     logger = logging.getLogger("main")

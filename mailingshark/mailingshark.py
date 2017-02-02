@@ -20,11 +20,46 @@ logger = logging.getLogger("main")
 
 
 class MailingSHARK(object):
+    """
+    Main application class. Contains the most important process logic.
+    The main application consists of different steps: \n
+
+    1. Connects to MongoDB
+
+    2. Finds the project, to which the mailing list belongs
+
+    3. Generates a new mailing list entry, if not existent
+
+    4. Finds the correct backend via
+    :func:`mailingshark.datacollection.basedatacollector.BaseDataCollector.find_fitting_backend`
+
+    5. Downloads the mailboxes using the backend
+    (:func:`mailingshark.datacollection.basedatacollector.BaseDataCollector.download_mail_boxes`)
+
+    6. Unpacks the files (if necessary) via :func:`mailingshark.mailingshark.MailingSHARK._unpack_files`
+
+    7. Parses the messages, by created :class:`mailingshark.analyzer.ParsedMessage` objects
+
+    8. Stores the messages, by calling :func:`mailingshark.mailingshark.MailingSHARK._store_message`
+
+
+    """
+
     def __init__(self):
+        """
+        Initializes the people and messages directory, which are used in
+        :func:`mailingshark.mailingshark.MailingSHARK._get_people` and
+        :func:`mailingshark.mailingshark.MailingSHARK._get_message` to save traffic
+        """
         self.people = {}
         self.messages = {}
 
     def start(self, cfg):
+        """
+        Starts the program
+
+        :param cfg: configuration of class :class:`mailingshark.config.Config`
+        """
         logger.setLevel(cfg.get_debug_level())
         start_time = timeit.default_timer()
 
@@ -67,11 +102,10 @@ class MailingSHARK(object):
                 logger.debug('Got the following message: %s' % parsed_message)
 
                 try:
-                    self.__store_message(parsed_message, mailing_list_id)
+                    self._store_message(parsed_message, mailing_list_id)
                     stored_messages += 1
                 except Exception:
                     non_stored += 1
-
 
         # Update mailing list
         mailing_list.last_updated = datetime.datetime.now()
@@ -83,12 +117,21 @@ class MailingSHARK(object):
         elapsed = timeit.default_timer() - start_time
         logger.info("Execution time: %0.5f s" % elapsed)
 
-    def __store_message(self, parsed_message, list_id):
+    def _store_message(self, parsed_message, list_id):
+        """
+        Stores the message parsed_message in the list with the id list_id
+
+        :param parsed_message: object of class :class:`mailingshark.analyzer.ParsedMessage`
+        :param list_id: object id of class :class:`bson.objectid.ObjectId`
+        """
+
+        # Get the message, if it exist in the database
         try:
             mongo_message = Message.objects(message_id=parsed_message.message_id, mailing_list_id=list_id).get()
         except DoesNotExist:
             mongo_message = Message(message_id=parsed_message.message_id, mailing_list_id=list_id)
 
+        # Set all values
         mongo_message.subject = parsed_message.subject
         mongo_message.body = parsed_message.body
         mongo_message.patches = parsed_message.patches
@@ -118,11 +161,19 @@ class MailingSHARK(object):
                 cc_ids.append(self._get_people(user_cc))
             mongo_message.cc_ids = cc_ids
 
-        # Save this call in a dictionary to save network traffic
+        # Save this call in a dictionary to save network traffic, if there is a reply to this message
         mongo_id = mongo_message.save().id
         self.messages[parsed_message.message_id] = mongo_id
 
     def _get_message(self, message_id, list_id):
+        """
+        Gets the message with the id message_id from the list list_id. Looks up the message dictionary first to
+        save network traffic.
+
+        :param message_id: string that identifies the message (worldwide unique). \
+        See: https://en.wikipedia.org/wiki/Message-ID
+        :param list_id: object id of class :class:`bson.objectid.ObjectId` for the list
+        """
         if message_id in self.messages:
             return self.messages[message_id]
 
@@ -135,6 +186,12 @@ class MailingSHARK(object):
         return mongo_id
 
     def _get_people(self, user):
+        """
+        Gets the correct user from the people collection. Looks up the user in the people dictionary first to
+        save network traffic.
+
+        :param user: list, where the first part is the name and the second part is the email address
+        """
 
         # Username is the first part of the email address
         username = user[1].split('@')[0]
@@ -151,6 +208,13 @@ class MailingSHARK(object):
         return people_id
 
     def _unpack_files(self, file_paths, output_dir):
+        """
+        Unpacks the files if they are .gz or .tar.gz or .tar files (based on the files paths in file_paths) and
+        stores the contents in the output_dir.
+
+        :param file_paths: paths of files that were downloaded (list)
+        :param output_dir: path to directory were the output is saved
+        """
         for file_path in file_paths:
             if file_path.endswith('.tar.gz') or file_path.endswith('.tar'):
                 opened_file = tarfile.open(file_path)
@@ -180,6 +244,6 @@ class MailingSHARK(object):
                     file_path = os.path.join(root, filename)
                     new_paths.append(file_path)  # Add it to the list.
 
-        return new_paths  # Self-explanatory.
+        return new_paths
 
 
