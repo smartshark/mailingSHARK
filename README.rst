@@ -5,6 +5,9 @@ mailingSHARK
 
 mailingSHARK collects data from mailing list archives. Currently, pipermail is supported.
 
+Documentation
+-------------
+https://smartshark.github.io/mailingSHARK/
 
 ============
 Introduction
