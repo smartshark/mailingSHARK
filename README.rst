@@ -9,6 +9,12 @@ Documentation
 -------------
 https://smartshark.github.io/mailingSHARK/
 
+
+Model Documentation
+-------------------
+The documentation for the used database models can be found here: https://smartshark.github.io/pycoSHARK/api.html
+
+
 ============
 Introduction
 ============
@@ -49,16 +55,16 @@ After these requirements are met, first clone the
 following, we assume that you have cloned the repository to **~/mailingSHARK**. Afterwards,
 the installation of **mailingSHARK** can be done in two different ways:
 
-=======
+
 via Pip
-=======
+-------
 .. code-block:: bash
 
 	$ sudo pip3 install https://github.com/smartshark/mailingSHARK/zipball/master --process-dependency-links
 
-============
+
 via setup.py
-============
+------------
 .. code-block:: bash
 
 	$ sudo python3.5 ~/mailingSHARK/setup.py install
