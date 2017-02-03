@@ -24,7 +24,7 @@ There are several important things to note:
 		logger = logging.getLogger("backend")
 
 
-2.	The execution logic is in the application class and explained here :class:`~pyvcsshark.Application`.
+2.	The execution logic is in the application class and explained here :class:`~mailingshark.mailingshark.MailingSHARK`.
 
 3. If you want to have an example how to implement this class, look at
 :class:`~mailingshark.datacollection.pipermail.PipermailBackend`
