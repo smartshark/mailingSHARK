@@ -3,4 +3,4 @@ pymongo
 requests
 bs4
 mock
-git+https://github.com/smartshark/pycoSHARK.git@1.0.0#egg=pycoshark-1.0.0
+git+https://github.com/smartshark/pycoSHARK.git@1.0.1#egg=pycoshark-1.0.1
