@@ -23,6 +23,7 @@ class ConfigMock(object):
 
         return choices[self.debug_level]
 
+
 class ParseMessageTest(unittest.TestCase):
 
     def setUp(self):
