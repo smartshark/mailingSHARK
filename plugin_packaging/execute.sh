@@ -32,8 +32,12 @@ if [ ! -z ${14+x} ] && [ ${14} != "None" ]; then
 COMMAND="$COMMAND --proxy-password ${14}"
 fi
 
-if [ ! -z ${16+x} ] && [ ${16} != "None" ]; then
+if [ ! -z ${15+x} ] && [ ${15} != "None" ]; then
 COMMAND="$COMMAND --debug ${16}"
+fi
+
+if [ ! -z ${16+x} ] && [ ${16} != "None" ]; then
+COMMAND="$COMMAND --ssl"
 fi
 
 $COMMAND

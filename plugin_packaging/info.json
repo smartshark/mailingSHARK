@@ -15,12 +15,12 @@
         {
 			"name": "message",
 			"shard_key": [{"message_id": 1}, {"mailing_list_id": 1}],
-			"unique": true
+            "unique": true
 		},
         {
 			"name": "people",
 			"shard_key": [{"email": 1}, {"name": 1}],
-			"unique": true
+            "unique": true
 		}
 	],
     "arguments": [
@@ -135,6 +135,13 @@
             "position": 15,
             "type": "execute",
             "description": "debug level, default is debug"
+        },
+        {
+            "name": "ssl_enabled",
+            "required": false,
+            "position": 16,
+            "type": "execute",
+            "description": "needs to be set if database uses ssl connection"
         }
     ]
 }

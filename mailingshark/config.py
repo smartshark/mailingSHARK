@@ -41,6 +41,7 @@ class Config(object):
         self.proxy_port = args.proxy_port
         self.proxy_username = args.proxy_user
         self.proxy_password = args.proxy_password
+        self.ssl_enabled = args.ssl
 
         self.temporary_dir = os.path.join(self.output_dir, 'ready')
         self._validate_config()
