@@ -33,7 +33,7 @@ COMMAND="$COMMAND --proxy-password ${14}"
 fi
 
 if [ ! -z ${15+x} ] && [ ${15} != "None" ]; then
-COMMAND="$COMMAND --debug ${16}"
+COMMAND="$COMMAND --debug ${15}"
 fi
 
 if [ ! -z ${16+x} ] && [ ${16} != "None" ]; then
