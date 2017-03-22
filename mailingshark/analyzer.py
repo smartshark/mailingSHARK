@@ -2,6 +2,7 @@
 The logic in this class is related to the project "MailingListStats" of MetricsGrimoire (see: analyzer.py)
 """
 import codecs
+import email
 import hashlib
 import logging
 import re
@@ -65,7 +66,7 @@ class ParsedMessage(object):
         self.__set_addresses(raw_message, charset)
         self.date, self.date_tz = self.__get_date(raw_message)
 
-        if raw_message.get('in-reply-to') is not None:
+        if raw_message.get('in-reply-to') and raw_message.get('in-reply-to') is not None:
             self.in_reply_to = re_reply_to.sub(r'\1', self.__decode(raw_message.get('in-reply-to'), charset))
         else:
             self.in_reply_to = None
@@ -74,7 +75,13 @@ class ParsedMessage(object):
         self.message_id = self.__create_message_id(raw_message)
 
         # set references
-        if raw_message.get('references') is not None:
+        if not isinstance(raw_message.get('references'), str) and not isinstance(raw_message.get('refernces'), bytes) \
+                and raw_message.get('references') is not None:
+            logger.warning('Reference header is not a string')
+            self.references = []
+            return
+
+        if raw_message.get('references') and raw_message.get('references') is not None:
             found_references = re.findall(r'(\<.*?\>)', raw_message.get('references'), re.MULTILINE)
             self.references = list(set(found_references))
         else:
