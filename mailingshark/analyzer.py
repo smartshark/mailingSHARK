@@ -2,7 +2,6 @@
 The logic in this class is related to the project "MailingListStats" of MetricsGrimoire (see: analyzer.py)
 """
 import codecs
-import email
 import hashlib
 import logging
 import re
@@ -164,7 +163,16 @@ class ParsedMessage(object):
 
         :param message: object of class :class:`email.message.Message`
         """
-        parsed_date = parsedate_tz(message.get('date'))
+        date = message.get('date')
+        print(date)
+        try:
+            parsed_date = parsedate_tz(date)
+        except AttributeError:
+            date_parts = str(date).split(" ")[0:-1]
+            date_parts.append("+0000")
+            new_date = ' '.join(date_parts)
+            logger.warning("Could not parse date %s. Try to format it differently: %s" % (date, new_date))
+            parsed_date = parsedate_tz(new_date)
 
         if not parsed_date:
             msg_date = datetime.datetime(*(1979, 2, 4, 0, 0))

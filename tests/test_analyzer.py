@@ -30,6 +30,14 @@ class ParseMessageTest(unittest.TestCase):
         # Setup logging
         logging.basicConfig(level=logging.ERROR)
 
+    def test_analyze_mbox_erronous_date(self):
+        messages = mailbox.mbox(os.path.dirname(os.path.realpath(__file__)) + '/testdata/200307_xalanj.mbox', create=False)
+        parsed_messages = []
+        for msg in messages:
+            parsed_messages.append(ParsedMessage(ConfigMock(), msg))
+
+        self.assertEqual(126, len(parsed_messages))
+
     def test_analyze_txt(self):
         april2010 = mailbox.mbox(os.path.dirname(os.path.realpath(__file__))+'/testdata/2010-April.txt', create=False)
         parsed_messages = []
