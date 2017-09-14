@@ -27,7 +27,7 @@ def to_unicode(text, charset):
         for encoding in [charset, 'ascii', 'utf-8', 'iso-8859-15']:
             try:
                 return text.decode(encoding)
-            except (UnicodeDecodeError, LookupError):
+            except (UnicodeDecodeErrorprint, LookupError):
                 continue
         else:
             # All conversions failed, get unicode with unknown characters
@@ -164,7 +164,6 @@ class ParsedMessage(object):
         :param message: object of class :class:`email.message.Message`
         """
         date = message.get('date')
-        print(date)
         try:
             parsed_date = parsedate_tz(date)
         except AttributeError:
