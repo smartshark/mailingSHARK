@@ -27,7 +27,8 @@ def to_unicode(text, charset):
         for encoding in [charset, 'ascii', 'utf-8', 'iso-8859-15']:
             try:
                 return text.decode(encoding)
-            except (UnicodeDecodeErrorprint, LookupError):
+            except (UnicodeDecodeError, LookupError):
+                logger.warning("Could not decode %s with encoding %s." % (text, encoding))
                 continue
         else:
             # All conversions failed, get unicode with unknown characters
@@ -119,7 +120,11 @@ class ParsedMessage(object):
                 setattr(self, header, None)
                 continue
 
-            address = self.__check_spam_obscuring(self.__decode(raw_message.get(header), charset))
+            try:
+                address = self.__check_spam_obscuring(self.__decode(raw_message.get(header), charset))
+            except AttributeError:
+                readable_address = "<%s" % str(raw_message.get(header)).split("<")[-1]
+                address = self.__check_spam_obscuring(self.__decode(readable_address, charset))
             addresses = self.__get_decoded_addresses(address, charset)
             setattr(self, header, addresses or None)
 
