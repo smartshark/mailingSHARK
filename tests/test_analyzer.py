@@ -30,6 +30,17 @@ class ParseMessageTest(unittest.TestCase):
         # Setup logging
         logging.basicConfig(level=logging.ERROR)
 
+    def test_analyze_mbox_erronous_message(self):
+        messages = mailbox.mbox(os.path.dirname(os.path.realpath(__file__)) + '/testdata/200306_httpcomponentsclient.mbox', create=False)
+        parsed_messages = []
+        for i in range(0, len(messages)):
+            try:
+                parsed_messages.append(ParsedMessage(ConfigMock(), messages.get(i)))
+            except UnicodeDecodeError:
+                pass
+
+        self.assertEqual(562, len(parsed_messages))
+
     def test_analyze_mbox_erronous_date(self):
         messages = mailbox.mbox(os.path.dirname(os.path.realpath(__file__)) + '/testdata/200307_xalanj.mbox', create=False)
         parsed_messages = []

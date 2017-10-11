@@ -99,14 +99,14 @@ class MailingSHARK(object):
         for path_to_box in boxes_to_analyze:
             box = mailbox.mbox(path_to_box, create=False)
             logger.info("Analyzing: %s" % path_to_box)
-            for msg in box:
-                parsed_message = ParsedMessage(cfg, msg)
-                logger.debug('Got the following message: %s' % parsed_message)
-
+            for i in range(0, len(box)):
                 try:
+                    parsed_message = ParsedMessage(cfg, box.get(i))
+                    logger.debug('Got the following message: %s' % parsed_message)
                     self._store_message(parsed_message, mailing_list_id)
                     stored_messages += 1
-                except Exception:
+                except Exception as e:
+                    logger.error("Could not parse message. Error: %s" % e)
                     non_stored += 1
 
         # Update mailing list
