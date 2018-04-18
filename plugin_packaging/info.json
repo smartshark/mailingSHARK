@@ -5,7 +5,7 @@
     "plugin_type": "other",
     "linux_libraries": [
     ],
-    "description": "Plugin to collect data from issue tracking systems.",
+    "description": "Plugin to collect data from mailing lists.",
     "requires": [],
     "created_collections": [
 		{
