@@ -21,4 +21,14 @@ script:
   - docker run testdocker /bin/sh -c "cd /root/mailingshark; python3.5 setup.py test"
 
 after_success:
-  - docker run --env-file .env --net=mongodb-net testdocker /bin/sh -c "cd /root/mailingshark; make deploy > /dev/null"
+  - docker run --env-file .env --net=mongodb-net testdocker /bin/bash -c "cd /root/mailingshark; make deploy > /dev/null"
+  - SRD=`docker ps -alq` && docker cp $SRD:/root/mailingshark/plugin_packaging/mailingSHARK_plugin.tar .
+
+deploy:
+  provider: releases
+  api_key: ${TRAVIS_GH_TOKEN}
+  file: "mailingSHARK_plugin.tar"
+  skip_cleanup: true
+  on:
+    repo: smartshark/mailingSHARK
+    tags: true
