@@ -88,7 +88,7 @@
             "description": "name of the project to which the mailing list belongs"
         },
         {
-            "name": "mailingurl",
+            "name": "mailing_url",
             "required": true,
             "position": 9,
             "type": "execute",
@@ -130,7 +130,7 @@
             "description": "password of the proxy"
         },
         {
-            "name": "debug",
+            "name": "log_level",
             "required": false,
             "position": 15,
             "type": "execute",
