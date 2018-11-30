@@ -8,7 +8,7 @@ if not sys.version_info[0] == 3:
 
 setup(
     name='mailingSHARK',
-    version='1.0.0',
+    version='2.0.1',
     author='Fabian Trautsch',
     author_email='trautsch@cs.uni-goettingen.de',
     description='Collect data from issue mailing lists',
