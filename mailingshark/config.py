@@ -21,7 +21,7 @@ class Config(object):
 
         :param args: argumentparser of the class :class:`argparse.ArgumentParser`
         """
-        self.mailing_url = args.mailingurl.rstrip('/')
+        self.mailing_url = args.mailing_url.rstrip('/')
         self.backend = args.backend
         self.project_name = args.project_name
         self.host = args.db_hostname

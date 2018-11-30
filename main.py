@@ -63,7 +63,7 @@ def start():
     parser.add_argument('-o', '--output', help='Directory, which can be used as output.',
                         required=True, type=writable_dir)
     parser.add_argument('-n', '--project-name', help='Name of the project.', required=True)
-    parser.add_argument('-m', '--mailingurl', help='URL to the bugtracking system.', required=True)
+    parser.add_argument('-m', '--mailing-url', help='URL to the bugtracking system.', required=True)
     parser.add_argument('-b', '--backend', help='Backend to use for the mailing parsing', choices=backend_choices)
     parser.add_argument('-PH', '--proxy-host', help='Proxy hostname or IP address.', default=None)
     parser.add_argument('-PP', '--proxy-port', help='Port of the proxy to use.', default=None)
