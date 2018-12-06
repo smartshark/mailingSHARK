@@ -27,7 +27,7 @@ after_success:
 deploy:
   provider: releases
   api_key: ${GH_TOKEN}
-  file: "mailingSHARK_plugin.tar"
+  file: "plugin_packaging/mailingSHARK_plugin.tar"
   skip_cleanup: true
   on:
     repo: smartshark/mailingSHARK
