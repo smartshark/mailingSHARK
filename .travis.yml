@@ -2,31 +2,31 @@
 sudo: required
 language: python
 python:
-  - "3.5"
-
-services:
-  - docker
+  - "3.6"
 
 before_install:
   # We put all environment variables with TRAVIS_ in the beginning in a file to read it later (e.g., for github token)
   - printenv | grep -E '^TRAVIS_' > .env
-  - docker build -t testdocker .
-  - docker network create -d bridge mongodb-net
-  - docker run -d --net=mongodb-net --name=mongodb mongo:3.4
+  - sudo apt-get update
+  - sudo apt-get install -y build-essential wget git
+  - sudo apt-get install -y python3-pip python3-cffi
+  - pip install -U pip setuptools
+  - pip install Sphinx
+  - pip install sphinx_rtd_theme
+  - pip install ghp_import
 
 install:
-  - docker run testdocker /bin/sh -c "cd /root/mailingshark; python3.5 setup.py install"
+  - python setup.py install
 
 script:
-  - docker run testdocker /bin/sh -c "cd /root/mailingshark; python3.5 setup.py test"
+  - python setup.py test
 
 after_success:
-  - docker run --env-file .env --net=mongodb-net testdocker /bin/bash -c "cd /root/mailingshark; make deploy > /dev/null"
-  - SRD=`docker ps -alq` && docker cp $SRD:/root/mailingshark/plugin_packaging/mailingSHARK_plugin.tar .
+  - make deploy
 
 deploy:
   provider: releases
-  api_key: ${TRAVIS_GH_TOKEN}
+  api_key: ${GH_TOKEN}
   file: "mailingSHARK_plugin.tar"
   skip_cleanup: true
   on:

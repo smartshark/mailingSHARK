@@ -2,11 +2,9 @@ import logging
 import os
 import shutil
 import unittest
-import gzip
 from urllib.parse import urlparse
 
 import mock
-from bs4 import BeautifulSoup
 
 from mailingshark.datacollection.pipermail import PipermailBackend
 
