@@ -1,0 +1,847 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>3. API Documentation &mdash; mailingSHARK 1.0.0 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="prev" title="2. How to Extend" href="extension.html" /> 
+
+  
+  <script src="_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="index.html" class="icon icon-home"> mailingSHARK
+          
+
+          
+            
+            <img src="_static/SmartSHARK_read_the_docs_logo.png" class="logo" alt="Logo"/>
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                1.0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="intro.html">1. Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="extension.html">2. How to Extend</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">3. API Documentation</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#module-main">3.1. Entry Point</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#application">3.2. Application</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#configuration-and-misc">3.3. Configuration and Misc</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#configuration">3.3.1. Configuration</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#data-collectors">3.4. Data Collectors</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#basedatacollector">3.4.1. BaseDataCollector</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#pipermail-collector">3.4.2. Pipermail Collector</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#module-mailingshark.datacollection.common">3.4.3. Utils</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#models">3.4.4. Models</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">mailingSHARK</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html">Docs</a> &raquo;</li>
+        
+      <li>3. API Documentation</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="_sources/api.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="api-documentation">
+<h1>3. API Documentation<a class="headerlink" href="#api-documentation" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="module-main">
+<span id="entry-point"></span><h2>3.1. Entry Point<a class="headerlink" href="#module-main" title="Permalink to this headline">¶</a></h2>
+<dl class="function">
+<dt id="main.setup_logging">
+<code class="descclassname">main.</code><code class="descname">setup_logging</code><span class="sig-paren">(</span><em>default_path='/home/travis/build/smartshark/mailingSHARK/loggerConfiguration.json'</em>, <em>default_level=20</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/main.html#setup_logging"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#main.setup_logging" title="Permalink to this definition">¶</a></dt>
+<dd><p>Setup logging configuration</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>default_path</strong> – path to the logger configuration</li>
+<li><strong>default_level</strong> – defines the default logging level if configuration file is not found          (default:logging.INFO)</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="main.start">
+<code class="descclassname">main.</code><code class="descname">start</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/main.html#start"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#main.start" title="Permalink to this definition">¶</a></dt>
+<dd><p>Starts the application. First parses the different command line arguments and then it gives these to
+<a class="reference internal" href="#mailingshark.mailingshark.MailingSHARK" title="mailingshark.mailingshark.MailingSHARK"><code class="xref py py-class docutils literal notranslate"><span class="pre">mailingshark.mailingshark.MailingSHARK</span></code></a>.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="main.writable_dir">
+<code class="descclassname">main.</code><code class="descname">writable_dir</code><span class="sig-paren">(</span><em>prospective_dir</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/main.html#writable_dir"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#main.writable_dir" title="Permalink to this definition">¶</a></dt>
+<dd><p>Function that checks if a path is a directory, if it exists and if it is writable and only
+returns true if all these three are the case</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>prospective_dir</strong> – path to the directory</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</div>
+<div class="section" id="application">
+<h2>3.2. Application<a class="headerlink" href="#application" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="mailingshark.mailingshark.MailingSHARK">
+<em class="property">class </em><code class="descclassname">mailingshark.mailingshark.</code><code class="descname">MailingSHARK</code><a class="reference internal" href="_modules/mailingshark/mailingshark.html#MailingSHARK"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#mailingshark.mailingshark.MailingSHARK" title="Permalink to this definition">¶</a></dt>
+<dd><p>Main application class. Contains the most important process logic.
+The main application consists of different steps:</p>
+<ol class="arabic simple">
+<li>Connects to MongoDB</li>
+<li>Finds the project, to which the mailing list belongs</li>
+<li>Generates a new mailing list entry, if not existent</li>
+</ol>
+<p>4. Finds the correct backend via
+<a class="reference internal" href="#mailingshark.datacollection.basedatacollector.BaseDataCollector.find_fitting_backend" title="mailingshark.datacollection.basedatacollector.BaseDataCollector.find_fitting_backend"><code class="xref py py-func docutils literal notranslate"><span class="pre">mailingshark.datacollection.basedatacollector.BaseDataCollector.find_fitting_backend()</span></code></a></p>
+<p>5. Downloads the mailboxes using the backend
+(<a class="reference internal" href="#mailingshark.datacollection.basedatacollector.BaseDataCollector.download_mail_boxes" title="mailingshark.datacollection.basedatacollector.BaseDataCollector.download_mail_boxes"><code class="xref py py-func docutils literal notranslate"><span class="pre">mailingshark.datacollection.basedatacollector.BaseDataCollector.download_mail_boxes()</span></code></a>)</p>
+<ol class="arabic simple" start="6">
+<li>Unpacks the files (if necessary) via <a class="reference internal" href="#mailingshark.mailingshark.MailingSHARK._unpack_files" title="mailingshark.mailingshark.MailingSHARK._unpack_files"><code class="xref py py-func docutils literal notranslate"><span class="pre">mailingshark.mailingshark.MailingSHARK._unpack_files()</span></code></a></li>
+<li>Parses the messages, by created <a class="reference internal" href="#mailingshark.analyzer.ParsedMessage" title="mailingshark.analyzer.ParsedMessage"><code class="xref py py-class docutils literal notranslate"><span class="pre">mailingshark.analyzer.ParsedMessage</span></code></a> objects</li>
+<li>Stores the messages, by calling <a class="reference internal" href="#mailingshark.mailingshark.MailingSHARK._store_message" title="mailingshark.mailingshark.MailingSHARK._store_message"><code class="xref py py-func docutils literal notranslate"><span class="pre">mailingshark.mailingshark.MailingSHARK._store_message()</span></code></a></li>
+</ol>
+<dl class="method">
+<dt id="mailingshark.mailingshark.MailingSHARK.__init__">
+<code class="descname">__init__</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/mailingshark/mailingshark.html#MailingSHARK.__init__"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#mailingshark.mailingshark.MailingSHARK.__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Initializes the people and messages directory, which are used in
+<a class="reference internal" href="#mailingshark.mailingshark.MailingSHARK._get_people" title="mailingshark.mailingshark.MailingSHARK._get_people"><code class="xref py py-func docutils literal notranslate"><span class="pre">mailingshark.mailingshark.MailingSHARK._get_people()</span></code></a> and
+<a class="reference internal" href="#mailingshark.mailingshark.MailingSHARK._get_message" title="mailingshark.mailingshark.MailingSHARK._get_message"><code class="xref py py-func docutils literal notranslate"><span class="pre">mailingshark.mailingshark.MailingSHARK._get_message()</span></code></a> to save traffic</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="mailingshark.mailingshark.MailingSHARK.__weakref__">
+<code class="descname">__weakref__</code><a class="headerlink" href="#mailingshark.mailingshark.MailingSHARK.__weakref__" title="Permalink to this definition">¶</a></dt>
+<dd><p>list of weak references to the object (if defined)</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="mailingshark.mailingshark.MailingSHARK._get_message">
+<code class="descname">_get_message</code><span class="sig-paren">(</span><em>message_id</em>, <em>list_id</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/mailingshark/mailingshark.html#MailingSHARK._get_message"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#mailingshark.mailingshark.MailingSHARK._get_message" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets the message with the id message_id from the list list_id. Looks up the message dictionary first to
+save network traffic.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>message_id</strong> – string that identifies the message (worldwide unique).         See: <a class="reference external" href="https://en.wikipedia.org/wiki/Message-ID">https://en.wikipedia.org/wiki/Message-ID</a></li>
+<li><strong>list_id</strong> – object id of class <a class="reference external" href="http://api.mongodb.com/python/current/api/bson/objectid.html#bson.objectid.ObjectId" title="(in PyMongo v3.7.2)"><code class="xref py py-class docutils literal notranslate"><span class="pre">bson.objectid.ObjectId</span></code></a> for the list</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="mailingshark.mailingshark.MailingSHARK._get_people">
+<code class="descname">_get_people</code><span class="sig-paren">(</span><em>user</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/mailingshark/mailingshark.html#MailingSHARK._get_people"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#mailingshark.mailingshark.MailingSHARK._get_people" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets the correct user from the people collection. Looks up the user in the people dictionary first to
+save network traffic.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>user</strong> – list, where the first part is the name and the second part is the email address</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="mailingshark.mailingshark.MailingSHARK._store_message">
+<code class="descname">_store_message</code><span class="sig-paren">(</span><em>parsed_message</em>, <em>list_id</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/mailingshark/mailingshark.html#MailingSHARK._store_message"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#mailingshark.mailingshark.MailingSHARK._store_message" title="Permalink to this definition">¶</a></dt>
+<dd><p>Stores the message parsed_message in the list with the id list_id</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>parsed_message</strong> – object of class <a class="reference internal" href="#mailingshark.analyzer.ParsedMessage" title="mailingshark.analyzer.ParsedMessage"><code class="xref py py-class docutils literal notranslate"><span class="pre">mailingshark.analyzer.ParsedMessage</span></code></a></li>
+<li><strong>list_id</strong> – object id of class <a class="reference external" href="http://api.mongodb.com/python/current/api/bson/objectid.html#bson.objectid.ObjectId" title="(in PyMongo v3.7.2)"><code class="xref py py-class docutils literal notranslate"><span class="pre">bson.objectid.ObjectId</span></code></a></li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="mailingshark.mailingshark.MailingSHARK._unpack_files">
+<code class="descname">_unpack_files</code><span class="sig-paren">(</span><em>file_paths</em>, <em>output_dir</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/mailingshark/mailingshark.html#MailingSHARK._unpack_files"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#mailingshark.mailingshark.MailingSHARK._unpack_files" title="Permalink to this definition">¶</a></dt>
+<dd><p>Unpacks the files if they are .gz or .tar.gz or .tar files (based on the files paths in file_paths) and
+stores the contents in the output_dir.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>file_paths</strong> – paths of files that were downloaded (list)</li>
+<li><strong>output_dir</strong> – path to directory were the output is saved</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="mailingshark.mailingshark.MailingSHARK.start">
+<code class="descname">start</code><span class="sig-paren">(</span><em>cfg</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/mailingshark/mailingshark.html#MailingSHARK.start"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#mailingshark.mailingshark.MailingSHARK.start" title="Permalink to this definition">¶</a></dt>
+<dd><p>Starts the program</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>cfg</strong> – configuration of class <a class="reference internal" href="#mailingshark.config.Config" title="mailingshark.config.Config"><code class="xref py py-class docutils literal notranslate"><span class="pre">mailingshark.config.Config</span></code></a></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="configuration-and-misc">
+<h2>3.3. Configuration and Misc<a class="headerlink" href="#configuration-and-misc" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="configuration">
+<h3>3.3.1. Configuration<a class="headerlink" href="#configuration" title="Permalink to this headline">¶</a></h3>
+<dl class="class">
+<dt id="mailingshark.config.Config">
+<em class="property">class </em><code class="descclassname">mailingshark.config.</code><code class="descname">Config</code><span class="sig-paren">(</span><em>args</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/mailingshark/config.html#Config"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#mailingshark.config.Config" title="Permalink to this definition">¶</a></dt>
+<dd><p>Holds configuration information</p>
+<dl class="method">
+<dt id="mailingshark.config.Config.__init__">
+<code class="descname">__init__</code><span class="sig-paren">(</span><em>args</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/mailingshark/config.html#Config.__init__"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#mailingshark.config.Config.__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Initializes the object via arguments from the argumentparser</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>args</strong> – argumentparser of the class <a class="reference external" href="https://docs.python.org/3.5/library/argparse.html#argparse.ArgumentParser" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">argparse.ArgumentParser</span></code></a></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="mailingshark.config.Config.__str__">
+<code class="descname">__str__</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/mailingshark/config.html#Config.__str__"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#mailingshark.config.Config.__str__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return str(self).</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="mailingshark.config.Config.__weakref__">
+<code class="descname">__weakref__</code><a class="headerlink" href="#mailingshark.config.Config.__weakref__" title="Permalink to this definition">¶</a></dt>
+<dd><p>list of weak references to the object (if defined)</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="mailingshark.config.Config._get_proxy_string">
+<code class="descname">_get_proxy_string</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/mailingshark/config.html#Config._get_proxy_string"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#mailingshark.config.Config._get_proxy_string" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets the proxy string to do the requests</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="mailingshark.config.Config._use_proxy">
+<code class="descname">_use_proxy</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/mailingshark/config.html#Config._use_proxy"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#mailingshark.config.Config._use_proxy" title="Permalink to this definition">¶</a></dt>
+<dd><p>Checks if a proxy is used</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="mailingshark.config.Config._validate_config">
+<code class="descname">_validate_config</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/mailingshark/config.html#Config._validate_config"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#mailingshark.config.Config._validate_config" title="Permalink to this definition">¶</a></dt>
+<dd><p>Validates the config: the temporary dir must exist and if a proxy username is given, there must be a proxy
+password and vice versa</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="mailingshark.config.Config.get_debug_level">
+<code class="descname">get_debug_level</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/mailingshark/config.html#Config.get_debug_level"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#mailingshark.config.Config.get_debug_level" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets the correct debug level, based on <a class="reference external" href="https://docs.python.org/3.5/library/logging.html#module-logging" title="(in Python v3.5)"><code class="xref py py-mod docutils literal notranslate"><span class="pre">logging</span></code></a></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="mailingshark.config.Config.get_mailing_url_identifier">
+<code class="descname">get_mailing_url_identifier</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/mailingshark/config.html#Config.get_mailing_url_identifier"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#mailingshark.config.Config.get_mailing_url_identifier" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets the mailing list url identifier</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="mailingshark.config.Config.get_proxy_dictionary">
+<code class="descname">get_proxy_dictionary</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/mailingshark/config.html#Config.get_proxy_dictionary"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#mailingshark.config.Config.get_proxy_dictionary" title="Permalink to this definition">¶</a></dt>
+<dd><p>Creates the proxy directory for the requests</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="mailingshark.config.ConfigValidationException">
+<em class="property">class </em><code class="descclassname">mailingshark.config.</code><code class="descname">ConfigValidationException</code><a class="reference internal" href="_modules/mailingshark/config.html#ConfigValidationException"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#mailingshark.config.ConfigValidationException" title="Permalink to this definition">¶</a></dt>
+<dd><p>Exception that is thrown if the configuration validation fails</p>
+<dl class="attribute">
+<dt id="mailingshark.config.ConfigValidationException.__weakref__">
+<code class="descname">__weakref__</code><a class="headerlink" href="#mailingshark.config.ConfigValidationException.__weakref__" title="Permalink to this definition">¶</a></dt>
+<dd><p>list of weak references to the object (if defined)</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+</div>
+<div class="section" id="data-collectors">
+<h2>3.4. Data Collectors<a class="headerlink" href="#data-collectors" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="basedatacollector">
+<h3>3.4.1. BaseDataCollector<a class="headerlink" href="#basedatacollector" title="Permalink to this headline">¶</a></h3>
+<dl class="class">
+<dt id="mailingshark.datacollection.basedatacollector.BaseDataCollector">
+<em class="property">class </em><code class="descclassname">mailingshark.datacollection.basedatacollector.</code><code class="descname">BaseDataCollector</code><span class="sig-paren">(</span><em>cfg</em>, <em>project_id</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/mailingshark/datacollection/basedatacollector.html#BaseDataCollector"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#mailingshark.datacollection.basedatacollector.BaseDataCollector" title="Permalink to this definition">¶</a></dt>
+<dd><p>Base class for data collection backends</p>
+<dl class="method">
+<dt id="mailingshark.datacollection.basedatacollector.BaseDataCollector.__init__">
+<code class="descname">__init__</code><span class="sig-paren">(</span><em>cfg</em>, <em>project_id</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/mailingshark/datacollection/basedatacollector.html#BaseDataCollector.__init__"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#mailingshark.datacollection.basedatacollector.BaseDataCollector.__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Initializes the backend</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>cfg</strong> – object of class <a class="reference internal" href="#mailingshark.config.Config" title="mailingshark.config.Config"><code class="xref py py-class docutils literal notranslate"><span class="pre">mailingshark.config.Config</span></code></a> that holds all configuration options</li>
+<li><strong>project_id</strong> – id of the project of class <a class="reference external" href="http://api.mongodb.com/python/current/api/bson/objectid.html#bson.objectid.ObjectId" title="(in PyMongo v3.7.2)"><code class="xref py py-class docutils literal notranslate"><span class="pre">bson.objectid.ObjectId</span></code></a>, to which the mailing list belongs</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="mailingshark.datacollection.basedatacollector.BaseDataCollector.__weakref__">
+<code class="descname">__weakref__</code><a class="headerlink" href="#mailingshark.datacollection.basedatacollector.BaseDataCollector.__weakref__" title="Permalink to this definition">¶</a></dt>
+<dd><p>list of weak references to the object (if defined)</p>
+</dd></dl>
+
+<dl class="staticmethod">
+<dt id="mailingshark.datacollection.basedatacollector.BaseDataCollector._import_backends">
+<em class="property">static </em><code class="descname">_import_backends</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/mailingshark/datacollection/basedatacollector.html#BaseDataCollector._import_backends"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#mailingshark.datacollection.basedatacollector.BaseDataCollector._import_backends" title="Permalink to this definition">¶</a></dt>
+<dd><p>Method to import all backends in the datacollection folder</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="mailingshark.datacollection.basedatacollector.BaseDataCollector.download_mail_boxes">
+<code class="descname">download_mail_boxes</code><span class="sig-paren">(</span><em>mailing_list</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/mailingshark/datacollection/basedatacollector.html#BaseDataCollector.download_mail_boxes"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#mailingshark.datacollection.basedatacollector.BaseDataCollector.download_mail_boxes" title="Permalink to this definition">¶</a></dt>
+<dd><p>Download all mail boxes from the website of the mailing list</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>mailing_list</strong> – object of MailingList class (see: pycoshark library)</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="staticmethod">
+<dt id="mailingshark.datacollection.basedatacollector.BaseDataCollector.find_fitting_backend">
+<em class="property">static </em><code class="descname">find_fitting_backend</code><span class="sig-paren">(</span><em>cfg</em>, <em>project_id</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/mailingshark/datacollection/basedatacollector.html#BaseDataCollector.find_fitting_backend"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#mailingshark.datacollection.basedatacollector.BaseDataCollector.find_fitting_backend" title="Permalink to this definition">¶</a></dt>
+<dd><p>Find the fitting backend based on the identifier</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>cfg</strong> – object of class <a class="reference internal" href="#mailingshark.config.Config" title="mailingshark.config.Config"><code class="xref py py-class docutils literal notranslate"><span class="pre">mailingshark.config.Config</span></code></a> that holds all configuration options</li>
+<li><strong>project_id</strong> – id of the project of class <a class="reference external" href="http://api.mongodb.com/python/current/api/bson/objectid.html#bson.objectid.ObjectId" title="(in PyMongo v3.7.2)"><code class="xref py py-class docutils literal notranslate"><span class="pre">bson.objectid.ObjectId</span></code></a>, to which the mailing list belongs</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="staticmethod">
+<dt id="mailingshark.datacollection.basedatacollector.BaseDataCollector.get_all_possible_backend_options">
+<em class="property">static </em><code class="descname">get_all_possible_backend_options</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/mailingshark/datacollection/basedatacollector.html#BaseDataCollector.get_all_possible_backend_options"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#mailingshark.datacollection.basedatacollector.BaseDataCollector.get_all_possible_backend_options" title="Permalink to this definition">¶</a></dt>
+<dd><p>Method that returns all available backend options</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="mailingshark.datacollection.basedatacollector.BaseDataCollector.identifier">
+<code class="descname">identifier</code><a class="headerlink" href="#mailingshark.datacollection.basedatacollector.BaseDataCollector.identifier" title="Permalink to this definition">¶</a></dt>
+<dd><p>Identifier of the backend</p>
+<div class="admonition warning">
+<p class="first admonition-title">Warning</p>
+<p class="last">Must be unique among all backends</p>
+</div>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="pipermail-collector">
+<h3>3.4.2. Pipermail Collector<a class="headerlink" href="#pipermail-collector" title="Permalink to this headline">¶</a></h3>
+<dl class="class">
+<dt id="mailingshark.datacollection.pipermail.PipermailBackend">
+<em class="property">class </em><code class="descclassname">mailingshark.datacollection.pipermail.</code><code class="descname">PipermailBackend</code><span class="sig-paren">(</span><em>cfg</em>, <em>project_id</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/mailingshark/datacollection/pipermail.html#PipermailBackend"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#mailingshark.datacollection.pipermail.PipermailBackend" title="Permalink to this definition">¶</a></dt>
+<dd><p>Backend to download emails from pipermail archives</p>
+<dl class="method">
+<dt id="mailingshark.datacollection.pipermail.PipermailBackend.__init__">
+<code class="descname">__init__</code><span class="sig-paren">(</span><em>cfg</em>, <em>project_id</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/mailingshark/datacollection/pipermail.html#PipermailBackend.__init__"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#mailingshark.datacollection.pipermail.PipermailBackend.__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>See: <a class="reference internal" href="#mailingshark.datacollection.basedatacollector.BaseDataCollector" title="mailingshark.datacollection.basedatacollector.BaseDataCollector"><code class="xref py py-class docutils literal notranslate"><span class="pre">mailingshark.datacollection.basedatacollector.BaseDataCollector</span></code></a></p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>cfg</strong> – object of class <a class="reference internal" href="#mailingshark.config.Config" title="mailingshark.config.Config"><code class="xref py py-class docutils literal notranslate"><span class="pre">mailingshark.config.Config</span></code></a> that holds all configuration options</li>
+<li><strong>project_id</strong> – id of the project of class <a class="reference external" href="http://api.mongodb.com/python/current/api/bson/objectid.html#bson.objectid.ObjectId" title="(in PyMongo v3.7.2)"><code class="xref py py-class docutils literal notranslate"><span class="pre">bson.objectid.ObjectId</span></code></a>, to which the mailing list belongs</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="mailingshark.datacollection.pipermail.PipermailBackend._filter_links">
+<code class="descname">_filter_links</code><span class="sig-paren">(</span><em>links</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/mailingshark/datacollection/pipermail.html#PipermailBackend._filter_links"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#mailingshark.datacollection.pipermail.PipermailBackend._filter_links" title="Permalink to this definition">¶</a></dt>
+<dd><p>Filter according to file types found in the archive index.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>links</strong> – list of all found links</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="mailingshark.datacollection.pipermail.PipermailBackend.download_mail_boxes">
+<code class="descname">download_mail_boxes</code><span class="sig-paren">(</span><em>mailing_list</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/mailingshark/datacollection/pipermail.html#PipermailBackend.download_mail_boxes"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#mailingshark.datacollection.pipermail.PipermailBackend.download_mail_boxes" title="Permalink to this definition">¶</a></dt>
+<dd><p>See: <a class="reference internal" href="#mailingshark.datacollection.basedatacollector.BaseDataCollector.download_mail_boxes" title="mailingshark.datacollection.basedatacollector.BaseDataCollector.download_mail_boxes"><code class="xref py py-func docutils literal notranslate"><span class="pre">mailingshark.datacollection.basedatacollector.BaseDataCollector.download_mail_boxes()</span></code></a></p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>mailing_list</strong> – object of MailingList class (see: pycoshark library)</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="mailingshark.datacollection.pipermail.PipermailBackend.get_links">
+<code class="descname">get_links</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/mailingshark/datacollection/pipermail.html#PipermailBackend.get_links"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#mailingshark.datacollection.pipermail.PipermailBackend.get_links" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets the links to all maling list boxes or archives by parsing the html site</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="mailingshark.datacollection.pipermail.PipermailBackend.identifier">
+<code class="descname">identifier</code><a class="headerlink" href="#mailingshark.datacollection.pipermail.PipermailBackend.identifier" title="Permalink to this definition">¶</a></dt>
+<dd><p>Identifier of the backend (pipermail)</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-mailingshark.datacollection.common">
+<span id="utils"></span><h3>3.4.3. Utils<a class="headerlink" href="#module-mailingshark.datacollection.common" title="Permalink to this headline">¶</a></h3>
+<dl class="function">
+<dt id="mailingshark.datacollection.common.current_month">
+<code class="descclassname">mailingshark.datacollection.common.</code><code class="descname">current_month</code><span class="sig-paren">(</span><em>mailing_list_updated</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/mailingshark/datacollection/common.html#current_month"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#mailingshark.datacollection.common.current_month" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get a tuple containing the current month in different formats</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>mailing_list_updated</strong> – object of class <a class="reference external" href="https://docs.python.org/3.5/library/datetime.html#datetime.datetime" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">datetime.datetime</span></code></a>, which holds the time the mailing list
+was last parsed</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="mailingshark.datacollection.common.find_month_were_mailing_list_was_last_parsed">
+<code class="descclassname">mailingshark.datacollection.common.</code><code class="descname">find_month_were_mailing_list_was_last_parsed</code><span class="sig-paren">(</span><em>link</em>, <em>mailing_list_updated</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/mailingshark/datacollection/common.html#find_month_were_mailing_list_was_last_parsed"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#mailingshark.datacollection.common.find_month_were_mailing_list_was_last_parsed" title="Permalink to this definition">¶</a></dt>
+<dd><p>Find the current month in the given string.
+If the month is found, the function will return a string
+containing the current month. Otherwise returns None.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>link</strong> – string of the link to the specific mbox or mailing list file</li>
+<li><strong>mailing_list_updated</strong> – object of class <a class="reference external" href="https://docs.python.org/3.5/library/datetime.html#datetime.datetime" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">datetime.datetime</span></code></a>, which holds the time the mailing list
+was last parsed</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</div>
+<div class="section" id="models">
+<h3>3.4.4. Models<a class="headerlink" href="#models" title="Permalink to this headline">¶</a></h3>
+<dl class="class">
+<dt id="mailingshark.analyzer.ParsedMessage">
+<em class="property">class </em><code class="descclassname">mailingshark.analyzer.</code><code class="descname">ParsedMessage</code><span class="sig-paren">(</span><em>cfg</em>, <em>raw_message</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/mailingshark/analyzer.html#ParsedMessage"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#mailingshark.analyzer.ParsedMessage" title="Permalink to this definition">¶</a></dt>
+<dd><p>Model to which the raw message is given that turns it into a parsed message</p>
+<dl class="staticmethod">
+<dt id="mailingshark.analyzer.ParsedMessage._ParsedMessage__check_spam_obscuring">
+<em class="property">static </em><code class="descname">_ParsedMessage__check_spam_obscuring</code><span class="sig-paren">(</span><em>field</em><span class="sig-paren">)</span><a class="headerlink" href="#mailingshark.analyzer.ParsedMessage._ParsedMessage__check_spam_obscuring" title="Permalink to this definition">¶</a></dt>
+<dd><p>Checks the field for spam obscuring (e.g., at instead of &#64;)</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>field</strong> – content of the email field</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="mailingshark.analyzer.ParsedMessage._ParsedMessage__create_message_id">
+<code class="descname">_ParsedMessage__create_message_id</code><span class="sig-paren">(</span><em>raw_message</em><span class="sig-paren">)</span><a class="headerlink" href="#mailingshark.analyzer.ParsedMessage._ParsedMessage__create_message_id" title="Permalink to this definition">¶</a></dt>
+<dd><p>Creates the mssage id, if none is given</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>raw_message</strong> – object of class <a class="reference external" href="https://docs.python.org/3.5/library/email.message.html#email.message.Message" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">email.message.Message</span></code></a></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="staticmethod">
+<dt id="mailingshark.analyzer.ParsedMessage._ParsedMessage__decode">
+<em class="property">static </em><code class="descname">_ParsedMessage__decode</code><span class="sig-paren">(</span><em>s</em>, <em>charset='latin-1'</em>, <em>sep=' '</em><span class="sig-paren">)</span><a class="headerlink" href="#mailingshark.analyzer.ParsedMessage._ParsedMessage__decode" title="Permalink to this definition">¶</a></dt>
+<dd><p>Decodes a header for a specific charset</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>s</strong> – header</li>
+<li><strong>charset</strong> – charset that should be used</li>
+<li><strong>sep</strong> – seperator</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="staticmethod">
+<dt id="mailingshark.analyzer.ParsedMessage._ParsedMessage__get_body">
+<em class="property">static </em><code class="descname">_ParsedMessage__get_body</code><span class="sig-paren">(</span><em>raw_message</em>, <em>charset</em><span class="sig-paren">)</span><a class="headerlink" href="#mailingshark.analyzer.ParsedMessage._ParsedMessage__get_body" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets the body for the message using a specific charset</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>raw_message</strong> – object of class <a class="reference external" href="https://docs.python.org/3.5/library/email.message.html#email.message.Message" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">email.message.Message</span></code></a></li>
+<li><strong>charset</strong> – charset that should be used</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="staticmethod">
+<dt id="mailingshark.analyzer.ParsedMessage._ParsedMessage__get_date">
+<em class="property">static </em><code class="descname">_ParsedMessage__get_date</code><span class="sig-paren">(</span><em>message</em><span class="sig-paren">)</span><a class="headerlink" href="#mailingshark.analyzer.ParsedMessage._ParsedMessage__get_date" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets the date from the message</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>message</strong> – object of class <a class="reference external" href="https://docs.python.org/3.5/library/email.message.html#email.message.Message" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">email.message.Message</span></code></a></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="mailingshark.analyzer.ParsedMessage._ParsedMessage__get_decoded_addresses">
+<code class="descname">_ParsedMessage__get_decoded_addresses</code><span class="sig-paren">(</span><em>address</em>, <em>charset</em><span class="sig-paren">)</span><a class="headerlink" href="#mailingshark.analyzer.ParsedMessage._ParsedMessage__get_decoded_addresses" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets the decoded addresses</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>address</strong> – email address</li>
+<li><strong>charset</strong> – charset that should be used</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="mailingshark.analyzer.ParsedMessage._ParsedMessage__set_addresses">
+<code class="descname">_ParsedMessage__set_addresses</code><span class="sig-paren">(</span><em>raw_message</em>, <em>charset</em><span class="sig-paren">)</span><a class="headerlink" href="#mailingshark.analyzer.ParsedMessage._ParsedMessage__set_addresses" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sets the addresses in the email</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>raw_message</strong> – object of class <a class="reference external" href="https://docs.python.org/3.5/library/email.message.html#email.message.Message" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">email.message.Message</span></code></a></li>
+<li><strong>charset</strong> – charset that should be used</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="staticmethod">
+<dt id="mailingshark.analyzer.ParsedMessage._ParsedMessage__set_msgdate">
+<em class="property">static </em><code class="descname">_ParsedMessage__set_msgdate</code><span class="sig-paren">(</span><em>raw_message</em><span class="sig-paren">)</span><a class="headerlink" href="#mailingshark.analyzer.ParsedMessage._ParsedMessage__set_msgdate" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sets the message date</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>raw_message</strong> – object of class <a class="reference external" href="https://docs.python.org/3.5/library/email.message.html#email.message.Message" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">email.message.Message</span></code></a></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="mailingshark.analyzer.ParsedMessage.__init__">
+<code class="descname">__init__</code><span class="sig-paren">(</span><em>cfg</em>, <em>raw_message</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/mailingshark/analyzer.html#ParsedMessage.__init__"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#mailingshark.analyzer.ParsedMessage.__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Creates the parsed message using config cfg and message raw_message</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>cfg</strong> – object of class <a class="reference internal" href="#mailingshark.config.Config" title="mailingshark.config.Config"><code class="xref py py-class docutils literal notranslate"><span class="pre">mailingshark.config.Config</span></code></a></li>
+<li><strong>raw_message</strong> – object of class <a class="reference external" href="https://docs.python.org/3.5/library/email.message.html#email.message.Message" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">email.message.Message</span></code></a></li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="mailingshark.analyzer.ParsedMessage.__str__">
+<code class="descname">__str__</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/mailingshark/analyzer.html#ParsedMessage.__str__"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#mailingshark.analyzer.ParsedMessage.__str__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return str(self).</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="mailingshark.analyzer.ParsedMessage.__weakref__">
+<code class="descname">__weakref__</code><a class="headerlink" href="#mailingshark.analyzer.ParsedMessage.__weakref__" title="Permalink to this definition">¶</a></dt>
+<dd><p>list of weak references to the object (if defined)</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+      
+        <a href="extension.html" class="btn btn-neutral" title="2. How to Extend" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2017, Fabian Trautsch
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script type="text/javascript" src="_static/jquery.js"></script>
+        <script type="text/javascript" src="_static/underscore.js"></script>
+        <script type="text/javascript" src="_static/doctools.js"></script>
+    
+
+  
+
+  <script type="text/javascript" src="_static/js/theme.js"></script>
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

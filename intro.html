@@ -1,0 +1,511 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>1. Introduction &mdash; mailingSHARK 1.0.0 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="2. How to Extend" href="extension.html" />
+    <link rel="prev" title="Welcome to mailingSHARK’s documentation!" href="index.html" /> 
+
+  
+  <script src="_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="index.html" class="icon icon-home"> mailingSHARK
+          
+
+          
+            
+            <img src="_static/SmartSHARK_read_the_docs_logo.png" class="logo" alt="Logo"/>
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                1.0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">1. Introduction</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#model-documentation">1.1. Model Documentation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#installation">1.2. Installation</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#via-pip">1.2.1. via Pip</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#via-setup-py">1.2.2. via setup.py</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#tests">1.3. Tests</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#execution">1.4. Execution</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#tutorial">1.5. Tutorial</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="extension.html">2. How to Extend</a></li>
+<li class="toctree-l1"><a class="reference internal" href="api.html">3. API Documentation</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">mailingSHARK</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html">Docs</a> &raquo;</li>
+        
+      <li>1. Introduction</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="_sources/intro.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="introduction">
+<h1>1. Introduction<a class="headerlink" href="#introduction" title="Permalink to this headline">¶</a></h1>
+<p>This introduction will show how the requirements of <strong>mailingSHARK</strong> , how it is installed, tested, and executed. Furthermore,
+a small tutorial in the end will show step by step, how to use this tool.</p>
+<p>mailingSHARK is written in Python and is a tool to collect communication data from mailing list archives.
+This includes messages, people, as well as references between messages. Currently, only pipermail archives
+are supported (e.g., <a class="reference external" href="https://mail.kde.org/pipermail/k3b/">k3b mailing list</a> or
+<a class="reference external" href="http://mail-archives.apache.org/mod_mbox/logging-log4j-user/">log4j mailing list</a></p>
+<p>We use a vanilla Ubuntu 16.04 operating system as basis for the steps that we describe. If necessary, we give hints
+on how to perform this step with a different operating system.</p>
+<div class="admonition warning">
+<p class="first admonition-title">Warning</p>
+<p class="last">This software is still in development.</p>
+</div>
+<div class="section" id="model-documentation">
+<h2>1.1. Model Documentation<a class="headerlink" href="#model-documentation" title="Permalink to this headline">¶</a></h2>
+<p>The documentation for the used database models can be found here: <a class="reference external" href="https://smartshark.github.io/pycoSHARK/api.html">https://smartshark.github.io/pycoSHARK/api.html</a></p>
+</div>
+<div class="section" id="installation">
+<span id="id1"></span><h2>1.2. Installation<a class="headerlink" href="#installation" title="Permalink to this headline">¶</a></h2>
+<p>The installation process is straight forward. For a vanilla Ubuntu 16.04, we need to install the following packages:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ sudo apt-get install git python3-pip python3-cffi
+</pre></div>
+</div>
+<p>Furthermore, you need a running MongoDB. The process of setting up a MongoDB is explained here:
+<a class="reference external" href="https://docs.mongodb.com/manual/installation/">https://docs.mongodb.com/manual/installation/</a></p>
+<p>After these requirements are met, first clone the
+<strong>mailingSHARK</strong> <a class="reference external" href="https://github.com/smartshark/mailingSHARK/">repository</a> repository to a folder you want. In the
+following, we assume that you have cloned the repository to <strong>~/mailingSHARK</strong>. Afterwards,
+the installation of <strong>mailingSHARK</strong> can be done in two different ways:</p>
+<div class="section" id="via-pip">
+<h3>1.2.1. via Pip<a class="headerlink" href="#via-pip" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ sudo pip3 install https://github.com/smartshark/mailingSHARK/zipball/master --process-dependency-links
+</pre></div>
+</div>
+</div>
+<div class="section" id="via-setup-py">
+<h3>1.2.2. via setup.py<a class="headerlink" href="#via-setup-py" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ sudo python3.5 ~/mailingSHARK/setup.py install
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">It is advisable to change the location, where the logs are written to.
+They can be changed in the <strong>~/mailingSHARK/loggerConfiguration.json</strong>. There are different file handlers defined.
+Just change the “filename”-attribute to a location of your wish.</p>
+</div>
+</div>
+</div>
+<div class="section" id="tests">
+<h2>1.3. Tests<a class="headerlink" href="#tests" title="Permalink to this headline">¶</a></h2>
+<p>The tests of <strong>mailingSHARK</strong> can be executed by calling</p>
+<blockquote>
+<div><div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ python3.5 ~/mailingSHARK/setup.py <span class="nb">test</span>
+</pre></div>
+</div>
+</div></blockquote>
+<p>The tests can be found in the folder “tests”.</p>
+<div class="admonition warning">
+<p class="first admonition-title">Warning</p>
+<p class="last">The generated tests are not fully complete. They just test the basic functionality.</p>
+</div>
+</div>
+<div class="section" id="execution">
+<h2>1.4. Execution<a class="headerlink" href="#execution" title="Permalink to this headline">¶</a></h2>
+<p>In this chapter, we explain how you can execute <strong>mailingSHARK</strong>. Furthermore, the different execution parameters are
+explained in detail.</p>
+<ol class="arabic">
+<li><p class="first">Choose a web mail archive address (e.g., <a class="reference external" href="https://mail.kde.org/pipermail/k3b/">https://mail.kde.org/pipermail/k3b/</a>)</p>
+</li>
+<li><p class="first">Make sure that your MongoDB is running!</p>
+<blockquote>
+<div><div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ sudo systemctl status mongodb
+</pre></div>
+</div>
+</div></blockquote>
+</li>
+</ol>
+<p>3) Make sure that the project from which you collect data is already in the project collection of the MongoDB. If not,
+you can add them by:</p>
+<blockquote>
+<div><div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ db.project.insert<span class="o">({</span><span class="s2">&quot;name&quot;</span>: &lt;PROJECT_NAME&gt;<span class="o">})</span>
+</pre></div>
+</div>
+</div></blockquote>
+<ol class="arabic" start="4">
+<li><p class="first">Execute <strong>mailingSHARK</strong> by calling</p>
+<blockquote>
+<div><div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ python3.5 ~/mailingSHARK/main.py
+</pre></div>
+</div>
+</div></blockquote>
+</li>
+</ol>
+<p><strong>mailingSHARK</strong> supports different commandline arguments:</p>
+<dl class="option">
+<dt id="cmdoption-help">
+<code class="descname">--help</code><code class="descclassname"></code><code class="descclassname">, </code><code class="descname">-h</code><code class="descclassname"></code><a class="headerlink" href="#cmdoption-help" title="Permalink to this definition">¶</a></dt>
+<dd><p>shows the help page for this command</p>
+</dd></dl>
+
+<dl class="option">
+<dt id="cmdoption-version">
+<code class="descname">--version</code><code class="descclassname"></code><code class="descclassname">, </code><code class="descname">-v</code><code class="descclassname"></code><a class="headerlink" href="#cmdoption-version" title="Permalink to this definition">¶</a></dt>
+<dd><p>shows the version</p>
+</dd></dl>
+
+<dl class="option">
+<dt id="cmdoption-db-user">
+<code class="descname">--db-user</code><code class="descclassname"> &lt;USER&gt;</code><code class="descclassname">, </code><code class="descname">-U</code><code class="descclassname"> &lt;USER&gt;</code><a class="headerlink" href="#cmdoption-db-user" title="Permalink to this definition">¶</a></dt>
+<dd><p>Default: None</p>
+<p>mongodb user name</p>
+</dd></dl>
+
+<dl class="option">
+<dt id="cmdoption-db-password">
+<code class="descname">--db-password</code><code class="descclassname"> &lt;PASSWORD&gt;</code><code class="descclassname">, </code><code class="descname">-P</code><code class="descclassname"> &lt;PASSWORD&gt;</code><a class="headerlink" href="#cmdoption-db-password" title="Permalink to this definition">¶</a></dt>
+<dd><p>Default: None</p>
+<p>mongodb password</p>
+</dd></dl>
+
+<dl class="option">
+<dt id="cmdoption-db-database">
+<code class="descname">--db-database</code><code class="descclassname"> &lt;DATABASENAME&gt;</code><code class="descclassname">, </code><code class="descname">-DB</code><code class="descclassname"> &lt;DATABASENAME&gt;</code><a class="headerlink" href="#cmdoption-db-database" title="Permalink to this definition">¶</a></dt>
+<dd><p>Default: smartshark</p>
+<p>database name</p>
+</dd></dl>
+
+<dl class="option">
+<dt id="cmdoption-db-hostname">
+<code class="descname">--db-hostname</code><code class="descclassname"> &lt;HOSTNAME&gt;</code><code class="descclassname">, </code><code class="descname">-H</code><code class="descclassname"> &lt;HOSTNAME&gt;</code><a class="headerlink" href="#cmdoption-db-hostname" title="Permalink to this definition">¶</a></dt>
+<dd><p>Default: localhost</p>
+<p>hostname, where the mongodb runs on</p>
+</dd></dl>
+
+<dl class="option">
+<dt id="cmdoption-db-port">
+<code class="descname">--db-port</code><code class="descclassname"> &lt;PORT&gt;</code><code class="descclassname">, </code><code class="descname">-p</code><code class="descclassname"> &lt;PORT&gt;</code><a class="headerlink" href="#cmdoption-db-port" title="Permalink to this definition">¶</a></dt>
+<dd><p>Default: 27017</p>
+<p>port, where the mongodb runs on</p>
+</dd></dl>
+
+<dl class="option">
+<dt id="cmdoption-db-authentication">
+<code class="descname">--db-authentication</code><code class="descclassname"> &lt;DB_AUTHENTICATION&gt; -a &lt;DB_AUTHENTICATION&gt;</code><a class="headerlink" href="#cmdoption-db-authentication" title="Permalink to this definition">¶</a></dt>
+<dd><p>Default: None</p>
+<p>name of the authentication database</p>
+</dd></dl>
+
+<dl class="option">
+<dt id="cmdoption-ssl">
+<code class="descname">--ssl</code><code class="descclassname"></code><a class="headerlink" href="#cmdoption-ssl" title="Permalink to this definition">¶</a></dt>
+<dd><p>enables ssl for the connection to the mongodb</p>
+</dd></dl>
+
+<dl class="option">
+<dt id="cmdoption-debug">
+<code class="descname">--debug</code><code class="descclassname"> &lt;DEBUG_LEVEL&gt;</code><code class="descclassname">, </code><code class="descname">-d</code><code class="descclassname"> &lt;DEBUG_LEVEL&gt;</code><a class="headerlink" href="#cmdoption-debug" title="Permalink to this definition">¶</a></dt>
+<dd><p>Default: DEBUG</p>
+<p>Debug level (INFO, DEBUG, WARNING, ERROR)</p>
+</dd></dl>
+
+<dl class="option">
+<dt id="cmdoption-project-name">
+<code class="descname">--project-name</code><code class="descclassname"> &lt;PROJECT_NAME&gt;</code><a class="headerlink" href="#cmdoption-project-name" title="Permalink to this definition">¶</a></dt>
+<dd><p>Required</p>
+<p>Name of the project, from which the data is collected</p>
+</dd></dl>
+
+<dl class="option">
+<dt id="cmdoption-output">
+<code class="descname">--output</code><code class="descclassname"> &lt;PATH&gt;</code><code class="descclassname">, </code><code class="descname">-o</code><code class="descclassname"> &lt;PATH&gt;</code><a class="headerlink" href="#cmdoption-output" title="Permalink to this definition">¶</a></dt>
+<dd><p>Required</p>
+<p>Path to directory, where output can be stored (must be writable)</p>
+</dd></dl>
+
+<dl class="option">
+<dt id="cmdoption-mailingurl">
+<code class="descname">--mailingurl</code><code class="descclassname"> &lt;URL&gt;</code><code class="descclassname">, </code><code class="descname">-m</code><code class="descclassname"> &lt;URL&gt;</code><a class="headerlink" href="#cmdoption-mailingurl" title="Permalink to this definition">¶</a></dt>
+<dd><p>Required</p>
+<p>Url of the mailing list archive</p>
+</dd></dl>
+
+<dl class="option">
+<dt id="cmdoption-backend">
+<code class="descname">--backend</code><code class="descclassname">  &lt;BACKENDNAME&gt;</code><code class="descclassname">, </code><code class="descname">-b</code><code class="descclassname"> &lt;BACKENDNAME&gt;</code><a class="headerlink" href="#cmdoption-backend" title="Permalink to this definition">¶</a></dt>
+<dd><p>Required</p>
+<p>Backend to use to download the emails</p>
+</dd></dl>
+
+<dl class="option">
+<dt id="cmdoption-proxy-host">
+<code class="descname">--proxy-host</code><code class="descclassname"> &lt;PROXYHOST&gt;</code><code class="descclassname">, </code><code class="descname">-PH</code><code class="descclassname"> &lt;PROXYHOST&gt;</code><a class="headerlink" href="#cmdoption-proxy-host" title="Permalink to this definition">¶</a></dt>
+<dd><p>Default: None</p>
+<p>Proxy hostname or IP address.</p>
+</dd></dl>
+
+<dl class="option">
+<dt id="cmdoption-proxy-port">
+<code class="descname">--proxy-port</code><code class="descclassname"> &lt;PROXYPORT&gt;</code><code class="descclassname">, </code><code class="descname">-PP</code><code class="descclassname"> &lt;PROXYPORT&gt;</code><a class="headerlink" href="#cmdoption-proxy-port" title="Permalink to this definition">¶</a></dt>
+<dd><p>Default: None</p>
+<p>Port of the proxy to use.</p>
+</dd></dl>
+
+<dl class="option">
+<dt id="cmdoption-proxy-password">
+<code class="descname">--proxy-password</code><code class="descclassname"> &lt;PROXYPASSWORD&gt;</code><code class="descclassname">, </code><code class="descname">-Pp</code><code class="descclassname"> &lt;PROXYPASSWORD&gt;</code><a class="headerlink" href="#cmdoption-proxy-password" title="Permalink to this definition">¶</a></dt>
+<dd><p>Default: None</p>
+<p>Password to use the proxy (HTTP Basic Auth)</p>
+</dd></dl>
+
+<dl class="option">
+<dt id="cmdoption-proxy-user">
+<code class="descname">--proxy-user</code><code class="descclassname"> &lt;PROXYUSER&gt;</code><code class="descclassname">, </code><code class="descname">-PU</code><code class="descclassname"> &lt;PROXYUSER&gt;</code><a class="headerlink" href="#cmdoption-proxy-user" title="Permalink to this definition">¶</a></dt>
+<dd><p>Default: None</p>
+<p>Username to use the proxy (HTTP Basic Auth)</p>
+</dd></dl>
+
+</div>
+<div class="section" id="tutorial">
+<h2>1.5. Tutorial<a class="headerlink" href="#tutorial" title="Permalink to this headline">¶</a></h2>
+<p>In this section we show step-by-step how you can store the messages of the k3b mailinglist
+<a class="reference external" href="https://mail.kde.org/pipermail/k3b/">https://mail.kde.org/pipermail/k3b/</a> in the MongoDB</p>
+<p>1.      First, you need to have a mongodb running (version 3.2+).
+How this can be achieved is explained here: <a class="reference external" href="https://docs.mongodb.org/manual/">https://docs.mongodb.org/manual/</a>.</p>
+<div class="admonition warning">
+<p class="first admonition-title">Warning</p>
+<p class="last">Make sure, that you activated the authentication of mongodb
+(<strong>mailingSHARK</strong> also works without authentication, but with authentication it is much safer!).
+Hints how this can be achieved are given <a class="reference external" href="https://docs.mongodb.org/manual/core/authentication/">here</a>.</p>
+</div>
+<ol class="arabic" start="2">
+<li><p class="first">Add k3b to the projects table in MongoDB.</p>
+<blockquote>
+<div><div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ mongo
+$ use smartshark
+$ db.project.insert<span class="o">({</span><span class="s2">&quot;name&quot;</span>: <span class="s2">&quot;k3b&quot;</span><span class="o">})</span>
+</pre></div>
+</div>
+</div></blockquote>
+</li>
+<li><p class="first">Install <strong>mailingSHARK</strong>. An explanation is given above.</p>
+</li>
+</ol>
+<ol class="arabic" start="3">
+<li><p class="first">Enter the <strong>mailingSHARK</strong> directory via</p>
+<blockquote>
+<div><div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ <span class="nb">cd</span> mailingSHARK
+</pre></div>
+</div>
+</div></blockquote>
+</li>
+<li><p class="first">Test if everything works as expected</p>
+<blockquote>
+<div><div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ python3.5 main.py --help
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">If you receive an error here, it is most likely, that the installation process failed.</p>
+</div>
+</div></blockquote>
+</li>
+<li><p class="first">Create an empty directory</p>
+<blockquote>
+<div><div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ mkdir ~/temp
+</pre></div>
+</div>
+</div></blockquote>
+</li>
+</ol>
+<ol class="arabic" start="5">
+<li><p class="first">Execute <strong>mailingSHARK</strong>:</p>
+<blockquote>
+<div><div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ <span class="nb">cd</span> ~/mailingSHARK
+$ python3.5 main.py --backend pipermail --project-name k3b --mailingurl https://mail.kde.org/pipermail/k3b --output ~/temp
+</pre></div>
+</div>
+</div></blockquote>
+</li>
+</ol>
+<p>Thats it. The results are explained in the database documentation
+of <a class="reference external" href="http://smartshark2.informatik.uni-goettingen.de/documentation/">SmartSHARK</a>.</p>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="extension.html" class="btn btn-neutral float-right" title="2. How to Extend" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="index.html" class="btn btn-neutral" title="Welcome to mailingSHARK’s documentation!" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2017, Fabian Trautsch
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script type="text/javascript" src="_static/jquery.js"></script>
+        <script type="text/javascript" src="_static/underscore.js"></script>
+        <script type="text/javascript" src="_static/doctools.js"></script>
+    
+
+  
+
+  <script type="text/javascript" src="_static/js/theme.js"></script>
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

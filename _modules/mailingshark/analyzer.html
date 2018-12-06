@@ -1,0 +1,488 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>mailingshark.analyzer &mdash; mailingSHARK 1.0.0 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" /> 
+
+  
+  <script src="../../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../../index.html" class="icon icon-home"> mailingSHARK
+          
+
+          
+            
+            <img src="../../_static/SmartSHARK_read_the_docs_logo.png" class="logo" alt="Logo"/>
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                1.0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../intro.html">1. Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../extension.html">2. How to Extend</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../api.html">3. API Documentation</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">mailingSHARK</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="../index.html">Module code</a> &raquo;</li>
+        
+      <li>mailingshark.analyzer</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <h1>Source code for mailingshark.analyzer</h1><div class="highlight"><pre>
+<span></span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">The logic in this class is related to the project &quot;MailingListStats&quot; of MetricsGrimoire (see: analyzer.py)</span>
+<span class="sd">&quot;&quot;&quot;</span>
+<span class="kn">import</span> <span class="nn">codecs</span>
+<span class="kn">import</span> <span class="nn">hashlib</span>
+<span class="kn">import</span> <span class="nn">logging</span>
+<span class="kn">import</span> <span class="nn">re</span>
+<span class="kn">import</span> <span class="nn">datetime</span>
+<span class="kn">from</span> <span class="nn">email.header</span> <span class="k">import</span> <span class="n">decode_header</span>
+<span class="kn">from</span> <span class="nn">email.iterators</span> <span class="k">import</span> <span class="n">typed_subpart_iterator</span>
+
+<span class="kn">from</span> <span class="nn">email.utils</span> <span class="k">import</span> <span class="n">parsedate_tz</span><span class="p">,</span> <span class="n">getaddresses</span>
+
+<span class="n">logger</span> <span class="o">=</span> <span class="n">logging</span><span class="o">.</span><span class="n">getLogger</span><span class="p">(</span><span class="s2">&quot;analyzer&quot;</span><span class="p">)</span>
+
+<span class="n">EMAIL_OBFUSCATION_PATTERNS</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39; at &#39;</span><span class="p">,</span> <span class="s1">&#39;_at_&#39;</span><span class="p">,</span> <span class="s1">&#39; en &#39;</span><span class="p">]</span>
+
+
+<span class="k">def</span> <span class="nf">to_unicode</span><span class="p">(</span><span class="n">text</span><span class="p">,</span> <span class="n">charset</span><span class="p">):</span>
+    <span class="k">if</span> <span class="n">charset</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="n">charset</span> <span class="o">=</span> <span class="s1">&#39;latin-1&#39;</span>
+
+    <span class="c1"># In python3 strings are unicode by default</span>
+    <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">text</span><span class="p">,</span> <span class="nb">str</span><span class="p">):</span>
+        <span class="k">return</span> <span class="n">text</span>
+    <span class="k">elif</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">text</span><span class="p">,</span> <span class="nb">bytes</span><span class="p">):</span>
+        <span class="k">for</span> <span class="n">encoding</span> <span class="ow">in</span> <span class="p">[</span><span class="n">charset</span><span class="p">,</span> <span class="s1">&#39;ascii&#39;</span><span class="p">,</span> <span class="s1">&#39;utf-8&#39;</span><span class="p">,</span> <span class="s1">&#39;iso-8859-15&#39;</span><span class="p">]:</span>
+            <span class="k">try</span><span class="p">:</span>
+                <span class="k">return</span> <span class="n">text</span><span class="o">.</span><span class="n">decode</span><span class="p">(</span><span class="n">encoding</span><span class="p">)</span>
+            <span class="k">except</span> <span class="p">(</span><span class="ne">UnicodeDecodeError</span><span class="p">,</span> <span class="ne">LookupError</span><span class="p">):</span>
+                <span class="n">logger</span><span class="o">.</span><span class="n">warning</span><span class="p">(</span><span class="s2">&quot;Could not decode </span><span class="si">%s</span><span class="s2"> with encoding </span><span class="si">%s</span><span class="s2">.&quot;</span> <span class="o">%</span> <span class="p">(</span><span class="n">text</span><span class="p">,</span> <span class="n">encoding</span><span class="p">))</span>
+                <span class="k">continue</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="c1"># All conversions failed, get unicode with unknown characters</span>
+            <span class="k">return</span> <span class="n">codecs</span><span class="o">.</span><span class="n">decode</span><span class="p">(</span><span class="n">text</span><span class="p">,</span> <span class="n">errors</span><span class="o">=</span><span class="s1">&#39;replace&#39;</span><span class="p">)</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s1">&#39;string should be of str type&#39;</span><span class="p">)</span>
+
+
+<div class="viewcode-block" id="ParsedMessage"><a class="viewcode-back" href="../../api.html#mailingshark.analyzer.ParsedMessage">[docs]</a><span class="k">class</span> <span class="nc">ParsedMessage</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Model to which the raw message is given that turns it into a parsed message</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+<div class="viewcode-block" id="ParsedMessage.__init__"><a class="viewcode-back" href="../../api.html#mailingshark.analyzer.ParsedMessage.__init__">[docs]</a>    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">cfg</span><span class="p">,</span> <span class="n">raw_message</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Creates the parsed message using config cfg and message raw_message</span>
+
+<span class="sd">        :param cfg: object of class :class:`mailingshark.config.Config`</span>
+<span class="sd">        :param raw_message: object of class :class:`email.message.Message`</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">logger</span><span class="o">.</span><span class="n">setLevel</span><span class="p">(</span><span class="n">cfg</span><span class="o">.</span><span class="n">get_debug_level</span><span class="p">())</span>
+
+        <span class="c1"># Clean up reply_noise</span>
+        <span class="n">re_reply_to</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">compile</span><span class="p">(</span><span class="s1">&#39;^.*[^&lt;]*(&lt;.*&gt;).*&#39;</span><span class="p">,</span> <span class="n">re</span><span class="o">.</span><span class="n">IGNORECASE</span><span class="p">)</span>
+        <span class="n">charset</span> <span class="o">=</span> <span class="n">raw_message</span><span class="o">.</span><span class="n">get_content_charset</span><span class="p">()</span>
+
+        <span class="c1"># Set attributes</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">msgdate</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">__set_msgdate</span><span class="p">(</span><span class="n">raw_message</span><span class="p">)</span>
+
+        <span class="c1"># The &#39;body&#39; is not actually part of the header, but it will be</span>
+        <span class="c1"># treated as any other header</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">body</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">patches</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">__get_body</span><span class="p">(</span><span class="n">raw_message</span><span class="p">,</span> <span class="n">charset</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">subject</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">__decode</span><span class="p">(</span><span class="n">raw_message</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;subject&#39;</span><span class="p">),</span> <span class="n">charset</span><span class="p">)</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">__set_addresses</span><span class="p">(</span><span class="n">raw_message</span><span class="p">,</span> <span class="n">charset</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">date</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">date_tz</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">__get_date</span><span class="p">(</span><span class="n">raw_message</span><span class="p">)</span>
+
+        <span class="k">if</span> <span class="n">raw_message</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;in-reply-to&#39;</span><span class="p">)</span> <span class="ow">and</span> <span class="n">raw_message</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;in-reply-to&#39;</span><span class="p">)</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">in_reply_to</span> <span class="o">=</span> <span class="n">re_reply_to</span><span class="o">.</span><span class="n">sub</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;\1&#39;</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">__decode</span><span class="p">(</span><span class="n">raw_message</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;in-reply-to&#39;</span><span class="p">),</span> <span class="n">charset</span><span class="p">))</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">in_reply_to</span> <span class="o">=</span> <span class="kc">None</span>
+
+        <span class="c1"># set message-id</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">message_id</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">__create_message_id</span><span class="p">(</span><span class="n">raw_message</span><span class="p">)</span>
+
+        <span class="c1"># set references</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">raw_message</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;references&#39;</span><span class="p">),</span> <span class="nb">str</span><span class="p">)</span> <span class="ow">and</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">raw_message</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;refernces&#39;</span><span class="p">),</span> <span class="nb">bytes</span><span class="p">)</span> \
+                <span class="ow">and</span> <span class="n">raw_message</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;references&#39;</span><span class="p">)</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="n">logger</span><span class="o">.</span><span class="n">warning</span><span class="p">(</span><span class="s1">&#39;Reference header is not a string&#39;</span><span class="p">)</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">references</span> <span class="o">=</span> <span class="p">[]</span>
+            <span class="k">return</span>
+
+        <span class="k">if</span> <span class="n">raw_message</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;references&#39;</span><span class="p">)</span> <span class="ow">and</span> <span class="n">raw_message</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;references&#39;</span><span class="p">)</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="n">found_references</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">findall</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;(\&lt;.*?\&gt;)&#39;</span><span class="p">,</span> <span class="n">raw_message</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;references&#39;</span><span class="p">),</span> <span class="n">re</span><span class="o">.</span><span class="n">MULTILINE</span><span class="p">)</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">references</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="nb">set</span><span class="p">(</span><span class="n">found_references</span><span class="p">))</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">references</span> <span class="o">=</span> <span class="p">[]</span></div>
+
+<div class="viewcode-block" id="ParsedMessage.__str__"><a class="viewcode-back" href="../../api.html#mailingshark.analyzer.ParsedMessage.__str__">[docs]</a>    <span class="k">def</span> <span class="nf">__str__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="s2">&quot;message_id: </span><span class="si">%s</span><span class="s2">, body: </span><span class="si">%s</span><span class="s2">, patches: </span><span class="si">%s</span><span class="s2">, subject: </span><span class="si">%s</span><span class="s2">, msgdate: </span><span class="si">%s</span><span class="s2">, from: </span><span class="si">%s</span><span class="s2">, to: </span><span class="si">%s</span><span class="s2">, cc: </span><span class="si">%s</span><span class="s2">, date: </span><span class="si">%s</span><span class="s2">, &quot;</span> \
+               <span class="s2">&quot;in_reply_to: </span><span class="si">%s</span><span class="s2">, references: </span><span class="si">%s</span><span class="s2">&quot;</span> <span class="o">%</span> <span class="p">(</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">message_id</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">body</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">patches</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">subject</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">msgdate</span><span class="p">,</span> <span class="nb">getattr</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="s1">&#39;from&#39;</span><span class="p">),</span> <span class="bp">self</span><span class="o">.</span><span class="n">to</span><span class="p">,</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">cc</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">date</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">in_reply_to</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">references</span>
+        <span class="p">)</span></div>
+
+    <span class="k">def</span> <span class="nf">__set_addresses</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">raw_message</span><span class="p">,</span> <span class="n">charset</span><span class="p">):</span>
+        <span class="c1"># message.getaddrlist returns a list of tuples</span>
+        <span class="c1"># Each one of the tuples is like this</span>
+        <span class="c1"># (name,email_address)</span>
+        <span class="c1">#</span>
+        <span class="c1"># For instance, if the header is</span>
+        <span class="c1">#      To: Alice &lt;alice@alice.com&gt;, Bob &lt;bob@bob.com&gt;</span>
+        <span class="c1"># it will return</span>
+        <span class="c1">#      [(&#39;Alice&#39;,&#39;alice@alice.com&#39;), (&#39;Bob&#39;,&#39;bob@bob.com&#39;)]</span>
+        <span class="c1">#</span>
+        <span class="c1"># If the header is &#39;from&#39;, this list will contain only one element.</span>
+        <span class="c1"># If the header is &#39;to&#39; or &#39;cc&#39;, it may contain several items</span>
+        <span class="c1"># (or it could also be an empty list when such header is missing</span>
+        <span class="c1">#  in the original message).</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Sets the addresses in the email</span>
+
+<span class="sd">        :param raw_message: object of class :class:`email.message.Message`</span>
+<span class="sd">        :param charset: charset that should be used</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="k">for</span> <span class="n">header</span> <span class="ow">in</span> <span class="p">(</span><span class="s1">&#39;from&#39;</span><span class="p">,</span> <span class="s1">&#39;to&#39;</span><span class="p">,</span> <span class="s1">&#39;cc&#39;</span><span class="p">):</span>
+            <span class="k">if</span> <span class="ow">not</span> <span class="n">raw_message</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">header</span><span class="p">):</span>
+                <span class="nb">setattr</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">header</span><span class="p">,</span> <span class="kc">None</span><span class="p">)</span>
+                <span class="k">continue</span>
+
+            <span class="k">try</span><span class="p">:</span>
+                <span class="n">address</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">__check_spam_obscuring</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">__decode</span><span class="p">(</span><span class="n">raw_message</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">header</span><span class="p">),</span> <span class="n">charset</span><span class="p">))</span>
+            <span class="k">except</span> <span class="ne">AttributeError</span><span class="p">:</span>
+                <span class="n">readable_address</span> <span class="o">=</span> <span class="s2">&quot;&lt;</span><span class="si">%s</span><span class="s2">&quot;</span> <span class="o">%</span> <span class="nb">str</span><span class="p">(</span><span class="n">raw_message</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">header</span><span class="p">))</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s2">&quot;&lt;&quot;</span><span class="p">)[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+                <span class="n">address</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">__check_spam_obscuring</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">__decode</span><span class="p">(</span><span class="n">readable_address</span><span class="p">,</span> <span class="n">charset</span><span class="p">))</span>
+            <span class="n">addresses</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">__get_decoded_addresses</span><span class="p">(</span><span class="n">address</span><span class="p">,</span> <span class="n">charset</span><span class="p">)</span>
+            <span class="nb">setattr</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">header</span><span class="p">,</span> <span class="n">addresses</span> <span class="ow">or</span> <span class="kc">None</span><span class="p">)</span>
+
+    <span class="nd">@staticmethod</span>
+    <span class="k">def</span> <span class="nf">__set_msgdate</span><span class="p">(</span><span class="n">raw_message</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Sets the message date</span>
+
+<span class="sd">        :param raw_message: object of class :class:`email.message.Message`</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">unix_from</span> <span class="o">=</span> <span class="n">raw_message</span><span class="o">.</span><span class="n">get_unixfrom</span><span class="p">()</span>
+        <span class="k">try</span><span class="p">:</span>
+            <span class="n">date_to_parse</span> <span class="o">=</span> <span class="n">unix_from</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39; &#39;</span><span class="p">,</span> <span class="mi">1</span><span class="p">)[</span><span class="mi">1</span><span class="p">]</span>
+            <span class="n">parsed_date</span> <span class="o">=</span> <span class="n">parsedate_tz</span><span class="p">(</span><span class="n">date_to_parse</span><span class="p">)</span>
+            <span class="k">return</span> <span class="n">datetime</span><span class="o">.</span><span class="n">datetime</span><span class="p">(</span><span class="o">*</span><span class="n">parsed_date</span><span class="p">)[:</span><span class="mi">6</span><span class="p">]</span>
+        <span class="k">except</span> <span class="ne">AttributeError</span><span class="p">:</span>
+            <span class="k">return</span> <span class="kc">None</span>
+
+    <span class="k">def</span> <span class="nf">__create_message_id</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">raw_message</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Creates the mssage id, if none is given</span>
+
+<span class="sd">        :param raw_message: object of class :class:`email.message.Message`</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">if</span> <span class="n">raw_message</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;message-id&#39;</span><span class="p">)</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="k">return</span> <span class="n">raw_message</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;message-id&#39;</span><span class="p">)</span>
+
+        <span class="c1"># Create unique identifier</span>
+        <span class="k">try</span><span class="p">:</span>
+            <span class="n">domain</span> <span class="o">=</span> <span class="nb">getattr</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="s1">&#39;from&#39;</span><span class="p">)[</span><span class="mi">0</span><span class="p">][</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39;@&#39;</span><span class="p">)[</span><span class="mi">1</span><span class="p">]</span>
+        <span class="k">except</span> <span class="ne">Exception</span><span class="p">:</span>
+            <span class="n">domain</span> <span class="o">=</span> <span class="s1">&#39;mailingshark.localdomain&#39;</span>
+
+        <span class="n">m</span> <span class="o">=</span> <span class="n">hashlib</span><span class="o">.</span><span class="n">md5</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">body</span><span class="o">.</span><span class="n">encode</span><span class="p">(</span><span class="s1">&#39;utf-8&#39;</span><span class="p">))</span><span class="o">.</span><span class="n">hexdigest</span><span class="p">()</span>
+        <span class="k">return</span> <span class="s1">&#39;&lt;</span><span class="si">%s</span><span class="s1">.mailingshark@</span><span class="si">%s</span><span class="s1">&gt;&#39;</span> <span class="o">%</span> <span class="p">(</span><span class="n">m</span><span class="p">,</span> <span class="n">domain</span><span class="p">)</span>
+
+    <span class="nd">@staticmethod</span>
+    <span class="k">def</span> <span class="nf">__get_date</span><span class="p">(</span><span class="n">message</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Gets the date from the message</span>
+
+<span class="sd">        :param message: object of class :class:`email.message.Message`</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">date</span> <span class="o">=</span> <span class="n">message</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;date&#39;</span><span class="p">)</span>
+        <span class="k">try</span><span class="p">:</span>
+            <span class="n">parsed_date</span> <span class="o">=</span> <span class="n">parsedate_tz</span><span class="p">(</span><span class="n">date</span><span class="p">)</span>
+        <span class="k">except</span> <span class="ne">AttributeError</span><span class="p">:</span>
+            <span class="n">date_parts</span> <span class="o">=</span> <span class="nb">str</span><span class="p">(</span><span class="n">date</span><span class="p">)</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s2">&quot; &quot;</span><span class="p">)[</span><span class="mi">0</span><span class="p">:</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+            <span class="n">date_parts</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s2">&quot;+0000&quot;</span><span class="p">)</span>
+            <span class="n">new_date</span> <span class="o">=</span> <span class="s1">&#39; &#39;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">date_parts</span><span class="p">)</span>
+            <span class="n">logger</span><span class="o">.</span><span class="n">warning</span><span class="p">(</span><span class="s2">&quot;Could not parse date </span><span class="si">%s</span><span class="s2">. Try to format it differently: </span><span class="si">%s</span><span class="s2">&quot;</span> <span class="o">%</span> <span class="p">(</span><span class="n">date</span><span class="p">,</span> <span class="n">new_date</span><span class="p">))</span>
+            <span class="n">parsed_date</span> <span class="o">=</span> <span class="n">parsedate_tz</span><span class="p">(</span><span class="n">new_date</span><span class="p">)</span>
+
+        <span class="k">if</span> <span class="ow">not</span> <span class="n">parsed_date</span><span class="p">:</span>
+            <span class="n">msg_date</span> <span class="o">=</span> <span class="n">datetime</span><span class="o">.</span><span class="n">datetime</span><span class="p">(</span><span class="o">*</span><span class="p">(</span><span class="mi">1979</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">))</span>
+            <span class="n">tz_secs</span> <span class="o">=</span> <span class="mi">0</span>
+            <span class="k">return</span> <span class="n">msg_date</span><span class="p">,</span> <span class="n">tz_secs</span>
+
+        <span class="k">try</span><span class="p">:</span>
+            <span class="n">msg_date</span> <span class="o">=</span> <span class="n">datetime</span><span class="o">.</span><span class="n">datetime</span><span class="p">(</span><span class="o">*</span><span class="n">parsed_date</span><span class="p">[:</span><span class="mi">6</span><span class="p">])</span>
+            <span class="c1"># Workaround for `strftime` which allow dates higher than 1900.</span>
+            <span class="c1"># And the MySQL module uses `strftime` to convert a datetime.</span>
+            <span class="k">if</span> <span class="n">msg_date</span><span class="o">.</span><span class="n">year</span> <span class="o">&lt;</span> <span class="mi">1900</span><span class="p">:</span>
+                <span class="c1"># Usually we see years like 0102, but in case someboedy</span>
+                <span class="c1"># set the date to 1800 or something alike, we leave only</span>
+                <span class="c1"># the centuries before adding 1900.</span>
+                <span class="n">fixed_year</span> <span class="o">=</span> <span class="p">(</span><span class="n">msg_date</span><span class="o">.</span><span class="n">year</span> <span class="o">%</span> <span class="mi">1000</span><span class="p">)</span> <span class="o">+</span> <span class="mi">1900</span>
+                <span class="n">msg_date</span> <span class="o">=</span> <span class="n">msg_date</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="n">year</span><span class="o">=</span><span class="n">msg_date</span><span class="o">.</span><span class="n">year</span> <span class="o">+</span> <span class="n">fixed_year</span><span class="p">)</span>
+        <span class="k">except</span> <span class="ne">ValueError</span><span class="p">:</span>
+            <span class="n">msg_date</span> <span class="o">=</span> <span class="n">datetime</span><span class="o">.</span><span class="n">datetime</span><span class="p">(</span><span class="o">*</span><span class="p">(</span><span class="mi">1979</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">))</span>
+
+        <span class="n">tz_secs</span> <span class="o">=</span> <span class="n">parsed_date</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="ow">or</span> <span class="mi">0</span>
+
+        <span class="k">return</span> <span class="n">msg_date</span><span class="p">,</span> <span class="n">tz_secs</span>
+
+    <span class="k">def</span> <span class="nf">__get_decoded_addresses</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">address</span><span class="p">,</span> <span class="n">charset</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Gets the decoded addresses</span>
+
+<span class="sd">        :param address: email address</span>
+<span class="sd">        :param charset: charset that should be used</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">result</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="k">for</span> <span class="n">name</span><span class="p">,</span> <span class="n">email</span> <span class="ow">in</span> <span class="n">getaddresses</span><span class="p">([</span><span class="n">address</span><span class="p">]):</span>
+            <span class="n">decoded_email</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">__decode</span><span class="p">(</span><span class="n">email</span><span class="p">,</span> <span class="n">charset</span><span class="p">)</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">&#39;&quot;&#39;</span><span class="p">,</span> <span class="s1">&#39;&#39;</span><span class="p">)</span>
+
+            <span class="c1"># If name is none, we just choose the first part of the email as name</span>
+            <span class="k">if</span> <span class="ow">not</span> <span class="n">name</span> <span class="ow">or</span> <span class="n">name</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+                <span class="n">decoded_name</span> <span class="o">=</span> <span class="n">decoded_email</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39;@&#39;</span><span class="p">)[</span><span class="mi">0</span><span class="p">]</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="n">decoded_name</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">__decode</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">charset</span><span class="p">)</span>
+            <span class="n">result</span><span class="o">.</span><span class="n">append</span><span class="p">((</span><span class="n">decoded_name</span><span class="p">,</span><span class="n">decoded_email</span><span class="p">))</span>
+        <span class="k">return</span> <span class="n">result</span>
+
+    <span class="nd">@staticmethod</span>
+    <span class="k">def</span> <span class="nf">__check_spam_obscuring</span><span class="p">(</span><span class="n">field</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Checks the field for spam obscuring (e.g., at instead of @)</span>
+
+<span class="sd">        :param field: content of the email field</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="n">field</span><span class="p">:</span>
+            <span class="k">return</span> <span class="n">field</span>
+
+        <span class="k">for</span> <span class="n">pattern</span> <span class="ow">in</span> <span class="n">EMAIL_OBFUSCATION_PATTERNS</span><span class="p">:</span>
+            <span class="k">if</span> <span class="n">field</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="n">pattern</span><span class="p">)</span> <span class="o">!=</span> <span class="o">-</span><span class="mi">1</span><span class="p">:</span>
+                <span class="k">return</span> <span class="n">field</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="n">pattern</span><span class="p">,</span> <span class="s1">&#39;@&#39;</span><span class="p">)</span>
+
+        <span class="k">return</span> <span class="n">field</span>
+
+    <span class="nd">@staticmethod</span>
+    <span class="k">def</span> <span class="nf">__get_body</span><span class="p">(</span><span class="n">raw_message</span><span class="p">,</span> <span class="n">charset</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Gets the body for the message using a specific charset</span>
+
+<span class="sd">        :param raw_message: object of class :class:`email.message.Message`</span>
+<span class="sd">        :param charset: charset that should be used</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="c1"># Non multipart messages should be straightforward</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="n">raw_message</span><span class="o">.</span><span class="n">is_multipart</span><span class="p">():</span>
+            <span class="k">return</span> <span class="n">to_unicode</span><span class="p">(</span><span class="n">raw_message</span><span class="o">.</span><span class="n">get_payload</span><span class="p">(</span><span class="n">decode</span><span class="o">=</span><span class="kc">True</span><span class="p">),</span> <span class="n">charset</span><span class="p">),</span> <span class="kc">None</span>
+
+        <span class="n">body</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="n">patches</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="c1"># Include all the attached texts if it is multipart</span>
+        <span class="n">parts</span> <span class="o">=</span> <span class="p">[</span><span class="n">part</span> <span class="k">for</span> <span class="n">part</span> <span class="ow">in</span> <span class="n">typed_subpart_iterator</span><span class="p">(</span><span class="n">raw_message</span><span class="p">,</span> <span class="s1">&#39;text&#39;</span><span class="p">)]</span>
+        <span class="k">for</span> <span class="n">part</span> <span class="ow">in</span> <span class="n">parts</span><span class="p">:</span>
+            <span class="n">part_charset</span> <span class="o">=</span> <span class="n">part</span><span class="o">.</span><span class="n">get_content_charset</span><span class="p">()</span>
+            <span class="n">part_body</span> <span class="o">=</span> <span class="n">part</span><span class="o">.</span><span class="n">get_payload</span><span class="p">(</span><span class="n">decode</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+            <span class="n">part_subtype</span> <span class="o">=</span> <span class="n">part</span><span class="o">.</span><span class="n">get_content_subtype</span><span class="p">()</span>
+            <span class="k">if</span> <span class="n">part_subtype</span> <span class="o">==</span> <span class="s1">&#39;plain&#39;</span><span class="p">:</span>
+                <span class="n">body</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">to_unicode</span><span class="p">(</span><span class="n">part_body</span><span class="p">,</span> <span class="n">part_charset</span><span class="p">))</span>
+            <span class="k">elif</span> <span class="n">part_subtype</span> <span class="ow">in</span> <span class="p">(</span><span class="s1">&#39;x-patch&#39;</span><span class="p">,</span> <span class="s1">&#39;x-diff&#39;</span><span class="p">):</span>
+                <span class="n">patches</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">to_unicode</span><span class="p">(</span><span class="n">part_body</span><span class="p">,</span> <span class="n">part_charset</span><span class="p">))</span>
+
+        <span class="k">return</span> <span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">body</span><span class="p">),</span> <span class="n">patches</span>
+
+    <span class="nd">@staticmethod</span>
+    <span class="k">def</span> <span class="nf">__decode</span><span class="p">(</span><span class="n">s</span><span class="p">,</span> <span class="n">charset</span><span class="o">=</span><span class="s1">&#39;latin-1&#39;</span><span class="p">,</span> <span class="n">sep</span><span class="o">=</span><span class="sa">u</span><span class="s1">&#39; &#39;</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Decodes a header for a specific charset</span>
+
+<span class="sd">        :param s: header</span>
+<span class="sd">        :param charset: charset that should be used</span>
+<span class="sd">        :param sep: seperator</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="n">charset</span> <span class="o">=</span> <span class="n">charset</span> <span class="ow">or</span> <span class="s1">&#39;latin-1&#39;</span>
+
+        <span class="k">try</span><span class="p">:</span>
+            <span class="n">decoded_s</span> <span class="o">=</span> <span class="n">decode_header</span><span class="p">(</span><span class="n">s</span><span class="p">)</span>
+            <span class="n">r</span> <span class="o">=</span> <span class="n">sep</span><span class="o">.</span><span class="n">join</span><span class="p">([</span><span class="n">to_unicode</span><span class="p">(</span><span class="n">text</span><span class="p">,</span> <span class="n">text_charset</span> <span class="ow">or</span> <span class="n">charset</span><span class="p">)</span> <span class="k">for</span> <span class="n">text</span><span class="p">,</span> <span class="n">text_charset</span> <span class="ow">in</span> <span class="n">decoded_s</span><span class="p">])</span>
+        <span class="k">except</span> <span class="ne">Exception</span><span class="p">:</span>
+            <span class="n">logger</span><span class="o">.</span><span class="n">warning</span><span class="p">(</span><span class="s1">&#39;WARNING: charset: </span><span class="si">%s</span><span class="s1">&#39;</span> <span class="o">%</span> <span class="n">charset</span><span class="p">)</span>
+            <span class="n">logger</span><span class="o">.</span><span class="n">warning</span><span class="p">(</span><span class="s1">&#39;</span><span class="si">%s</span><span class="s1">&#39;</span> <span class="o">%</span> <span class="n">s</span><span class="p">)</span>
+            <span class="n">r</span> <span class="o">=</span> <span class="n">s</span>
+
+        <span class="k">return</span> <span class="n">r</span></div>
+</pre></div>
+
+           </div>
+           
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2017, Fabian Trautsch
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../../_static/jquery.js"></script>
+        <script type="text/javascript" src="../../_static/underscore.js"></script>
+        <script type="text/javascript" src="../../_static/doctools.js"></script>
+    
+
+  
+
+  <script type="text/javascript" src="../../_static/js/theme.js"></script>
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
