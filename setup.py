@@ -8,11 +8,11 @@ if not sys.version_info[0] == 3:
 
 setup(
     name='mailingSHARK',
-    version='2.0.1',
+    version='2.0.2',
     author='Fabian Trautsch',
     author_email='trautsch@cs.uni-goettingen.de',
     description='Collect data from issue mailing lists',
-    install_requires=['mongoengine', 'pymongo', 'requests', 'bs4', 'pycoshark>=1.0.3', 'mock'],
+    install_requires=['mongoengine', 'pymongo', 'requests', 'bs4', 'pycoshark>=1.2.6', 'mock'],
     url='https://github.com/smartshark/mailingSHARK',
     download_url='https://github.com/smartshark/mailingSHARK/zipball/master',
     packages=find_packages(),
