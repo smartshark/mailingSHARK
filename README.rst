@@ -207,7 +207,7 @@ How this can be achieved is explained here: https://docs.mongodb.org/manual/.
 	.. code-block:: bash
 
 		$ cd ~/mailingSHARK
-		$ python3.5 main.py --backend pipermail --project-name k3b --mailingurl https://mail.kde.org/pipermail/k3b --output ~/temp
+		$ python3.5 main.py --backend pipermail --project-name k3b --mailing-url https://mail.kde.org/pipermail/k3b --output ~/temp
 
 
 Thats it. The results are explained in the database documentation
