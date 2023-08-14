@@ -8,7 +8,8 @@ import tarfile
 import sys
 
 import datetime
-from mongoengine import connect, DoesNotExist
+
+from mongoengine import connect, DoesNotExist, ConnectionFailure
 
 from mailingshark.datacollection.basedatacollector import BaseDataCollector
 from mailingshark.analyzer import ParsedMessage
@@ -67,7 +68,11 @@ class MailingSHARK(object):
         # Connect to mongodb
         uri = create_mongodb_uri_string(cfg.user, cfg.password, cfg.host, cfg.port, cfg.authentication_db,
                                         cfg.ssl_enabled)
-        connect(cfg.database, host=uri)
+
+        try:
+            connect(cfg.database, host=uri)
+        except ConnectionFailure:
+            logger.error("Failed to connect to MongoDB")
 
         # Get the project for which issue data is collected
         try:
@@ -233,7 +238,7 @@ class MailingSHARK(object):
                 with open(path_to_store, 'wb') as f:
                     f.write(s)
 
-            if file_path.endswith('.mbox'):
+            if file_path.endswith('.mbox') or file_path.endswith('.txt'):
                 print(file_path)
                 shutil.move(file_path, os.path.join(output_dir, os.path.basename(file_path)))
 
