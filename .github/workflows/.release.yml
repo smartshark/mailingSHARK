@@ -1,0 +1,28 @@
+name: Create plugin bundle
+
+on:
+  release:
+    types:
+      - published
+
+jobs:
+  generate:
+    name: Create plugin bundle
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout the repository
+        uses: actions/checkout@v2
+      - name: Generate the bundle
+        run: |
+          cd plugin_packaging
+          ./build_plugin.sh
+      - name: Upload tar as release asset
+        id: upload-release-asset
+        uses: actions/upload-release-asset@v1
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          upload_url: ${{ github.event.release.upload_url }}
+          asset_path: ./plugin_packaging/mailingSHARK_plugin.tar
+          asset_name: mailingSHARK_plugin.tar
+          asset_content_type: application/x-tar
