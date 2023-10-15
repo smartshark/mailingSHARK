@@ -53,34 +53,20 @@ class PipermailBackend(BaseDataCollector):
         logger.debug("Got links %s" % links)
 
         paths = []
-        already_parsed = True
         for link in links:
             logger.debug("Trying link: %s" % link)
 
             # We get the last part of the link as file name
             path = os.path.join(base_path, link.split('/')[-1])
 
-            # If the mailing list was never parsed, we can not find the correct month
-            if mailing_list.last_updated is not None:
-                # We need to find if we have already parsed the file (so we do not need to download it)
-                # Therefore, we check when the mailing list was last parsed and try to find the month (and year) in the
-                # links that we are parsing. If we have found it, we know that everything after that was not parsed
-                month = find_month_were_mailing_list_was_last_parsed(link, mailing_list.last_updated)
-                if month is not None:
-                    logger.debug("Found last parsed month! %s" % month)
-                    already_parsed = False
+            paths.append(path)
+            if not os.path.isfile(path):
+                logger.info('Downloading %s...' % link)
+                response = requests.get(link, proxies=self.config.get_proxy_dictionary())
+                with open(path, 'wb') as target_file:
+                    target_file.write(response.content)
             else:
-                already_parsed = False
-
-            if not already_parsed:
-                paths.append(path)
-                if not os.path.isfile(path):
-                    logger.info('Downloading %s...' % link)
-                    response = requests.get(link, proxies=self.config.get_proxy_dictionary())
-                    with open(path, 'wb') as target_file:
-                        target_file.write(response.content)
-                else:
-                    logger.info('Already got %s...' % link)
+                logger.info('Already got %s...' % link)
 
         return paths
 
