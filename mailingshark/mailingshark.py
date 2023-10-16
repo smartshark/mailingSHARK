@@ -15,8 +15,9 @@ from mailingshark.datacollection.basedatacollector import BaseDataCollector
 from mailingshark.analyzer import ParsedMessage
 import mailbox
 
-from pycoshark.mongomodels import MailingList, Project, Message, People
+from pycoshark.mongomodels import MailingSystem, Project, Message, People
 from pycoshark.utils import create_mongodb_uri_string
+from deepdiff import DeepDiff
 
 logger = logging.getLogger("main")
 
@@ -81,12 +82,12 @@ class MailingSHARK(object):
             logger.error('Project not found. Use vcsSHARK beforehand!')
             sys.exit(1)
 
-        # Try to create the mailing_list in database
-        try:
-            mailing_list = MailingList.objects(project_id=project_id, name=cfg.mailing_url).get()
-        except DoesNotExist:
-            mailing_list = MailingList(project_id=project_id, name=cfg.mailing_url)
-        mailing_list_id = mailing_list.save().id
+        last_mailing_systems = MailingSystem.objects.filter(url=cfg.mailing_url).order_by('-collection_date').first()
+        last_mailing_system_id = last_mailing_systems.id if last_mailing_systems else None
+
+        mailing_list = MailingSystem(project_id=project_id, url=cfg.mailing_url, collection_date=datetime.datetime.now())
+
+        mailing_system_id = mailing_list.save().id
 
         # Find correct backend
         backend = BaseDataCollector.find_fitting_backend(cfg, project_id)
@@ -108,15 +109,11 @@ class MailingSHARK(object):
                 try:
                     parsed_message = ParsedMessage(cfg, box.get(i))
                     logger.debug('Got the following message: %s' % parsed_message)
-                    self._store_message(parsed_message, mailing_list_id)
+                    self._store_message(parsed_message, last_mailing_system_id, mailing_system_id)
                     stored_messages += 1
                 except Exception as e:
                     logger.error("Could not parse message. Error: %s" % e)
                     non_stored += 1
-
-        # Update mailing list
-        mailing_list.last_updated = datetime.datetime.now()
-        mailing_list.save()
 
         logger.info("%d messages stored in database %s" % (stored_messages, cfg.database))
         logger.info("%d messages ignored by the parser" % non_stored)
@@ -124,70 +121,96 @@ class MailingSHARK(object):
         elapsed = timeit.default_timer() - start_time
         logger.info("Execution time: %0.5f s" % elapsed)
 
-    def _store_message(self, parsed_message, list_id):
+    def _store_message(self, parsed_message, last_mailing_system_id, mailing_system_id):
         """
-        Stores the message parsed_message in the list with the id list_id
+        Store or update a parsed message in the database.
 
-        :param parsed_message: object of class :class:`mailingshark.analyzer.ParsedMessage`
-        :param list_id: object id of class :class:`bson.objectid.ObjectId`
+        :param parsed_message: An instance of the :class:`mailingshark.analyzer.ParsedMessage` class.
+        :param last_mailing_system_id: The object ID of the last mailing system.
+        :param mailing_system_id: The object ID of the current mailing system.
+
         """
 
         # Get the message, if it exist in the database
         try:
-            mongo_message = Message.objects(message_id=parsed_message.message_id, mailing_list_id=list_id).get()
+            mongo_message = Message.objects.get(message_id=parsed_message.message_id, mailing_system_ids=last_mailing_system_id)
         except DoesNotExist:
-            mongo_message = Message(message_id=parsed_message.message_id, mailing_list_id=list_id)
+            mongo_message = None
+        try:
+            new_message = Message.objects.get(message_id=parsed_message.message_id, mailing_system_ids=mailing_system_id)
+        except DoesNotExist:
+            new_message = Message(message_id=parsed_message.message_id, mailing_system_ids=[mailing_system_id])
 
         # Set all values
-        mongo_message.subject = parsed_message.subject
-        mongo_message.body = parsed_message.body
-        mongo_message.patches = parsed_message.patches
-        mongo_message.date = parsed_message.date
+        new_message.subject = parsed_message.subject
+        new_message.body = parsed_message.body
+        new_message.patches = parsed_message.patches
+        new_message.date = parsed_message.date
 
         if parsed_message.in_reply_to and parsed_message.in_reply_to is not None:
-            mongo_message.in_reply_to_id = self._get_message(parsed_message.in_reply_to, list_id)
+            new_message.in_reply_to_id = self._get_message(parsed_message.in_reply_to, last_mailing_system_id, mailing_system_id)
 
         if parsed_message.references:
             reference_ids = []
             for reference in parsed_message.references:
-                reference_ids.append(self._get_message(reference, list_id))
-            mongo_message.reference_ids = reference_ids
+                reference_ids.append(self._get_message(reference, last_mailing_system_id, mailing_system_id))
+            new_message.reference_ids = reference_ids
 
         if getattr(parsed_message, 'from'):
-            mongo_message.from_id = self._get_people(getattr(parsed_message, 'from')[0])
+            new_message.from_id = self._get_people(getattr(parsed_message, 'from')[0])
 
         if parsed_message.to:
             to_ids = []
             for user_to in parsed_message.to:
                 to_ids.append(self._get_people(user_to))
-            mongo_message.to_ids = to_ids
+            new_message.to_ids = to_ids
 
         if parsed_message.cc:
             cc_ids = []
             for user_cc in parsed_message.cc:
                 cc_ids.append(self._get_people(user_cc))
-            mongo_message.cc_ids = cc_ids
+            new_message.cc_ids = cc_ids
+
+        if mongo_message is not None:
+            diff = DeepDiff(t1=mongo_message.__dict__, t2=new_message.__dict__, exclude_paths='mailing_system_ids')
+            if diff:
+                mongo_id = new_message.save().id
+            else:
+                if mailing_system_id not in mongo_message.mailing_system_ids:
+                    mongo_message.mailing_system_ids.append(mailing_system_id)
+                mongo_id = mongo_message.save().id
+        else:
+            mongo_id = new_message.save().id
 
         # Save this call in a dictionary to save network traffic, if there is a reply to this message
-        mongo_id = mongo_message.save().id
         self.messages[parsed_message.message_id] = mongo_id
 
-    def _get_message(self, message_id, list_id):
+    def _get_message(self, message_id, last_mailing_system_id, mailing_system_id):
         """
-        Gets the message with the id message_id from the list list_id. Looks up the message dictionary first to
-        save network traffic.
+        Retrieve a message by its unique identifier from the database or cache.
 
-        :param message_id: string that identifies the message (worldwide unique). \
-        See: https://en.wikipedia.org/wiki/Message-ID
-        :param list_id: object id of class :class:`bson.objectid.ObjectId` for the list
+        :param message_id: A string that uniquely identifies the message, typically in the format specified by
+                          Message-ID (e.g., https://en.wikipedia.org/wiki/Message-ID).
+        :param last_mailing_system_id: The object ID of the last mailing system to which the message belonged, of class
+                                      :class:`bson.objectid.ObjectId`.
+        :param mailing_system_id: The object ID of the current mailing system to which the message belongs, of class
+                                 :class:`bson.objectid.ObjectId`.
         """
         if message_id in self.messages:
             return self.messages[message_id]
 
         try:
-            mongo_id = Message.objects(message_id=message_id, mailing_list_id=list_id).get().id
+            message = Message.objects(message_id=message_id, mailing_system_ids=last_mailing_system_id).get()
+            if mailing_system_id not in message.mailing_system_ids:
+                message.mailing_system_ids.append(mailing_system_id)
+            mongo_id = message.save().id
         except DoesNotExist:
-            mongo_id = Message(message_id=message_id, mailing_list_id=list_id).save().id
+            mongo_id = None
+        if not mongo_id:
+            try:
+                mongo_id = Message.objects(message_id=message_id, mailing_system_ids=mailing_system_id).get().id
+            except DoesNotExist:
+                mongo_id = Message(message_id=message_id, mailing_system_ids=[mailing_system_id]).save().id
 
         self.messages[message_id] = mongo_id
         return mongo_id
