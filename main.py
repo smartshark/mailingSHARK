@@ -8,7 +8,7 @@ import argparse
 from mailingshark.config import Config, ConfigValidationException
 from mailingshark.datacollection.basedatacollector import BaseDataCollector
 from mailingshark.mailingshark import MailingSHARK
-from pycoshark.utils import get_base_argparser, delete_last_system_on_failure
+from pycoshark.utils import get_base_argparser, delete_last_system_data_on_failure
 
 
 def setup_logging(default_path=os.path.dirname(os.path.realpath(__file__))+"/loggerConfiguration.json",
@@ -85,8 +85,9 @@ def start():
     except (KeyboardInterrupt, Exception) as e:
         logger.error(f"Program did not run successfully. Reason:{e}")
         logger.info(f"Deleting uncompleted data .....")
-        delete_last_system_on_failure('mailing_system', cfg.mailing_url)
-
+        delete_last_system_data_on_failure('mailing_system', cfg.mailing_url, db_user=cfg.user, db_password=cfg.password,
+                                      db_hostname= cfg.host, db_port=cfg.port, db_authentication_db=cfg.authentication_db,
+                                      db_ssl=cfg.ssl_enabled, db_name=cfg.database)
 
 if __name__ == "__main__":
     start()
