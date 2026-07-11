@@ -4,6 +4,6 @@ requests~=2.31.0
 bs4~=0.0.1
 beautifulsoup4~=4.12.2
 mongoengine~=0.23.1
-pycoSHARK~=1.4.5
+pycoshark @ git+https://github.com/smartshark/pycoSHARK.git@2.0.0
 setuptools~=60.2.0
 deepdiff~=6.6.0
